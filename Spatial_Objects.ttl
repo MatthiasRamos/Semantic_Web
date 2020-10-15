@@ -8,87 +8,88 @@
 
 @prefix : <https://inf8410.com/tp/astronomical-object/>.
 
+#########################
+#       Classes         #
+#########################
 
-
-:Galaxy
+:Galaxy a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :ourGalaxy :MilkyWay;
     :isMadeOf :GalaxiesComponents.
 
-:ourGalaxy
-    a rdf:Property;
+:Definition a rdfs:Class.
+
+
+:PlanetarySystems a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody;
+
+:BlackHoles a :Class
+    rdfs:subClassOf dbo:CelestialBody;
+    :isDefinedBy _:n2.
+
+:fundamentalUnitsOfUniverseStructure a rdfs:Class.
+
+:Matter a rdfs:Class.
+
+:KnownMatter a :Class
+    rdf:subClassOf :Matter.
+
+:KnownPhysics a rdfs:Class.
+
+#########################
+#   Objects Properties  #
+#########################
+:ourGalaxy a rdf:Property;
     rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Contains our solar system";
     rdfs:domain :Galaxy;
     rdfs:range :fundamentalUnitsOfUniverseStructure.
 
+:isDefinedBy a rdf:Property;
+    rdfs:subPropertyOf :Description;
+    rdfs:comment "Elements that describe a BlackHole";
+    rdfs:domain :Definition;
+    rdfs:range :KnownPhysics.
 
-:PlanetarySystems
-    rdfs:subClassOf dbo:CelestialBody;
+:Distance a rdf:Property
+    rdfs:comment "Distance from Earth, in light year"
 
-:fundamentalUnitsOfUniverseStructure
-    a rdfs:Class.
+:Mass a rdf:Property
+    rdfs:range :
+    rdfs:comment "Object Mass"
 
-
-:isMadeOf
-    a rdf:Property;
+:isMadeOf a rdf:Property;
     rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Elements that compose a galaxy";
     rdfs:domain :Matter;
     rdfs:range :KnownMatter.
 
-:Matter
-    a rdfs:Class.
 
-:KnownMatter
-    rdf:subClassOf :Matter.
 
-:GalaxiesComponents
-    a rdf:Bag;
+
+#########################
+#      Instances        #
+#########################
+
+:GalaxiesComponents a rdf:Bag;
     rdf:_1 :Stars;
     rdf:_2 :InterstellarGas;
     rdf:_3 :Dust;
     rdf:_4 :Emptiness;
     rdf:_5 :DarkMatter.
 
-:BlackHoles
-    a :Class;
-    :isDefinedBy _:n2.
-
-:isDefinedBy
-    a rdf:Property;
-    rdfs:subPropertyOf :Description;
-    rdfs:comment "Elements that describe a BlackHole";
-    rdfs:domain :Definition;
-    rdfs:range :KnownPhysics.
-
-:Definition
-    a rdfs:Class.
-
-:Distance
-    a rdf:Property
-    rdfs:comment "Distance from Earth, in light year"
-
-:Mass
-    a rdf:Property
-    rdfs:range :
-    rdfs:comment "Object Mass"
-
-:KnownPhysics
-    a rdfs:Class.
-
-_:n2
-    a rdf:Bag;
+_:n2 a rdf:Bag;
     rdf:_1 :SpacetimeRegion;
     rdf:_2 :Gravity.
 
-:MilkyWay
-    a dbo:Galaxy;
+#Galaxies
+:MilkyWay a dbo:Galaxy;
     :name "Milky Way";
     :containsOur :SolarSystem;
 
-:SolarSystem
-    a :PlanetarySystems;
+#PlanetarySystems
+
+:SolarSystem a :PlanetarySystems;
     :hasStar :Sun;
     :ApparentMagnitude "-26.74"^^xsd:decimal;
     :ConfirmedPlanets "8"^^xsd:integer;
@@ -97,33 +98,28 @@ _:n2
     :Planets
         (:Mercury :Venus :Earth :Mars :Jupyter :Saturn :Uranus :Neptune)
 
-:Mercury
-    a :Planet
+
+#Planets
+
+:Mercury a :Planet
     :Mass
-:Venus
-    a :Planet
-:Earth
-    a :Planet
+:Venus a :Planet
+:Earth a :Planet
     :Satellites
         (:Moon)
-:Mars
-    a :Planet
+:Mars a :Planet
     :Satellites
         (:Phobos :Deimos)
-:Jupyter
-    a :Planet
+:Jupyter a :Planet
     :Satellites
         (:Io :Europa :Ganymede :Callisto)
-:Saturn
-    a :Planet
+:Saturn a :Planet
     :Satellites
         (:Pan :Daphnis :Atlas :Prometheus :Pandora :Epimetheus :Janus :Mimas :Methone :Anthe :Pallene :Enceladus :Tethys :Telesto :Calypso :Dione :Helene :Polydeuces :Rhea :Titan :Hyperion :Iapetus :Kiviuq :Ijiraq :Phoebe :Paaliaq :Skathi :Albiorix :Bebhionn :Erriapo :Skoll :Siarnaq :Tarqeq
          :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot)
-:Uranus
-    a :Planet
+:Uranus a :Planet
     :Satellites
         (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron)
-:Neptune
-    a :Planet
+:Neptune a :Planet
     :Satellites
         (:Triton)
