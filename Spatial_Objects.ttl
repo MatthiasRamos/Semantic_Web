@@ -5,12 +5,18 @@
 @prefix event: <http://motools.sourceforge.net/event/event.html>.
 @prefix time: <https://www.w3.org/TR/owl-time/>.
 @prefix dbo: <http://dbpedia.org/ontology/>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix : <https://inf8410.com/tp/astronomical-object#>.
+@prefix xsd: <https://www.w3.org/2001/XMLSchema/#>.
 
 @prefix : <https://inf8410.com/tp/astronomical-object/>.
 
 #########################
 #       Classes         #
 #########################
+
+:AstronomicalObject a rdfs:Class
+    rdfs:subClassOf :deepSkyObject.
 
 :Galaxy a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
@@ -19,13 +25,37 @@
 
 :Definition a rdfs:Class.
 
+:Planet a rdfs:Class;
+   rdfs:subClassOf dbo:CelestialBody.
+
+:Swarm a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody.
+
+:Star a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody.
+
+:ArtificalSatellite a Class
+    rdfs:subClassOf dbo:Satellite.
+
+:Asteroid a rdfs:Class
+    rdfs:subClassOf dbo:CelestialBody.
+
+:Satellite
+    rdfs:subClassOf dbo:CelestialBody.
+
 
 :PlanetarySystems a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
 
 :BlackHoles a :Class
     rdfs:subClassOf dbo:CelestialBody;
-    :isDefinedBy _:n2.
+    :isDefinedBy
+    [
+    rdf:type rdf:Bag;
+    rdf:_1 :SpacetimeRegion;
+    rdf:_2 :Gravity.
+    ]
+
 
 :fundamentalUnitsOfUniverseStructure a rdfs:Class.
 
@@ -64,9 +94,6 @@
     rdfs:domain :Matter;
     rdfs:range :KnownMatter.
 
-
-
-
 #########################
 #      Instances        #
 #########################
@@ -77,10 +104,6 @@
     rdf:_3 :Dust;
     rdf:_4 :Emptiness;
     rdf:_5 :DarkMatter.
-
-_:n2 a rdf:Bag;
-    rdf:_1 :SpacetimeRegion;
-    rdf:_2 :Gravity.
 
 #Galaxies
 :MilkyWay a dbo:Galaxy;
@@ -123,3 +146,23 @@ _:n2 a rdf:Bag;
 :Neptune a :Planet
     :Satellites
         (:Triton)
+
+
+:Zodiac
+    a :Place;
+    :shape "circle";
+    :madeOf :Constellation;
+    :idk[
+       a rdf:Bag;
+        rdf:_1  :Taurus;
+        rdf:_2 :Virgo;
+        rdf:_3 :Gemini;
+        rdf:_4 :Cancer;
+        rdf:_5 :Aquarius;
+        rdf:_6 :Aries;
+        rdf:_7 :Capricornus;
+        rdf:_8 :Leo;
+        rdf:_9 :Libra;
+        rdf:_10 :Pisces;
+        rdf:_11 :Sagittarius;
+        rdf:_12 :Scorpius].
