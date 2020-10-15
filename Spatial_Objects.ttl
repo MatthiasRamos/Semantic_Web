@@ -9,40 +9,40 @@
 @prefix local: <https://inf8410.com/tp/astronomical-object/>.
 
 local:Galaxies
-    rdf:type rdfs:Class;
+    a rdfs:Class;
     local:ourGalaxy local:MilkyWay;
     local:isMadeOf :GalaxiesComponents.
 
 local:ourGalaxy
-    rdf:type rdf:Property;
+    a rdf:Property;
     rdfs:subPropertyOf local:UniverseElements;
     rdfs:comment "Contains our solar system";
     rdfs:domain local:Galaxy;
     rdfs:range local:fundamentalUnitsOfUniverseStructure.
 
 
-local:MultiplanetarySystems
-    rdf:type rdfs:Class
+local:PlanetarySystems
+    a rdfs:Class
 
 local:fundamentalUnitsOfUniverseStructure
-    rdf:type rdfs:Class.
+    a rdfs:Class.
 
 
 local:isMadeOf
-    rdf:type rdf:Property;
+    a rdf:Property;
     rdfs:subPropertyOf local:UniverseElements;
     rdfs:comment "Elements that compose a galaxy";
     rdfs:domain local:Matter;
     rdfs:range local:KnownMatter.
 
 local:Matter
-    rdf:type rdfs:Class.
+    a rdfs:Class.
 
 local:KnownMatter
     rdf:subClassOf local:Matter.
 
 local:GalaxiesComponents
-    rdf:type rdf:Bag;
+    a rdf:Bag;
     rdf:_1 :Stars;
     rdf:_2 :InterstellarGas;
     rdf:_3 :Dust;
@@ -50,28 +50,28 @@ local:GalaxiesComponents
     rdf:_5 :DarkMatter.
 
 local:BlackHoles
-    rdf:type local:Class;
+    a local:Class;
     local:isDefinedBy _:n2.
 
 local:isDefinedBy
-    rdf:type rdf:Property;
+    a rdf:Property;
     rdfs:subPropertyOf local:Description;
     rdfs:comment "Elements that describe a BlackHole";
     rdfs:domain local:Definition;
     rdfs:range local:KnownPhysics.
 
 local:Definition
-    rdf:type rdfs:Class.
+    a rdfs:Class.
 
 local:Distance
-    rdf:type rdf:Property
+    a rdf:Property
     rdfs:comments "Distance from Earth, in light year"
 
 local:KnownPhysics
-    rdf:type rdfs:Class.
+    a rdfs:Class.
 
 _:n2
-    rdf:type rdf:Bag;
+    a rdf:Bag;
     rdf:_1 :SpacetimeRegion;
     rdf:_2 :Gravity.
 
@@ -81,8 +81,41 @@ local:MilkyWay
     local:containsOur local:SolarSystem;
 
 local:SolarSystem
+    a local:PlanetarySystems;
     local:hasStar local:Sun;
     local:ApparentMagnitude "-26.74"^^xsd:decimal;
     local:ConfirmedPlanets "8"^^xsd:integer;
     local:Distance "1.6E-5"^^xsd:double;
     local:Mass 1.0.
+    local:Planets
+        (local:Mercury local:Venus local:Earth local:Mars local:Jupyter local:Saturn local:Uranus local:Neptune)
+
+local:Mercury
+    a local:Planet
+local:Venus
+    a local:Planet
+local:Earth
+    a local:Planet
+    local:Satellites
+        (local:Moon)
+local:Mars
+    a local:Planet
+    local:Satellites
+        (local:Phobos local:Deimos)
+local:Jupyter
+    a local:Planet
+    local:Satellites
+        (local:Io local:Europa local:Ganymede local:Callisto)
+local:Saturn
+    a local:Planet
+    local:Satellites
+        (local:Pan local:Daphnis local:Atlas local:Prometheus local:Pandora local:Epimetheus local:Janus local:Mimas local:Methone local:Anthe local:Pallene local:Enceladus local:Tethys local:Telesto local:Calypso local:Dione local:Helene local:Polydeuces local:Rhea local:Titan local:Hyperion local:Iapetus local:Kiviuq local:Ijiraq local:Phoebe local:Paaliaq local:Skathi local:Albiorix local:Bebhionn local:Erriapo local:Skoll local:Siarnaq local:Tarqeq
+     local:Greip local:Hyrrokkin local:Jarnsaxa local:Tarvos local:Mundilfari local:Bergelmir local:Narvi local:Suttungr local:Hati local:Farbauti local:Thrymr local:Aegir local:Bestla local:Fenrir local:Surtur local:Kari local:Ymir local:Loge local:Fornjot)
+local:Uranus
+    a local:Planet
+    local:Satellites
+        (local:Puck local:Miranda local:Ariel local:Umbriel local:Titania local:Obéron)
+local:Neptune
+    a local:Planet
+    local:Satellites
+        (local:Triton)
