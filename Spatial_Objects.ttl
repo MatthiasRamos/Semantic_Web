@@ -14,7 +14,7 @@
 #########################
 #       Classes         #
 #########################
-
+#Commentaire a enelever
 :AstronomicalObject a rdfs:Class;
     rdfs:subClassOf :deepSkyObject.
 
