@@ -6,42 +6,44 @@
 @prefix time: <https://www.w3.org/TR/owl-time/>.
 @prefix dbo: <http://dbpedia.org/ontology/>
 
-@prefix local: <https://inf8410.com/tp/astronomical-object/>.
+@prefix : <https://inf8410.com/tp/astronomical-object/>.
 
-local:Galaxies
-    a rdfs:Class;
-    local:ourGalaxy local:MilkyWay;
-    local:isMadeOf :GalaxiesComponents.
 
-local:ourGalaxy
+
+:Galaxy
+    rdfs:subClassOf dbo:CelestialBody;
+    :ourGalaxy :MilkyWay;
+    :isMadeOf :GalaxiesComponents.
+
+:ourGalaxy
     a rdf:Property;
-    rdfs:subPropertyOf local:UniverseElements;
+    rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Contains our solar system";
-    rdfs:domain local:Galaxy;
-    rdfs:range local:fundamentalUnitsOfUniverseStructure.
+    rdfs:domain :Galaxy;
+    rdfs:range :fundamentalUnitsOfUniverseStructure.
 
 
-local:PlanetarySystems
-    a rdfs:Class
+:PlanetarySystems
+    rdfs:subClassOf dbo:CelestialBody;
 
-local:fundamentalUnitsOfUniverseStructure
+:fundamentalUnitsOfUniverseStructure
     a rdfs:Class.
 
 
-local:isMadeOf
+:isMadeOf
     a rdf:Property;
-    rdfs:subPropertyOf local:UniverseElements;
+    rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Elements that compose a galaxy";
-    rdfs:domain local:Matter;
-    rdfs:range local:KnownMatter.
+    rdfs:domain :Matter;
+    rdfs:range :KnownMatter.
 
-local:Matter
+:Matter
     a rdfs:Class.
 
-local:KnownMatter
-    rdf:subClassOf local:Matter.
+:KnownMatter
+    rdf:subClassOf :Matter.
 
-local:GalaxiesComponents
+:GalaxiesComponents
     a rdf:Bag;
     rdf:_1 :Stars;
     rdf:_2 :InterstellarGas;
@@ -49,25 +51,30 @@ local:GalaxiesComponents
     rdf:_4 :Emptiness;
     rdf:_5 :DarkMatter.
 
-local:BlackHoles
-    a local:Class;
-    local:isDefinedBy _:n2.
+:BlackHoles
+    a :Class;
+    :isDefinedBy _:n2.
 
-local:isDefinedBy
+:isDefinedBy
     a rdf:Property;
-    rdfs:subPropertyOf local:Description;
+    rdfs:subPropertyOf :Description;
     rdfs:comment "Elements that describe a BlackHole";
-    rdfs:domain local:Definition;
-    rdfs:range local:KnownPhysics.
+    rdfs:domain :Definition;
+    rdfs:range :KnownPhysics.
 
-local:Definition
+:Definition
     a rdfs:Class.
 
-local:Distance
+:Distance
     a rdf:Property
-    rdfs:comments "Distance from Earth, in light year"
+    rdfs:comment "Distance from Earth, in light year"
 
-local:KnownPhysics
+:Mass
+    a rdf:Property
+    rdfs:range :
+    rdfs:comment "Object Mass"
+
+:KnownPhysics
     a rdfs:Class.
 
 _:n2
@@ -75,47 +82,48 @@ _:n2
     rdf:_1 :SpacetimeRegion;
     rdf:_2 :Gravity.
 
-local:MilkyWay
-    rdfs:type dbo:Galaxy;
-    local:name "Milky Way";
-    local:containsOur local:SolarSystem;
+:MilkyWay
+    a dbo:Galaxy;
+    :name "Milky Way";
+    :containsOur :SolarSystem;
 
-local:SolarSystem
-    a local:PlanetarySystems;
-    local:hasStar local:Sun;
-    local:ApparentMagnitude "-26.74"^^xsd:decimal;
-    local:ConfirmedPlanets "8"^^xsd:integer;
-    local:Distance "1.6E-5"^^xsd:double;
-    local:Mass 1.0.
-    local:Planets
-        (local:Mercury local:Venus local:Earth local:Mars local:Jupyter local:Saturn local:Uranus local:Neptune)
+:SolarSystem
+    a :PlanetarySystems;
+    :hasStar :Sun;
+    :ApparentMagnitude "-26.74"^^xsd:decimal;
+    :ConfirmedPlanets "8"^^xsd:integer;
+    :Distance "1.6E-5"^^xsd:double;
+    :Mass 1.0.
+    :Planets
+        (:Mercury :Venus :Earth :Mars :Jupyter :Saturn :Uranus :Neptune)
 
-local:Mercury
-    a local:Planet
-local:Venus
-    a local:Planet
-local:Earth
-    a local:Planet
-    local:Satellites
-        (local:Moon)
-local:Mars
-    a local:Planet
-    local:Satellites
-        (local:Phobos local:Deimos)
-local:Jupyter
-    a local:Planet
-    local:Satellites
-        (local:Io local:Europa local:Ganymede local:Callisto)
-local:Saturn
-    a local:Planet
-    local:Satellites
-        (local:Pan local:Daphnis local:Atlas local:Prometheus local:Pandora local:Epimetheus local:Janus local:Mimas local:Methone local:Anthe local:Pallene local:Enceladus local:Tethys local:Telesto local:Calypso local:Dione local:Helene local:Polydeuces local:Rhea local:Titan local:Hyperion local:Iapetus local:Kiviuq local:Ijiraq local:Phoebe local:Paaliaq local:Skathi local:Albiorix local:Bebhionn local:Erriapo local:Skoll local:Siarnaq local:Tarqeq
-     local:Greip local:Hyrrokkin local:Jarnsaxa local:Tarvos local:Mundilfari local:Bergelmir local:Narvi local:Suttungr local:Hati local:Farbauti local:Thrymr local:Aegir local:Bestla local:Fenrir local:Surtur local:Kari local:Ymir local:Loge local:Fornjot)
-local:Uranus
-    a local:Planet
-    local:Satellites
-        (local:Puck local:Miranda local:Ariel local:Umbriel local:Titania local:Obéron)
-local:Neptune
-    a local:Planet
-    local:Satellites
-        (local:Triton)
+:Mercury
+    a :Planet
+    :Mass
+:Venus
+    a :Planet
+:Earth
+    a :Planet
+    :Satellites
+        (:Moon)
+:Mars
+    a :Planet
+    :Satellites
+        (:Phobos :Deimos)
+:Jupyter
+    a :Planet
+    :Satellites
+        (:Io :Europa :Ganymede :Callisto)
+:Saturn
+    a :Planet
+    :Satellites
+        (:Pan :Daphnis :Atlas :Prometheus :Pandora :Epimetheus :Janus :Mimas :Methone :Anthe :Pallene :Enceladus :Tethys :Telesto :Calypso :Dione :Helene :Polydeuces :Rhea :Titan :Hyperion :Iapetus :Kiviuq :Ijiraq :Phoebe :Paaliaq :Skathi :Albiorix :Bebhionn :Erriapo :Skoll :Siarnaq :Tarqeq
+         :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot)
+:Uranus
+    a :Planet
+    :Satellites
+        (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron)
+:Neptune
+    a :Planet
+    :Satellites
+        (:Triton)
