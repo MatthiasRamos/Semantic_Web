@@ -1,10 +1,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix foaf: <http://xmlns.com/foaf/spec/>.
 @prefix schema: <https://schema.org/docs/schemas.html>.
-@prefix dublin core: <http://dublincore.org/documents/dcmi-terms/>.
+@prefix dc: <http://dublincore.org/documents/dcmi-terms/>.
 @prefix event: <http://motools.sourceforge.net/event/event.html>.
 @prefix time: <https://www.w3.org/TR/owl-time/>.
-@prefix dbo: <http://dbpedia.org/ontology/>
+@prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix : <https://inf8410.com/tp/astronomical-object#>.
 @prefix xsd: <https://www.w3.org/2001/XMLSchema/#>.
@@ -15,7 +15,7 @@
 #       Classes         #
 #########################
 
-:AstronomicalObject a rdfs:Class
+:AstronomicalObject a rdfs:Class;
     rdfs:subClassOf :deepSkyObject.
 
 :Galaxy a rdfs:Class;
@@ -34,10 +34,10 @@
 :Star a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody.
 
-:ArtificalSatellite a Class
+:ArtificalSatellite a rdf:Class;
     rdfs:subClassOf dbo:Satellite.
 
-:Asteroid a rdfs:Class
+:Asteroid a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody.
 
 :Satellite
@@ -45,23 +45,23 @@
 
 
 :PlanetarySystems a rdfs:Class;
-    rdfs:subClassOf dbo:CelestialBody;
+    rdfs:subClassOf dbo:CelestialBody.
 
-:BlackHoles a :Class
+:BlackHoles a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :isDefinedBy
     [
     rdf:type rdf:Bag;
     rdf:_1 :SpacetimeRegion;
-    rdf:_2 :Gravity.
-    ]
+    rdf:_2 :Gravity
+    ].
 
 
 :fundamentalUnitsOfUniverseStructure a rdfs:Class.
 
 :Matter a rdfs:Class.
 
-:KnownMatter a :Class
+:KnownMatter a :Class;
     rdf:subClassOf :Matter.
 
 :KnownPhysics a rdfs:Class.
@@ -81,12 +81,12 @@
     rdfs:domain :Definition;
     rdfs:range :KnownPhysics.
 
-:Distance a rdf:Property
-    rdfs:comment "Distance from Earth, in light year"
+:Distance a rdf:Property;
+    rdfs:comment "Distance from Earth, in light year".
 
-:Mass a rdf:Property
-    rdfs:range :
-    rdfs:comment "Object Mass"
+:Mass a rdf:Property;
+    rdfs:range :AstronomicalObject;
+    rdfs:comment "Object Mass".
 
 :isMadeOf a rdf:Property;
     rdfs:subPropertyOf :UniverseElements;
@@ -108,7 +108,7 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     :name "Milky Way";
-    :containsOur :SolarSystem;
+    :containsOur :SolarSystem.
 
 #PlanetarySystems
 
@@ -117,35 +117,35 @@
     :ApparentMagnitude "-26.74"^^xsd:decimal;
     :ConfirmedPlanets "8"^^xsd:integer;
     :Distance "1.6E-5"^^xsd:double;
-    :Mass 1.0.
+    :Mass 1.0;
     :Planets
-        (:Mercury :Venus :Earth :Mars :Jupyter :Saturn :Uranus :Neptune)
+        (:Mercury :Venus :Earth :Mars :Jupyter :Saturn :Uranus :Neptune).
 
 
 #Planets
 
-:Mercury a :Planet
-    :Mass
-:Venus a :Planet
-:Earth a :Planet
+:Mercury a :Planet;
+    :Mass "..".
+:Venus a :Planet.
+:Earth a :Planet;
     :Satellites
-        (:Moon)
-:Mars a :Planet
+        (:Moon).
+:Mars a :Planet;
     :Satellites
-        (:Phobos :Deimos)
-:Jupyter a :Planet
+        (:Phobos :Deimos).
+:Jupyter a :Planet;
     :Satellites
-        (:Io :Europa :Ganymede :Callisto)
-:Saturn a :Planet
+        (:Io :Europa :Ganymede :Callisto).
+:Saturn a :Planet;
     :Satellites
         (:Pan :Daphnis :Atlas :Prometheus :Pandora :Epimetheus :Janus :Mimas :Methone :Anthe :Pallene :Enceladus :Tethys :Telesto :Calypso :Dione :Helene :Polydeuces :Rhea :Titan :Hyperion :Iapetus :Kiviuq :Ijiraq :Phoebe :Paaliaq :Skathi :Albiorix :Bebhionn :Erriapo :Skoll :Siarnaq :Tarqeq
-         :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot)
-:Uranus a :Planet
+         :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot).
+:Uranus a :Planet;
     :Satellites
-        (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron)
-:Neptune a :Planet
+        (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron).
+:Neptune a :Planet;
     :Satellites
-        (:Triton)
+        (:Triton).
 
 
 :Zodiac
