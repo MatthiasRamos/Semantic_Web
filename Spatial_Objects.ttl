@@ -21,7 +21,16 @@
 :Galaxy a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :ourGalaxy :MilkyWay;
-    :isMadeOf :GalaxiesComponents.
+    :isMadeOf :GalaxiesComponents;
+    :famousGalaxies
+    [
+    rdf:type rdf:Bag;
+    rdf:_1 :MilkyWay;
+    rdf:_2 :LMC;
+    rdf:_3 :Andromeda;
+    rdf:_4 :CigarGalaxy;
+    rdf:_5 :PinwheelGalaxy
+    ].
 
 :Definition a rdfs:Class.
 
@@ -43,7 +52,6 @@
 :Satellite
     rdfs:subClassOf dbo:CelestialBody.
 
-
 :PlanetarySystems a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody.
 
@@ -54,8 +62,14 @@
     rdf:type rdf:Bag;
     rdf:_1 :SpacetimeRegion;
     rdf:_2 :Gravity
+    ];
+    :mostMassive
+    [
+    rdf:type rdf:Bag;
+    rdf:_1 :TON618;
+    rdf:_2 :Holmberg15A;
+    rdf:_3 :IC1101
     ].
-
 
 :fundamentalUnitsOfUniverseStructure a rdfs:Class.
 
@@ -66,9 +80,14 @@
 
 :KnownPhysics a rdfs:Class.
 
+:LightYear a dbo:Light-year.
+
+:SolarMass a dbo:Solar_mass.
+
 #########################
 #   Objects Properties  #
 #########################
+
 :ourGalaxy a rdf:Property;
     rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Contains our solar system";
@@ -108,10 +127,47 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     :name "Milky Way";
-    :containsOur :SolarSystem.
+    :containsOur :SolarSystem;
+    :diameter "1E5"^^dbo:LightYear;
+    :Distance "0"^^xsd:integer.
+
+:LMC a dbo:Galaxy;
+    :name "LMC";
+    :diameter "1.4E4"^^dbo:LightYear;
+    :Distance "1.58E5"^^xsd:double.
+
+:Andromeda a dbo:Galaxy;
+    :name "Andromeda";
+    :diameter "2.2E5"^^dbo:LightYear;
+    :Distance "2.5E6"^^xsd:double.
+
+:CigarGalaxy a dbo:Galaxy;
+    :name "Cigar Galaxy";
+    :diameter "3.7E5"^^dbo:LightYear;
+    :Distance "1.15E7"^^xsd:double.
+
+:PinwheelGalaxy a dbo:Galaxy;
+    :name "Pinwheel Galaxy";
+    :diameter "1.7E5"^^dbo:LightYear;
+    :Distance "2.087E7"^^xsd:double.
+
+# BlackHoles
+:TON618 a :BlackHoles;
+    :name "TON 618";
+    :Mass "6.6E10"^^:SolarMass;
+    :howMassWasObtain "Estimated from quasar HB emission line correlation".
+
+:Holmberg15A a :BlackHoles;
+    :name "Holmberg 15 A";
+    :Mass "4.0E10"^^:SolarMass;
+    :howMassWasObtain "Mass specified obtained through orbit-based, axisymmetric Schwarzschild models".
+
+:IC1101 a :BlackHoles;
+    :name "IC 1101";
+    :Mass "7E10"^^:SolarMass;
+    :howMassWasObtain "Estimated from properties of the host galaxy; mass has not been measured directly".
 
 #PlanetarySystems
-
 :SolarSystem a :PlanetarySystems;
     :hasStar :Sun;
     :ApparentMagnitude "-26.74"^^xsd:decimal;
@@ -120,7 +176,6 @@
     :Mass 1.0;
     :Planets
         (:Mercury :Venus :Earth :Mars :Jupyter :Saturn :Uranus :Neptune).
-
 
 #Planets
 
@@ -146,7 +201,6 @@
 :Neptune a :Planet;
     :Satellites
         (:Triton).
-
 
 :Zodiac
     a :Place;
