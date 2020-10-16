@@ -202,6 +202,26 @@
     :Satellites
         (:Triton).
 
+:Constellation
+      a :Place
+      rdfs:subClassOf :CelestialBody;
+      :count "88"^^xsd:integer;
+      :region local:Sky;
+      :recognizedBy :InternationalAstronomicalUnion;
+      :recognitionYear "1922"^^xsd:integer.
+
+:Sky
+     a :organisation.
+
+:InternationalAstronomicalUnion
+     a :organisation.
+
+:ConstellationFamily
+    rdfs:subClassOf :Constellation;
+    :collectionOf
+            (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
+                :HeavenlyWaters :Bayer :LaCaille).
+
 :Zodiac
     a :Place;
     :shape "circle";
