@@ -1,12 +1,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix foaf: <http://xmlns.com/foaf/spec/>.
 @prefix schema: <https://schema.org/docs/schemas.html>.
 @prefix dc: <http://dublincore.org/documents/dcmi-terms/>.
 @prefix event: <http://motools.sourceforge.net/event/event.html>.
 @prefix time: <https://www.w3.org/TR/owl-time/>.
 @prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix : <https://inf8410.com/tp/astronomical-object#>.
 @prefix xsd: <https://www.w3.org/2001/XMLSchema/#>.
 
 @prefix : <https://inf8410.com/tp/astronomical-object/>.
@@ -44,6 +42,7 @@
     rdfs:subClassOf dbo:CelestialBody.
 
 :ArtificalSatellite a rdf:Class;
+    rdfs:label "PlanetarySystems";
     rdfs:subClassOf dbo:Satellite.
 
 :Asteroid a rdfs:Class;
@@ -53,9 +52,11 @@
     rdfs:subClassOf dbo:CelestialBody.
 
 :PlanetarySystems a rdfs:Class;
+    rdfs:label "Planetary Systems";
     rdfs:subClassOf dbo:CelestialBody.
 
-:BlackHoles a rdfs:Class;
+:BlackHole a rdfs:Class;
+    rdfs:label "Black Hole";
     rdfs:subClassOf dbo:CelestialBody;
     :isDefinedBy
     [
@@ -76,13 +77,26 @@
 :Matter a rdfs:Class.
 
 :KnownMatter a :Class;
+    rdfs:label "Known Matter";
     rdf:subClassOf :Matter.
 
-:KnownPhysics a rdfs:Class.
+:KnownPhysics a rdfs:Class;
+    rdfs:label "Known Physics".
 
-:LightYear a dbo:Light-year.
 
-:SolarMass a dbo:Solar_mass.
+:ConstellationFamily a rdfs:Class
+    rdfs:subClassOf :Constellation;
+    :collectionOf
+            (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
+                :HeavenlyWaters :Bayer :LaCaille).
+
+
+:Constellation a rdfs:Class
+      rdfs:subClassOf :CelestialBody;
+      :count "88"^^xsd:integer;
+      :recognizedBy :InternationalAstronomicalUnion;
+      :recognitionYear "1922"^^xsd:integer.
+
 
 #########################
 #   Objects Properties  #
@@ -126,56 +140,93 @@
 
 #Galaxies
 :MilkyWay a dbo:Galaxy;
+    rdfs:label "MilkyWay";
     :name "Milky Way";
     :containsOur :SolarSystem;
     :diameter "1E5"^^dbo:LightYear;
     :Distance "0"^^xsd:integer.
 
 :LMC a dbo:Galaxy;
+    rdfs:label "Large Magellanic Cloud";
     :name "LMC";
     :diameter "1.4E4"^^dbo:LightYear;
     :Distance "1.58E5"^^xsd:double.
 
 :Andromeda a dbo:Galaxy;
+    rdfs:label "Andromeda";
     :name "Andromeda";
     :diameter "2.2E5"^^dbo:LightYear;
     :Distance "2.5E6"^^xsd:double.
 
 :CigarGalaxy a dbo:Galaxy;
+    rdfs:label "Cigar Galaxy";
     :name "Cigar Galaxy";
     :diameter "3.7E5"^^dbo:LightYear;
     :Distance "1.15E7"^^xsd:double.
 
 :PinwheelGalaxy a dbo:Galaxy;
+    rdfs:label "Pinwheel Galaxy";
     :name "Pinwheel Galaxy";
     :diameter "1.7E5"^^dbo:LightYear;
     :Distance "2.087E7"^^xsd:double.
 
+#Stars
+:Sun a :Star;
+    rdfs:label "Sun";
+    :ApparentMagnitude "-26.74"^^xsd:decimal;
+    :Distance "1.6E-5"^^xsd:double;
+    :Mass "1.0"^^dbo:SolarMass.
+
+:AlphaCentauriA a :Star;
+    rdfs:label "Rigil Kentaurus";
+    :ApparentMagnitude "-0.01"^^xsd:decimal;
+    :Distance "4,365"^^xsd:double;
+    :Mass "1.1"^^dbo:SolarMass.
+
+:AlphaCentauriB a :Star;
+    rdfs:label "Rigil Kentaurus B";
+    :ApparentMagnitude "1,35"^^xsd:decimal;
+    :Distance "4,365"^^xsd:double;
+    :Mass "0.907"^^dbo:SolarMass.
+
+:AlphaCentauriC a :Star;
+    rdfs:label "Proxima Centauri";
+    :ApparentMagnitude "15.60"^^xsd:decimal;
+    :Distance "4.244"^^xsd:double;
+    :Mass "0.122"^^dbo:SolarMass.
+
+
 # BlackHoles
-:TON618 a :BlackHoles;
+:TON618 a :BlackHole;
     :name "TON 618";
-    :Mass "6.6E10"^^:SolarMass;
+    :Mass "6.6E10"^^dbo:SolarMass;
     :howMassWasObtain "Estimated from quasar HB emission line correlation".
 
-:Holmberg15A a :BlackHoles;
+:Holmberg15A a :BlackHole;
     :name "Holmberg 15 A";
-    :Mass "4.0E10"^^:SolarMass;
+    :Mass "4.0E10"^^dbo:SolarMass;
     :howMassWasObtain "Mass specified obtained through orbit-based, axisymmetric Schwarzschild models".
 
-:IC1101 a :BlackHoles;
+:IC1101 a :BlackHole;
     :name "IC 1101";
-    :Mass "7E10"^^:SolarMass;
+    :Mass "7E10"^^dbo:SolarMass;
     :howMassWasObtain "Estimated from properties of the host galaxy; mass has not been measured directly".
 
 #PlanetarySystems
 :SolarSystem a :PlanetarySystems;
+    rdfs:label "Solar System";
     :hasStar :Sun;
-    :ApparentMagnitude "-26.74"^^xsd:decimal;
-    :ConfirmedPlanets "8"^^xsd:integer;
-    :Distance "1.6E-5"^^xsd:double;
-    :Mass 1.0;
     :Planets
         (:Mercury :Venus :Earth :Mars :Jupyter :Saturn :Uranus :Neptune).
+
+:AlphaCentauri a :PlanetarySystems;
+    rdfs:label "Alpha Centauri";
+    :hasStar :AlphaCentauriA;
+    :hasStar :AlphaCentauriB;
+    :hasStar :AlphaCentauriC;
+    :Planets
+        (:ProximaCentauri_b :ProximaCentauri_c).
+
 
 #Planets
 
@@ -202,25 +253,13 @@
     :Satellites
         (:Triton).
 
-:Constellation
-      a :Place
-      rdfs:subClassOf :CelestialBody;
-      :count "88"^^xsd:integer;
-      :region local:Sky;
-      :recognizedBy :InternationalAstronomicalUnion;
-      :recognitionYear "1922"^^xsd:integer.
+:ProximaCentauri_b a :Planet;
 
-:Sky
-     a :organisation.
+:ProximaCentauri_c a :Planet;
 
 :InternationalAstronomicalUnion
      a :organisation.
 
-:ConstellationFamily
-    rdfs:subClassOf :Constellation;
-    :collectionOf
-            (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
-                :HeavenlyWaters :Bayer :LaCaille).
 
 :Zodiac
     a :Place;
