@@ -84,14 +84,14 @@
     rdfs:label "Known Physics".
 
 
-:ConstellationFamily a rdfs:Class
+:ConstellationFamily a rdfs:Class;
     rdfs:subClassOf :Constellation;
     :collectionOf
             (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
                 :HeavenlyWaters :Bayer :LaCaille).
 
 
-:Constellation a rdfs:Class
+:Constellation a rdfs:Class;
       rdfs:subClassOf :CelestialBody;
       :count "88"^^xsd:integer;
       :recognizedBy :InternationalAstronomicalUnion;
@@ -253,12 +253,11 @@
     :Satellites
         (:Triton).
 
-:ProximaCentauri_b a :Planet;
+:ProximaCentauri_b a :Planet.
 
-:ProximaCentauri_c a :Planet;
+:ProximaCentauri_c a :Planet.
 
-:InternationalAstronomicalUnion
-     a :organisation.
+:InternationalAstronomicalUniona a :organisation.
 
 
 :Zodiac
