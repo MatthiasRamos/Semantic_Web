@@ -115,7 +115,7 @@
       rdfs:subClassOf :CelestialBody;
       :count "88"^^xsd:integer;
       :recognizedBy :InternationalAstronomicalUnion;
-      :recognitionYear "1922"^^xsd:integer.
+      :recognitionYear "1922"^^xsd:int.
 
 
 #########################
@@ -175,6 +175,20 @@
     rdfs:domain :Galaxy;
     rdfs:range xsd:string.
 
+:count a rdf:DatatypeProperty;
+    rdfs:comment "Total number of a collection of items";
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range xsd:int.
+
+:recognizedBy a rdf:Property;
+    rdfs:label "Recognized by";
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range Organisation.
+
+:recognitionYear a rdf:DatatypeProperty;
+      rdfs:label "Recognition Year";
+      rdfs:domain dbo:CelestialBody;
+      rdfs:range xsd:int.
 
 #########################
 #      Instances        #
