@@ -114,7 +114,6 @@
 
 :Constellation a rdfs:Class;
       rdfs:subClassOf :CelestialBody;
-      :count "88"^^xsd:integer;
       :recognizedBy :InternationalAstronomicalUnion;
       :recognitionYear "1922"^^xsd:int.
 
@@ -175,11 +174,6 @@
     rdfs:comment "Other designations for the label";
     rdfs:domain :Galaxy;
     rdfs:range xsd:string.
-
-:count a rdf:DatatypeProperty;
-    rdfs:comment "Total number of a collection of items";
-    rdfs:domain dbo:CelestialBody;
-    rdfs:range xsd:int.
 
 :recognizedBy a rdf:Property;
     rdfs:label "Recognized by";
