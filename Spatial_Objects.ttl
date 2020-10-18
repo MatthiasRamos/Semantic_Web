@@ -117,7 +117,7 @@
 
 :distance a rdf:Property;
     rdfs:comment "Distance from Earth, in light year";
-    rdfs:domain dbo:CelestialBody
+    rdfs:domain dbo:CelestialBody.
 
 :mass a rdf:Property;
     rdfs:range :AstronomicalObject;
@@ -237,10 +237,10 @@
 
 :Mercury a :Planet;
     :mass "0.055"^^dbr:Earth_Mass.
-:Venus a :Planet
+:Venus a :Planet;
     :mass "0.815"^^dbr:Earth_Mass.
 :Earth a :Planet;
-    :mass "5.972E24kg".
+    :mass "5.972E24kg";
     :Satellites
         (:Moon).
 :Mars a :Planet;
