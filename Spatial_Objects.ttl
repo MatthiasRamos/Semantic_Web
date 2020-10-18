@@ -56,11 +56,11 @@
 
 :OpenCluster
     :haslocation :MilkyWay;
-    rdfs:subClassOf :StarCluster.
+    rdfs:subClassOf :StarCluster. #should be rdf:type
 
 :GlobularCluster
     :hasLocation :MilkyWay;
-    rdfs:subClassOf :StarCluster.
+    rdfs:subClassOf :StarCluster. #should be rdf:type
 
 :ArtificalSatellite a rdf:Class;
     rdfs:label "PlanetarySystems";
@@ -172,7 +172,8 @@
 
 :knowAs a rdf:Property;
     rdfs:comment "Other designations for the label";
-    rdfs:domain :Galaxy.
+    rdfs:domain :Galaxy;
+    rdfs:range xsd:string.
 
 
 #########################
@@ -335,23 +336,23 @@
 
 #StarClusters
 
-:Pleiades a:OpenCluster;
+:Pleiades a :OpenCluster;
     rdfs:label "Pleiades";
-    :knowAs "Seven Sisters and Messier 45";
+    :knowAs "Seven Sisters and Messier 45"^^xsd:string;
     :hasLocation :Taurus;
     :distance "444"^^dbo:LightYear;
     :ApparentMagnitude "1.6"^^xsd:decimal.
 
-:Hyades a:OpenCluster;
+:Hyades a :OpenCluster;
     rdfs:label "Hyades";
-    :knowAs "CaldWell 41, Collinder 50, Melotte 25";
+    :knowAs "CaldWell 41, Collinder 50, Melotte 25"^^xsd:string;
     :hasLocation :Taurus;
     :distance "153"^^dbo:LightYear;
     :ApparentMagnitude "0.5"^^xsd:decimal;
     :mass "400"^^dbr:Solar_Mass.
 
-:47Tucanae a:GlobularCluster;
-    rdfs:label "47 Tucanae"
-    :hasLocation :Tucana;
-    :ApparentMagnitude "4.09"^^xsd:decimal.
+:47Tucanae a :GlobularCluster;
+    rdfs:label "47 Tucanae";
+    :hasLocation dbo:Tucana;
+    :ApparentMagnitude "4.09"^^xsd:decimal;
     :distance "13000"^^dbo:LightYear.
