@@ -42,6 +42,25 @@
 :Star a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody.
 
+:StarCluster
+    rdfs:subClassOf dbo:CelestialBody;
+    :groupOf :Stars;
+    :visibleToEye
+    [
+    rdf:type rdf:Bag;
+    rdf:_1 :Pleiades;
+    rdf:_2 :Hyades;
+    rdf:_3 :47Tucanae;
+    ].
+
+:OpenCluster
+    :haslocation :MilkyWay;
+    rdfs:subClassOf :StarCluster.
+
+:GlobularCluster
+    :hasLocation :MilkyWay;
+    rdfs:subClassOf :StarCluster.
+
 :ArtificalSatellite a rdf:Class;
     rdfs:label "PlanetarySystems";
     rdfs:subClassOf dbo:Satellite.
@@ -91,7 +110,6 @@
             (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
                 :HeavenlyWaters :Bayer :LaCaille).
 
-
 :Constellation a rdfs:Class;
       rdfs:subClassOf :CelestialBody;
       :count "88"^^xsd:integer;
@@ -123,6 +141,12 @@
     rdfs:range :AstronomicalObject;
     rdfs:comment "Object mass".
 
+:shape a rdf:Property;
+    rdfs:comment "Form of an object in the Universe"
+    rdfs:domain  dbo:CelestialBody;
+    rdfs:range dbo:ElementaryShapes.
+
+
 :isMadeOf a rdf:Property;
     rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Elements that compose a galaxy";
@@ -133,6 +157,18 @@
     rdfs:comment "Define the star of a System";
     rdfs:domain :PlanetarySystems;
     rdfs:range :Star.
+
+:hasLocation a rdf:Property;
+    rdfs:subPropertyOf: location;
+    rdfs:comment "The location of a thing in the Universe";
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range :Place.
+
+:visibleToEye a rdf:Property;
+    rdfs:comment "Visible to the naked eye";
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range :KnownMatter.
+
 
 #########################
 #      Instances        #
@@ -269,14 +305,14 @@
 
 :ProximaCentauri_c a :Planet.
 
-:InternationalAstronomicalUniona a :organisation.
+:InternationalAstronomicalUnion a dbo:Organisation;
+     rdfs:label "International Astronomical Union".
 
 
 :Zodiac
-    a :Place;
+    :hasLocation "Along the ecliptic"
     :shape "circle";
-    :madeOf :Constellation;
-    :idk[
+    :ZodiacConstellations[
        a rdf:Bag;
         rdf:_1  :Taurus;
         rdf:_2 :Virgo;
