@@ -43,7 +43,7 @@
     rdfs:label "Star";
     rdfs:subClassOf dbo:CelestialBody.
 
-:StarCluster
+:StarCluster a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :groupOf :Stars;
     :visibleToEye
@@ -54,20 +54,21 @@
     rdf:_3 :47Tucanae;
     ].
 
-:OpenCluster
+:OpenCluster a rdfs:Class;
+    rdfs:subClassOf dbo:StarCluster;
     :haslocation :MilkyWay;
     rdfs:subClassOf :StarCluster. #should be rdf:type
 
-:GlobularCluster
+:GlobularCluster a rdfs:Class;
+    rdfs:subClassOf dbo:StarCluster;
     :hasLocation :MilkyWay;
     rdfs:subClassOf :StarCluster. #should be rdf:type
 
 :ArtificalSatellite a rdf:Class;
-    rdfs:label "PlanetarySystems";
     rdfs:subClassOf dbo:Satellite.
 
-:Asteroid a rdfs:Class;
-    rdfs:subClassOf dbo:CelestialBody.
+#:Asteroid a rdfs:Class;
+#    rdfs:subClassOf dbo:CelestialBody.
 
 :Satellite
     rdfs:subClassOf dbo:CelestialBody.
@@ -183,7 +184,7 @@
 :recognizedBy a rdf:Property;
     rdfs:label "Recognized by";
     rdfs:domain dbo:CelestialBody;
-    rdfs:range Organisation.
+    rdfs:range dbo:Organisation.
 
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
