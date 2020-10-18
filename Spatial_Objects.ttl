@@ -142,7 +142,7 @@
     rdfs:comment "Object mass".
 
 :shape a rdf:Property;
-    rdfs:comment "Form of an object in the Universe"
+    rdfs:comment "Form of an object in the Universe";
     rdfs:domain  dbo:CelestialBody;
     rdfs:range dbo:ElementaryShapes.
 
@@ -159,7 +159,7 @@
     rdfs:range :Star.
 
 :hasLocation a rdf:Property;
-    rdfs:subPropertyOf: location;
+    rdfs:subPropertyOf :location;
     rdfs:comment "The location of a thing in the Universe";
     rdfs:domain dbo:CelestialBody;
     rdfs:range :Place.
@@ -280,24 +280,24 @@
     :Satellites
         (:Moon).
 :Mars a :Planet;
-    :mass "0.107"^^dbr:Earth_Mass.
+    :mass "0.107"^^dbr:Earth_Mass;
     :Satellites
         (:Phobos :Deimos).
 :Jupiter a :Planet;
-    :mass "317.8"^^dbr:Earth_Mass.
+    :mass "317.8"^^dbr:Earth_Mass;
     :Satellites
         (:Io :Europa :Ganymede :Callisto).
 :Saturn a :Planet;
-    :mass "95.16"^^dbr:Earth_Mass.
+    :mass "95.16"^^dbr:Earth_Mass;
     :Satellites
         (:Pan :Daphnis :Atlas :Prometheus :Pandora :Epimetheus :Janus :Mimas :Methone :Anthe :Pallene :Enceladus :Tethys :Telesto :Calypso :Dione :Helene :Polydeuces :Rhea :Titan :Hyperion :Iapetus :Kiviuq :Ijiraq :Phoebe :Paaliaq :Skathi :Albiorix :Bebhionn :Erriapo :Skoll :Siarnaq :Tarqeq
          :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot).
 :Uranus a :Planet;
-    :mass "14.54"^^dbr:Earth_Mass.
+    :mass "14.54"^^dbr:Earth_Mass;
     :Satellites
         (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron).
 :Neptune a :Planet;
-    :mass "17.15"^^dbr:Earth_Mass.
+    :mass "17.15"^^dbr:Earth_Mass;
     :Satellites
         (:Triton).
 
@@ -310,7 +310,7 @@
 
 
 :Zodiac
-    :hasLocation "Along the ecliptic"
+    :hasLocation "Along the ecliptic";
     :shape "circle";
     :ZodiacConstellations[
        a rdf:Bag;
