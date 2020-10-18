@@ -40,6 +40,7 @@
     rdfs:subClassOf dbo:CelestialBody.
 
 :Star a rdfs:Class;
+    rdfs:label "Star";
     rdfs:subClassOf dbo:CelestialBody.
 
 :StarCluster
@@ -165,9 +166,13 @@
     rdfs:range :Place.
 
 :visibleToEye a rdf:Property;
-    rdfs:comment "Visible to the naked eye";
+    rdfs:comment "Visible to the naked eye in the night sky";
     rdfs:domain dbo:CelestialBody;
     rdfs:range :KnownMatter.
+
+:knowAs a rdf:Property;
+    rdfs:comment "Other designations for the label";
+    rdfs:domain :Galaxy.
 
 
 #########################
@@ -308,9 +313,10 @@
 :InternationalAstronomicalUnion a dbo:Organisation;
      rdfs:label "International Astronomical Union".
 
+#Constellations
 
 :Zodiac
-    :hasLocation "Along the ecliptic"
+    :hasLocation dbo:Ecliptic;
     :shape "circle";
     :ZodiacConstellations[
        a rdf:Bag;
@@ -326,3 +332,26 @@
         rdf:_10 :Pisces;
         rdf:_11 :Sagittarius;
         rdf:_12 :Scorpius].
+
+#StarClusters
+
+:Pleiades a:OpenCluster;
+    rdfs:label "Pleiades";
+    :knowAs "Seven Sisters and Messier 45";
+    :hasLocation :Taurus;
+    :distance "444"^^dbo:LightYear;
+    :ApparentMagnitude "1.6"^^xsd:decimal.
+
+:Hyades a:OpenCluster;
+    rdfs:label "Hyades";
+    :knowAs "CaldWell 41, Collinder 50, Melotte 25";
+    :hasLocation :Taurus;
+    :distance "153"^^dbo:LightYear;
+    :ApparentMagnitude "0.5"^^xsd:decimal;
+    :mass "400"^^dbr:Solar_Mass.
+
+:47Tucanae a:GlobularCluster;
+    rdfs:label "47 Tucanae"
+    :hasLocation :Tucana;
+    :ApparentMagnitude "4.09"^^xsd:decimal.
+    :distance "13000"^^dbo:LightYear.
