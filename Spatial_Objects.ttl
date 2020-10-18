@@ -278,6 +278,12 @@
     :Planets
         (:ProximaCentauri_b :ProximaCentauri_c).
 
+:Struve2398 a :PlanetarySystems;
+    rdfs:label "Struve 2398";
+    :hasStar :Struve2398A, :Struve2398;
+    :Planets
+        (_:p1 _:p2).
+
 
 #Planets
 
@@ -317,6 +323,9 @@
 
 :InternationalAstronomicalUnion a dbo:Organisation;
      rdfs:label "International Astronomical Union".
+
+_:p1 a :Planet;
+_:p2 a :Planet;
 
 #Constellations
 
