@@ -132,11 +132,14 @@
     rdfs:subPropertyOf :UniverseElements;
     rdfs:comment "Contains our solar system";
     rdfs:domain :Galaxy;
-    rdfs:range dbo:LightYear.
+    rdfs:range [
+    rdf:type dbo:LightYear;
+    rdfs:comment "Approximative size of the Galaxy in light Year"
+    ].
 
 :isDefinedBy a rdf:Property;
     rdfs:subPropertyOf :Description;
-    rdfs:comment "Elements that describe a BlackHole";
+    rdfs:comment "Elements that describe a Celestial body";
     rdfs:domain :Definition;
     rdfs:range :KnownPhysics.
 
