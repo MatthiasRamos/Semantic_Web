@@ -1,8 +1,4 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix schema: <https://schema.org/docs/schemas.html>.
-@prefix dc: <http://dublincore.org/documents/dcmi-terms/>.
-@prefix event: <http://motools.sourceforge.net/event/event.html>.
-@prefix time: <https://www.w3.org/TR/owl-time/>.
 @prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix dbr: <http://dbpedia.org/resource/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
