@@ -10,9 +10,6 @@
 #       Classes         #
 #########################
 
-:AstronomicalObject a rdfs:Class;
-    rdfs:subClassOf :deepSkyObject.
-
 :Galaxy a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :ourGalaxy :MilkyWay;
@@ -144,7 +141,7 @@
     rdfs:domain dbo:CelestialBody.
 
 :mass a rdf:Property;
-    rdfs:range :AstronomicalObject;
+    rdfs:range :CelestialBody;
     rdfs:comment "Object mass".
 
 :shape a rdf:Property;
