@@ -66,25 +66,6 @@
 :NaturalSatellite a rdf:Class;
     rdfs:subClassOf :Satellite;
     rdfs:label "Natural Satellite";
-    :orbitingAPlanet
-    [
-    rdf:type rdf:Bag;
-    rdf:_1 :Moon;
-    rdf:_2 :Phobos;
-    rdf:_3 :Deimos;
-    rdf:_4 :Io;
-    rdf:_5 :Europa;
-    rdf:_6 :Ganymede;
-    rdf:_7 :Callisto;
-    rdf:_8 :Pan;
-    rdf:_9 :Daphnis;
-    rdf:_10 :Atlas;
-    rdf:_11 :Prometheus;
-    rdf:_12 :Pandora;
-    rdf:_13 :Epimetheus;
-    rdf:_14 :Janus;
-    ...
-    ]
 
 :Satellite
     rdfs:subClassOf dbo:CelestialBody.
@@ -345,7 +326,7 @@
     :hasOnOrbit :Io, :Europa, :Ganymede, :Callisto.
 :Saturn a :Planet;
     :mass "95.16"^^dbr:Earth_Mass;
-    :hasOnOrbit :Pan, :Daphnis, :Atlas, :Prometheus, :Pandora, :Epimetheus, :Janus, :Mimas, :Methone, :Anthe, :Pallene, :Enceladus, :Tethys, :Telesto, :Calypso, :Dione, :Helene, :Polydeuces, :Rhea, :Titan, :Hyperion, :Iapetus, :Kiviuq, :Ijiraq, :Phoebe, :Paaliaq, :Skathi, :Albiorix, :Bebhionn, :Erriapo, :Skoll, :Siarnaq)
+    :hasOnOrbit :Pan, :Daphnis, :Atlas, :Prometheus, :Pandora, :Epimetheus, :Janus, :Mimas, :Methone, :Anthe, :Pallene, :Enceladus, :Tethys, :Telesto, :Calypso, :Dione, :Helene, :Polydeuces, :Rhea, :Titan, :Hyperion, :Iapetus, :Kiviuq, :Ijiraq, :Phoebe, :Paaliaq, :Skathi, :Albiorix, :Bebhionn, :Erriapo, :Skoll, :Siarnaq
 :Uranus a :Planet;
     :mass "14.54"^^dbr:Earth_Mass;
     :hasOnOrbit :Puck, :Miranda, :Ariel, :Umbriel, :Titania, :Obéron.
@@ -365,26 +346,26 @@ _:p2 a :Planet.
 
 #Constellations
 
-:Hercules a:ConstellationFamily.
+:Hercules a :ConstellationFamily.
 
-:Orion a:ConstellationFamily.
+:Orion a :ConstellationFamily.
 
-:HeavenlyWaters a:ConstellationFamily.
+:HeavenlyWaters a :ConstellationFamily.
 
-:Bayer a:ConstellationFamily.
+:Bayer a :ConstellationFamily.
 
-:LaCaille a:ConstellationFamily.
+:LaCaille a :ConstellationFamily.
 
 :Perseus a :ConstellationFamily.
 
-:UrsaMajor a:ConstellationFamily;
+:UrsaMajor a :ConstellationFamily;
     rdfs:label "Ursa Major";
     dbo:nameInLatin "Greater Bear"^^xsd:string.
 
 :Zodiac a :ConstellationFamily;
     :hasLocation dbo:Ecliptic;
     :shape dbr:Circle;
-    :Constellation[
+    :Constellation [
       a rdf:Bag;
       rdf:_1 :Taurus;
       rdf:_2 :Virgo;
@@ -397,7 +378,7 @@ _:p2 a :Planet.
       rdf:_9 :Libra;
       rdf:_10 :Pisces;
       rdf:_11 :Sagittarius;
-      rdf:_12 :Scorpius].
+      rdf:_12 :Scorpius ].
 
 #StarClusters
 
