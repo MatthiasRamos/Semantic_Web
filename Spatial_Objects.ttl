@@ -134,12 +134,11 @@
 
 :ConstellationFamily a rdfs:Class;
     rdfs:subClassOf :Constellation;
-    :collectionOf
-            (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
-                :HeavenlyWaters :Bayer :LaCaille).
+    :collectionOf :Constellation.
+
 
 :Constellation a rdfs:Class;
-      rdfs:subClassOf :CelestialBody;
+      rdfs:subClassOf dbo:CelestialBody;
       :recognizedBy :InternationalAstronomicalUnion;
       :recognitionYear "1922"^^xsd:int.
 
@@ -192,7 +191,7 @@
     rdfs:subPropertyOf :location;
     rdfs:comment "The location of a thing in the Universe";
     rdfs:domain dbo:CelestialBody;
-    rdfs:range :Place.
+    rdfs:range dbo:Place.
 
 :visibleToEye a rdf:Property;
     rdfs:comment "Visible to the naked eye in the night sky";
@@ -221,6 +220,11 @@
       rdfs:domain dbo:CelestialBody;
       rdfs:range xsd:int.
 
+:collectionOf a rdf:Property;
+      rdfs:label "collection Of";
+      rdfs:comment "A general collection of celestial bodies";
+      rdfs:domain dbo:CelestialBody;
+      rdfs:range dbo:CelestialBody.
 
 #########################
 #      Instances        #
@@ -365,23 +369,39 @@ _:p2 a :Planet.
 
 #Constellations
 
-:Zodiac
+:Hercules a:ConstellationFamily.
+
+:Orion a:ConstellationFamily.
+
+:HeavenlyWaters a:ConstellationFamily.
+
+:Bayer a:ConstellationFamily.
+
+:LaCaille a:ConstellationFamily.
+
+:Perseus a :ConstellationFamily.
+
+:UrsaMajor a:ConstellationFamily;
+    rdfs:label "Ursa Major";
+    dbo:nameInLatin "Greater Bear"^^xsd:string.
+
+:Zodiac a :ConstellationFamily;
     :hasLocation dbo:Ecliptic;
     :shape dbr:Circle;
-    :ZodiacConstellations[
-       a rdf:Bag;
-        rdf:_1  :Taurus;
-        rdf:_2 :Virgo;
-        rdf:_3 :Gemini;
-        rdf:_4 :Cancer;
-        rdf:_5 :Aquarius;
-        rdf:_6 :Aries;
-        rdf:_7 :Capricornus;
-        rdf:_8 :Leo;
-        rdf:_9 :Libra;
-        rdf:_10 :Pisces;
-        rdf:_11 :Sagittarius;
-        rdf:_12 :Scorpius].
+    :Constellation[
+      a rdf:Bag;
+      rdf:_1 :Taurus;
+      rdf:_2 :Virgo;
+      rdf:_3 :Gemini;
+      rdf:_4 :Cancer;
+      rdf:_5 :Aquarius;
+      rdf:_6 :Aries;
+      rdf:_7 :Capricornus;
+      rdf:_8 :Leo;
+      rdf:_9 :Libra;
+      rdf:_10 :Pisces;
+      rdf:_11 :Sagittarius;
+      rdf:_12 :Scorpius].
 
 #StarClusters
 
