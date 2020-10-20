@@ -36,8 +36,6 @@
 :Planet a rdfs:Class;
    rdfs:subClassOf dbo:CelestialBody.
 
-:Swarm a rdfs:Class;
-    rdfs:subClassOf dbo:CelestialBody.
 
 :Star a rdfs:Class;
     rdfs:label "Star";
@@ -57,18 +55,15 @@
 :OpenCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
     :haslocation :MilkyWay;
-    rdfs:subClassOf :StarCluster. #should be rdf:type
+    rdfs:subClassOf :StarCluster.
 
 :GlobularCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
     :hasLocation :MilkyWay;
-    rdfs:subClassOf :StarCluster. #should be rdf:type
+    rdfs:subClassOf :StarCluster.
 
 :ArtificalSatellite a rdf:Class;
     rdfs:subClassOf dbo:Satellite.
-
-#:Asteroid a rdfs:Class;
-#    rdfs:subClassOf dbo:CelestialBody.
 
 :Satellite
     rdfs:subClassOf dbo:CelestialBody.
@@ -341,7 +336,7 @@ _:p2 a :Planet.
 
 :Zodiac
     :hasLocation dbo:Ecliptic;
-    :shape "circle";
+    :shape dbr:Circle;
     :ZodiacConstellations[
        a rdf:Bag;
         rdf:_1  :Taurus;
