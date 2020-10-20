@@ -189,10 +189,18 @@
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:Organisation.
 
+:hasOnOrbit a rdf:Property;
+    rdfs:label "has on orbit";
+    rdfs:comment "the subject have the object on its orbit";
+    rdfs:domain :CelestialBody;
+    rdfs:range :CelestialBody;
+
+
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
       rdfs:domain dbo:CelestialBody;
       rdfs:range xsd:int.
+
 
 #########################
 #      Instances        #
@@ -208,7 +216,7 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     rdfs:label "Milky Way";
-    :containsOur :SolarSystem;
+    :hasOnOrbit :SolarSystem;
     :diameter "1E5"^^dbo:LightYear;
     :distance "0"^^xsd:integer.
 
@@ -301,30 +309,23 @@
 :Venus a :Planet;
     :mass "0.815"^^dbr:Earth_Mass.
 :Earth a :Planet;
-    :mass "5.972E24kg";
-    :Satellites
-        (:Moon).
+    :mass "5.972E24"^^dbr:Kilogram;
+    :hasOnOrbit :Moon.
 :Mars a :Planet;
     :mass "0.107"^^dbr:Earth_Mass;
-    :Satellites
-        (:Phobos :Deimos).
+    :hasOnOrbit :Phobos, :Deimos.
 :Jupiter a :Planet;
     :mass "317.8"^^dbr:Earth_Mass;
-    :Satellites
-        (:Io :Europa :Ganymede :Callisto).
+    :hasOnOrbit :Io, :Europa, :Ganymede, :Callisto.
 :Saturn a :Planet;
     :mass "95.16"^^dbr:Earth_Mass;
-    :Satellites
-        (:Pan :Daphnis :Atlas :Prometheus :Pandora :Epimetheus :Janus :Mimas :Methone :Anthe :Pallene :Enceladus :Tethys :Telesto :Calypso :Dione :Helene :Polydeuces :Rhea :Titan :Hyperion :Iapetus :Kiviuq :Ijiraq :Phoebe :Paaliaq :Skathi :Albiorix :Bebhionn :Erriapo :Skoll :Siarnaq :Tarqeq
-         :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot).
+    :hasOnOrbit :Pan, :Daphnis, :Atlas, :Prometheus, :Pandora, :Epimetheus, :Janus, :Mimas, :Methone, :Anthe, :Pallene, :Enceladus, :Tethys, :Telesto, :Calypso, :Dione, :Helene, :Polydeuces, :Rhea, :Titan, :Hyperion, :Iapetus, :Kiviuq, :Ijiraq, :Phoebe, :Paaliaq, :Skathi, :Albiorix, :Bebhionn, :Erriapo, :Skoll, :Siarnaq)
 :Uranus a :Planet;
     :mass "14.54"^^dbr:Earth_Mass;
-    :Satellites
-        (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron).
+    :hasOnOrbit :Puck, :Miranda, :Ariel, :Umbriel, :Titania, :Obéron.
 :Neptune a :Planet;
     :mass "17.15"^^dbr:Earth_Mass;
-    :Satellites
-        (:Triton).
+    :hasOnOrbit :Triton.
 
 :ProximaCentauri_b a :Planet.
 
