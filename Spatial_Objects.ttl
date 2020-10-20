@@ -362,20 +362,7 @@ _:p2 a :Planet.
 :Zodiac a :ConstellationFamily;
     :hasLocation dbo:Ecliptic;
     :shape dbr:Circle;
-    :Constellation [
-      a rdf:Bag;
-      rdf:_1 :Taurus;
-      rdf:_2 :Virgo;
-      rdf:_3 :Gemini;
-      rdf:_4 :Cancer;
-      rdf:_5 :Aquarius;
-      rdf:_6 :Aries;
-      rdf:_7 :Capricornus;
-      rdf:_8 :Leo;
-      rdf:_9 :Libra;
-      rdf:_10 :Pisces;
-      rdf:_11 :Sagittarius;
-      rdf:_12 :Scorpius ].
+    :hasConstellation :Taurus, :Virgo, :Gemini, :Cancer, :Aquarius, :Aries, :Capricornus, :Leo, :Libra, :Pisces, :Sagittarius, :Scorpius.
 
 #StarClusters
 
