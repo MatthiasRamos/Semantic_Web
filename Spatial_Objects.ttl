@@ -63,7 +63,32 @@
     rdfs:subClassOf :StarCluster.
 
 :ArtificalSatellite a rdf:Class;
-    rdfs:subClassOf dbo:Satellite.
+    rdfs:subClassOf :Satellite;
+    rdfs:label "Artifical Satellite".
+
+#A_Voir
+:NaturalSatellite a rdf:Class;
+    rdfs:subClassOf :Satellite;
+    rdfs:label "Natural Satellite";
+    :orbitingAPlanet
+    [
+    rdf:type rdf:Bag;
+    rdf:_1 :Moon;
+    rdf:_2 :Phobos;
+    rdf:_3 :Deimos;
+    rdf:_4 :Io;
+    rdf:_5 :Europa;
+    rdf:_6 :Ganymede;
+    rdf:_7 :Callisto;
+    rdf:_8 :Pan;
+    rdf:_9 :Daphnis;
+    rdf:_10 :Atlas;
+    rdf:_11 :Prometheus;
+    rdf:_12 :Pandora;
+    rdf:_13 :Epimetheus;
+    rdf:_14 :Janus;
+    ...
+    ]
 
 :Satellite
     rdfs:subClassOf dbo:CelestialBody.
@@ -296,6 +321,12 @@
     :Planets
         (_:p1 _:p2).
 
+#ArtificalSatellite
+
+:Sputnik1 a :ArtificalSatellite;
+    :launchDate "1957-10-04"^^xsd:date;
+    :missionDuration "21"dbo:day;
+    :orbited :Earth.
 
 #Planets
 
@@ -358,16 +389,15 @@ _:p2 a :Planet.
     rdfs:label "Pleiades";
     :knowAs "Seven Sisters and Messier 45"^^xsd:string;
     :hasLocation :Taurus;
-    :distance "444"^^dbo:LightYear;
     :ApparentMagnitude "1.6"^^xsd:decimal.
+    :distance "444"^^dbo:LightYear;
 
 :Hyades a :OpenCluster;
     rdfs:label "Hyades";
     :knowAs "CaldWell 41, Collinder 50, Melotte 25"^^xsd:string;
     :hasLocation :Taurus;
-    :distance "153"^^dbo:LightYear;
     :ApparentMagnitude "0.5"^^xsd:decimal;
-    :mass "400"^^dbr:Solar_Mass.
+    :distance "153"^^dbo:LightYear;
 
 :47Tucanae a :GlobularCluster;
     rdfs:label "47 Tucanae";
