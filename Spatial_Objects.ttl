@@ -32,8 +32,6 @@
 :Planet a rdfs:Class;
    rdfs:subClassOf dbo:CelestialBody.
 
-:Swarm a rdfs:Class;
-    rdfs:subClassOf dbo:CelestialBody.
 
 :Star a rdfs:Class;
     rdfs:label "Star";
@@ -53,18 +51,40 @@
 :OpenCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
     :haslocation :MilkyWay;
-    rdfs:subClassOf :StarCluster. #should be rdf:type
+    rdfs:subClassOf :StarCluster.
 
 :GlobularCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
     :hasLocation :MilkyWay;
-    rdfs:subClassOf :StarCluster. #should be rdf:type
+    rdfs:subClassOf :StarCluster.
 
 :ArtificalSatellite a rdf:Class;
-    rdfs:subClassOf dbo:Satellite.
+    rdfs:subClassOf :Satellite;
+    rdfs:label "Artifical Satellite".
 
-#:Asteroid a rdfs:Class;
-#    rdfs:subClassOf dbo:CelestialBody.
+#A_Voir
+:NaturalSatellite a rdf:Class;
+    rdfs:subClassOf :Satellite;
+    rdfs:label "Natural Satellite";
+    :orbitingAPlanet
+    [
+    rdf:type rdf:Bag;
+    rdf:_1 :Moon;
+    rdf:_2 :Phobos;
+    rdf:_3 :Deimos;
+    rdf:_4 :Io;
+    rdf:_5 :Europa;
+    rdf:_6 :Ganymede;
+    rdf:_7 :Callisto;
+    rdf:_8 :Pan;
+    rdf:_9 :Daphnis;
+    rdf:_10 :Atlas;
+    rdf:_11 :Prometheus;
+    rdf:_12 :Pandora;
+    rdf:_13 :Epimetheus;
+    rdf:_14 :Janus;
+    ...
+    ]
 
 :Satellite
     rdfs:subClassOf dbo:CelestialBody.
@@ -110,12 +130,11 @@
 
 :ConstellationFamily a rdfs:Class;
     rdfs:subClassOf :Constellation;
-    :collectionOf
-            (:UrsaMajor :Zodiac :Perseus :Hercules :Orion
-                :HeavenlyWaters :Bayer :LaCaille).
+    :collectionOf :Constellation.
+
 
 :Constellation a rdfs:Class;
-      rdfs:subClassOf :CelestialBody;
+      rdfs:subClassOf dbo:CelestialBody;
       :recognizedBy :InternationalAstronomicalUnion;
       :recognitionYear "1922"^^xsd:int.
 
@@ -168,7 +187,7 @@
     rdfs:subPropertyOf :location;
     rdfs:comment "The location of a thing in the Universe";
     rdfs:domain dbo:CelestialBody;
-    rdfs:range :Place.
+    rdfs:range dbo:Place.
 
 :visibleToEye a rdf:Property;
     rdfs:comment "Visible to the naked eye in the night sky";
@@ -185,10 +204,23 @@
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:Organisation.
 
+:hasOnOrbit a rdf:Property;
+    rdfs:label "has on orbit";
+    rdfs:comment "the subject have the object on its orbit";
+    rdfs:domain :CelestialBody;
+    rdfs:range :CelestialBody;
+
+
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
       rdfs:domain dbo:CelestialBody;
       rdfs:range xsd:int.
+
+:collectionOf a rdf:Property;
+      rdfs:label "collection Of";
+      rdfs:comment "A general collection of celestial bodies";
+      rdfs:domain dbo:CelestialBody;
+      rdfs:range dbo:CelestialBody.
 
 #########################
 #      Instances        #
@@ -204,7 +236,7 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     rdfs:label "Milky Way";
-    :containsOur :SolarSystem;
+    :hasOnOrbit :SolarSystem;
     :diameter "1E5"^^dbo:LightYear;
     :distance "0"^^xsd:integer.
 
@@ -289,6 +321,12 @@
     :Planets
         (_:p1 _:p2).
 
+#ArtificalSatellite
+
+:Sputnik1 a :ArtificalSatellite;
+    :launchDate "1957-10-04"^^xsd:date;
+    :missionDuration "21"dbo:day;
+    :orbited :Earth.
 
 #Planets
 
@@ -297,30 +335,23 @@
 :Venus a :Planet;
     :mass "0.815"^^dbr:Earth_Mass.
 :Earth a :Planet;
-    :mass "5.972E24kg";
-    :Satellites
-        (:Moon).
+    :mass "5.972E24"^^dbr:Kilogram;
+    :hasOnOrbit :Moon.
 :Mars a :Planet;
     :mass "0.107"^^dbr:Earth_Mass;
-    :Satellites
-        (:Phobos :Deimos).
+    :hasOnOrbit :Phobos, :Deimos.
 :Jupiter a :Planet;
     :mass "317.8"^^dbr:Earth_Mass;
-    :Satellites
-        (:Io :Europa :Ganymede :Callisto).
+    :hasOnOrbit :Io, :Europa, :Ganymede, :Callisto.
 :Saturn a :Planet;
     :mass "95.16"^^dbr:Earth_Mass;
-    :Satellites
-        (:Pan :Daphnis :Atlas :Prometheus :Pandora :Epimetheus :Janus :Mimas :Methone :Anthe :Pallene :Enceladus :Tethys :Telesto :Calypso :Dione :Helene :Polydeuces :Rhea :Titan :Hyperion :Iapetus :Kiviuq :Ijiraq :Phoebe :Paaliaq :Skathi :Albiorix :Bebhionn :Erriapo :Skoll :Siarnaq :Tarqeq
-         :Greip :Hyrrokkin :Jarnsaxa :Tarvos :Mundilfari :Bergelmir :Narvi :Suttungr :Hati :Farbauti :Thrymr :Aegir :Bestla :Fenrir :Surtur :Kari :Ymir :Loge :Fornjot).
+    :hasOnOrbit :Pan, :Daphnis, :Atlas, :Prometheus, :Pandora, :Epimetheus, :Janus, :Mimas, :Methone, :Anthe, :Pallene, :Enceladus, :Tethys, :Telesto, :Calypso, :Dione, :Helene, :Polydeuces, :Rhea, :Titan, :Hyperion, :Iapetus, :Kiviuq, :Ijiraq, :Phoebe, :Paaliaq, :Skathi, :Albiorix, :Bebhionn, :Erriapo, :Skoll, :Siarnaq)
 :Uranus a :Planet;
     :mass "14.54"^^dbr:Earth_Mass;
-    :Satellites
-        (:Puck :Miranda :Ariel :Umbriel :Titania :Obéron).
+    :hasOnOrbit :Puck, :Miranda, :Ariel, :Umbriel, :Titania, :Obéron.
 :Neptune a :Planet;
     :mass "17.15"^^dbr:Earth_Mass;
-    :Satellites
-        (:Triton).
+    :hasOnOrbit :Triton.
 
 :ProximaCentauri_b a :Planet.
 
@@ -334,23 +365,39 @@ _:p2 a :Planet.
 
 #Constellations
 
-:Zodiac
+:Hercules a:ConstellationFamily.
+
+:Orion a:ConstellationFamily.
+
+:HeavenlyWaters a:ConstellationFamily.
+
+:Bayer a:ConstellationFamily.
+
+:LaCaille a:ConstellationFamily.
+
+:Perseus a :ConstellationFamily.
+
+:UrsaMajor a:ConstellationFamily;
+    rdfs:label "Ursa Major";
+    dbo:nameInLatin "Greater Bear"^^xsd:string.
+
+:Zodiac a :ConstellationFamily;
     :hasLocation dbo:Ecliptic;
-    :shape "circle";
-    :ZodiacConstellations[
-       a rdf:Bag;
-        rdf:_1  :Taurus;
-        rdf:_2 :Virgo;
-        rdf:_3 :Gemini;
-        rdf:_4 :Cancer;
-        rdf:_5 :Aquarius;
-        rdf:_6 :Aries;
-        rdf:_7 :Capricornus;
-        rdf:_8 :Leo;
-        rdf:_9 :Libra;
-        rdf:_10 :Pisces;
-        rdf:_11 :Sagittarius;
-        rdf:_12 :Scorpius].
+    :shape dbr:Circle;
+    :Constellation[
+      a rdf:Bag;
+      rdf:_1 :Taurus;
+      rdf:_2 :Virgo;
+      rdf:_3 :Gemini;
+      rdf:_4 :Cancer;
+      rdf:_5 :Aquarius;
+      rdf:_6 :Aries;
+      rdf:_7 :Capricornus;
+      rdf:_8 :Leo;
+      rdf:_9 :Libra;
+      rdf:_10 :Pisces;
+      rdf:_11 :Sagittarius;
+      rdf:_12 :Scorpius].
 
 #StarClusters
 
@@ -358,16 +405,15 @@ _:p2 a :Planet.
     rdfs:label "Pleiades";
     :knowAs "Seven Sisters and Messier 45"^^xsd:string;
     :hasLocation :Taurus;
-    :distance "444"^^dbo:LightYear;
     :ApparentMagnitude "1.6"^^xsd:decimal.
+    :distance "444"^^dbo:LightYear;
 
 :Hyades a :OpenCluster;
     rdfs:label "Hyades";
     :knowAs "CaldWell 41, Collinder 50, Melotte 25"^^xsd:string;
     :hasLocation :Taurus;
-    :distance "153"^^dbo:LightYear;
     :ApparentMagnitude "0.5"^^xsd:decimal;
-    :mass "400"^^dbr:Solar_Mass.
+    :distance "153"^^dbo:LightYear;
 
 :47Tucanae a :GlobularCluster;
     rdfs:label "47 Tucanae";
