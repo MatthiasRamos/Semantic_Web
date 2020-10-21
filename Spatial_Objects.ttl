@@ -14,21 +14,11 @@
     rdfs:subClassOf dbo:CelestialBody;
     :ourGalaxy :MilkyWay;
     :isMadeOf :GalaxiesComponents;
-    :famousGalaxies
-    [
-    rdf:type rdf:Bag;
-    rdf:_1 :MilkyWay;
-    rdf:_2 :LMC;
-    rdf:_3 :Andromeda;
-    rdf:_4 :CigarGalaxy;
-    rdf:_5 :PinwheelGalaxy
-    ].
 
 :Definition a rdfs:Class.
 
 :Planet a rdfs:Class;
    rdfs:subClassOf dbo:CelestialBody.
-
 
 :Star a rdfs:Class;
     rdfs:label "Star";
@@ -37,13 +27,6 @@
 :StarCluster a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :groupOf :Star;
-    :visibleToEye
-    [
-    rdf:type rdf:Bag;
-    rdf:_1 :Pleiades;
-    rdf:_2 :Hyades;
-    rdf:_3 :47Tucanae;
-    ].
 
 :OpenCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
@@ -81,21 +64,9 @@
     rdfs:label "Known Matter";
     rdf:subClassOf :Matter.
 
-:KnownPhysics a rdfs:Class;
-    rdfs:label "Known Physics";
-    :includes
-    [
-    rdf:type rdf:Bag;
-    rdf:_1 dbo:Classical_physics;
-    rdf:_2 dbo:Quantum_mechanics;
-    rdf:_3 dbo:General_relativity
-    ].
-
-
 :ConstellationFamily a rdfs:Class;
     rdfs:subClassOf :Constellation;
     :collectionOf :Constellation.
-
 
 :Constellation a rdfs:Class;
       :groupOf :Star;
@@ -176,7 +147,7 @@
 
 :collectionOf a rdf:Property;
       rdfs:label "collection Of";
-      rdfs:comment "A general collection of celestial bodies";
+      rdfs:comment "A general list of celestial bodies";
       rdfs:domain dbo:CelestialBody;
       rdfs:range dbo:CelestialBody.
 
@@ -185,6 +156,11 @@
     rdfs:domain :ConstellationFamily;
     rdfs:range :Constellation.
 
+:groupOf a rdf:Property;
+     rdfs:label "Group Of";
+     rdfs:comment "Entities with similar characteristics together";
+     rdfs:domain dbo:CelestialBody;
+     rdfs:range dbo:CelestialBody;
 #########################
 #      Instances        #
 #########################
