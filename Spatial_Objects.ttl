@@ -59,7 +59,6 @@
     rdfs:subClassOf :Satellite;
     rdfs:label "Artifical Satellite".
 
-#A_Voir
 :NaturalSatellite a rdf:Class;
     rdfs:subClassOf :Satellite;
     rdfs:label "Natural Satellite";
@@ -112,7 +111,7 @@
 
 
 :Constellation a rdfs:Class;
-      rdfs:subClassOf dbo:CelestialBody;
+      :groupOf :Stars;
       :recognizedBy :InternationalAstronomicalUnion;
       :recognitionYear "1922"^^xsd:int.
 
@@ -180,13 +179,13 @@
 :recognizedBy a rdf:Property;
     rdfs:label "Recognized by";
     rdfs:domain dbo:CelestialBody;
-    rdfs:range dbo:Organisation.
+    rdfs:range dbo:Agent.
 
 :hasOnOrbit a rdf:Property;
     rdfs:label "has on orbit";
     rdfs:comment "the subject have the object on its orbit";
-    rdfs:domain :CelestialBody;
-    rdfs:range :CelestialBody;
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range dbo:CelestialBody;
 
 
 :recognitionYear a rdf:DatatypeProperty;
@@ -199,6 +198,11 @@
       rdfs:comment "A general collection of celestial bodies";
       rdfs:domain dbo:CelestialBody;
       rdfs:range dbo:CelestialBody.
+
+:hasConstellation a rdf:Property;
+    rdfs:label "has Constellation";
+    rdfs:domain :ConstellationFamily;
+    rdfs:range :Constellation.
 
 #########################
 #      Instances        #
@@ -343,24 +347,50 @@ _:p2 a :Planet.
 
 #Constellations
 
-:Hercules a :ConstellationFamily.
+:HerculesFamily a :ConstellationFamily;
+    :rdfs:label "Hercules Family";
+    :hasConstellation :Hercules, :Sagitta, :Aquila, :Lyra, :Cygnus, :Vulpecula, :Hydra, :Sextans, :Crater, :Corvus, :Ophiuchus, :Serpens, :Scutum, :Centaurus, :Lupus, :CoronaAustralis, :Ara, :Triangulum Australe, :Crux.
 
-:Orion a :ConstellationFamily.
+:Hercules a :Constellation;
+    :namedAfter "the Roman mythological hero, Hercules";
+    :recognizedBy :Ptolemy.
 
-:HeavenlyWaters a :ConstellationFamily.
+:OrionFamily a :ConstellationFamily;
+    rdfs:label "Orion Fammily";
+    :hasConstellation :Orion, :CanisMajor, :CanisMinor, :Lepus, :Monoceros.
 
-:Bayer a :ConstellationFamily.
+:Orion  a :Constellation;
+    dbo:namedAfter "a hunter in Greek mythology, named Orion".
 
-:LaCaille a :ConstellationFamily.
+:HeavenlyWaters a :ConstellationFamily;
+    rdfs:label "Heavenly Waters";
+    :hasConstellation :Delphinus, :Equuleus, :Eridanus, :PiscisAustrinus, :Carina, :Puppis, :Vela, :Pyxis, :Columbia.
 
-:Perseus a :ConstellationFamily.
+:BayerFamily a :ConstellationFamily;
+    rdfs:label "Bayer Family";
+    :recognizedBy :PetrusPlancius;
+    :hasConstellation :Hydrus, :Dorado, :Volans, :Apus, :Pavo, :Grus, :Phoenix, :Tucana, :Indus, :Chamaeleon, :Musca.
 
-:UrsaMajor a :ConstellationFamily;
-    rdfs:label "Ursa Major";
-    dbo:nameInLatin "Greater Bear"^^xsd:string.
+:LaCailleFamily a :ConstellationFamily;
+    rdfs:label "La Caille Family";
+    :recognizedBy :NicolasLouisDeLacaille;
+    :recognitionYear "1756"^^xsd:int.
+
+:PerseusFamily a :ConstellationFamily;
+    rdfs:label "Perseus Family";
+    :hasConstellation :Cassiopeia, :Cepheus, :Andromeda, :Perseus, :Pegasus, :Cetus, :Auriga, :Lacerta, :Triangulum.
+
+:Perseus a :Constellation;
+    :isDefinedBy :InternationalAstronomicalUnion;
+    dbo:namedAfter "Greek mythological hero Perseus".
+
+:UrsaMajorFamily a :ConstellationFamily;
+    rdfs:label "Ursa Major Family";
+    dbo:nameInLatin "Greater Bear"^^xsd:string;
+    :hasConstellation :UrsaMajor, :UrsaMinor, :Draco, :CanesVenatici, :Bootes, :ComaBerenices, :CoronaBorealis, :Camelopardalis, :Lynx, :LeoMinor.
 
 :Zodiac a :ConstellationFamily;
-    :hasLocation dbo:Ecliptic;
+    :hasLocation dbr:Ecliptic;
     :shape dbr:Circle;
     :hasConstellation :Taurus, :Virgo, :Gemini, :Cancer, :Aquarius, :Aries, :Capricornus, :Leo, :Libra, :Pisces, :Sagittarius, :Scorpius.
 
