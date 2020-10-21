@@ -13,7 +13,7 @@
 :Galaxy a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     :ourGalaxy :MilkyWay;
-    :isMadeOf :GalaxiesComponents;
+    :isMadeOf :GalaxiesComponents.
 
 :Definition a rdfs:Class.
 
@@ -26,7 +26,7 @@
 
 :StarCluster a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
-    :groupOf :Star;
+    :groupOf :Star.
 
 :OpenCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
@@ -44,9 +44,9 @@
 
 :NaturalSatellite a rdf:Class;
     rdfs:subClassOf :Satellite;
-    rdfs:label "Natural Satellite";
+    rdfs:label "Natural Satellite".
 
-:Satellite
+:Satellite a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody.
 
 :PlanetarySystems a rdfs:Class;
@@ -55,7 +55,7 @@
 
 :BlackHole a rdfs:Class;
     rdfs:label "Black Hole";
-    rdfs:subClassOf dbo:CelestialBody;
+    rdfs:subClassOf dbo:CelestialBody.
 
 :Matter a rdfs:Class;
     rdfs:label "Matter we know exist and have proof of existence".
@@ -137,7 +137,7 @@
     rdfs:label "is orbited on";
     rdfs:comment "the subject is on the orbit of the subject";
     rdfs:domain dbo:CelestialBody;
-    rdfs:range dbo:CelestialBody;
+    rdfs:range dbo:CelestialBody.
 
 
 :recognitionYear a rdf:DatatypeProperty;
@@ -160,7 +160,8 @@
      rdfs:label "Group Of";
      rdfs:comment "Entities with similar characteristics together";
      rdfs:domain dbo:CelestialBody;
-     rdfs:range dbo:CelestialBody;
+     rdfs:range dbo:CelestialBody.
+
 #########################
 #      Instances        #
 #########################
@@ -175,7 +176,7 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     rdfs:label "Milky Way";
-    :diameter "1E5"^^dbo:LightYear;
+    :diameter "1E5"^^dbo:LightYear.
 
 :LMC a dbo:Galaxy;
     rdfs:label "Large Magellanic Cloud";
@@ -266,17 +267,17 @@
 :Venus a :Planet;
     :mass "0.815"^^dbr:Earth_Mass.
 :Earth a :Planet;
-    :mass "5.972E24"^^dbr:Kilogram;
+    :mass "5.972E24"^^dbr:Kilogram.
 :Mars a :Planet;
-    :mass "0.107"^^dbr:Earth_Mass;
+    :mass "0.107"^^dbr:Earth_Mass.
 :Jupiter a :Planet;
-    :mass "317.8"^^dbr:Earth_Mass;
+    :mass "317.8"^^dbr:Earth_Mass.
 :Saturn a :Planet;
-    :mass "95.16"^^dbr:Earth_Mass;
+    :mass "95.16"^^dbr:Earth_Mass.
 :Uranus a :Planet;
-    :mass "14.54"^^dbr:Earth_Mass;
+    :mass "14.54"^^dbr:Earth_Mass.
 :Neptune a :Planet;
-    :mass "17.15"^^dbr:Earth_Mass;
+    :mass "17.15"^^dbr:Earth_Mass.
 
 :ProximaCentauri_b a :Planet.
 
@@ -340,12 +341,12 @@ _:p2 a :Planet.
 :Obéron a :Satellite;
 	   :orbited :Uranus.
 :Triton: a :Satellite;
-    :orbited :Neptune;
+    :orbited :Neptune.
 #ArtificalSatellites
 
 :Sputnik1 a :ArtificalSatellite;
    dbo:launchDate "1957-10-04"^^xsd:date;
-   dbo:missionDuration "21"^^dbo:day;
+   dbo:missionDuration "21"^^dbo:day.
 
 #ConstellationFamilies
 
@@ -403,15 +404,15 @@ _:p2 a :Planet.
     rdfs:label "Pleiades";
     :knowAs "Seven Sisters and Messier 45"^^xsd:string;
     :hasLocation :Taurus;
-    :ApparentMagnitude "1.6"^^xsd:decimal.
-    :distance "444"^^dbo:LightYear;
+    :ApparentMagnitude "1.6"^^xsd:decimal;
+    :distance "444"^^dbo:LightYear.
 
 :Hyades a :OpenCluster;
     rdfs:label "Hyades";
     :knowAs "CaldWell 41, Collinder 50, Melotte 25"^^xsd:string;
     :hasLocation :Taurus;
     :ApparentMagnitude "0.5"^^xsd:decimal;
-    :distance "153"^^dbo:LightYear;
+    :distance "153"^^dbo:LightYear.
 
 :47Tucanae a :GlobularCluster;
     rdfs:label "47 Tucanae";
