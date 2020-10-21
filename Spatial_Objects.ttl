@@ -1,4 +1,4 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+orbits@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix dbo: <http://dbpedia.org/ontology/>.
 @prefix dbr: <http://dbpedia.org/resource/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -118,11 +118,6 @@
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:Place.
 
-:visibleToEye a rdf:Property;
-    rdfs:comment "Visible to the naked eye in the night sky";
-    rdfs:domain dbo:CelestialBody;
-    rdfs:range :KnownMatter.
-
 :knowAs a rdf:Property;
     rdfs:comment "Other designations for the label";
     rdfs:domain :Galaxy;
@@ -133,8 +128,8 @@
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:Agent.
 
-:orbited a rdf:Property;
-    rdfs:label "is orbited on";
+:orbits a rdf:Property;
+    rdfs:label "is on orbit";
     rdfs:comment "the subject is on the orbit of the subject";
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:CelestialBody.
@@ -244,7 +239,7 @@
 :SolarSystem a :PlanetarySystems;
     rdfs:label "Solar System";
     :hasStar :Sun;
-    :orbited :MilkyWay;
+    :orbits :MilkyWay;
     :Planets
         (:Mercury :Venus :Earth :Mars :Jupiter :Saturn :Uranus :Neptune).
 
@@ -292,56 +287,56 @@ _:p2 a :Planet.
 #NaturalSatellites
 
 :Moon a :Satellite;
-    :orbited :Earth.
+    :orbits :Earth.
 
 :Phobos a :Satellite;
-    :orbited :Mars.
+    :orbits :Mars.
 
 :Deimos a :Satellite;
-    :orbited :Mars.
+    :orbits :Mars.
 
 :Io a :Satellite;
-    :orbited :Jupiter.
+    :orbits :Jupiter.
 
 :Europa a :Satellite;
-    :orbited :Jupiter.
+    :orbits :Jupiter.
 
 :Ganymede a :Satellite;
-    :orbited :Jupiter.
+    :orbits :Jupiter.
 
 :Callisto a :Satellite;
-    :orbited :Jupiter.
+    :orbits :Jupiter.
 
 :Pan a :Satellite;
-    :orbited :Saturn.
+    :orbits :Saturn.
 
 :Daphnis a :Satellite;
-    :orbited :Saturn.
+    :orbits :Saturn.
 
 :Atlas a :Satellite;
-    :orbited :Saturn.
+    :orbits :Saturn.
 
 :Prometheus a :Satellite;
-    :orbited :Saturn.
+    :orbits :Saturn.
 
 :Pandora a :Satellite;
-    :orbited :Saturn.
+    :orbits :Saturn.
 :Epimetheus a :Satellite;
-    :orbited :Saturn.
+    :orbits :Saturn.
 :Puck a :Satellite;
-	   :orbited :Uranus.
+	   :orbits :Uranus.
 :Miranda a :Satellite;
-	   :orbited :Uranus.
+	   :orbits :Uranus.
 :Ariel a :Satellite;
-	   :orbited :Uranus.
+	   :orbits :Uranus.
 :Umbriel a :Satellite;
-	   :orbited :Uranus.
+	   :orbits :Uranus.
 :Titania a :Satellite;
-	   :orbited :Uranus.
+	   :orbits :Uranus.
 :Obéron a :Satellite;
-	   :orbited :Uranus.
+	   :orbits :Uranus.
 :Triton: a :Satellite;
-    :orbited :Neptune.
+    :orbits :Neptune.
 #ArtificalSatellites
 
 :Sputnik1 a :ArtificalSatellite;
