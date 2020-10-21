@@ -133,9 +133,9 @@
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:Agent.
 
-:hasOnOrbit a rdf:Property;
-    rdfs:label "has on orbit";
-    rdfs:comment "the subject have the object on its orbit";
+:orbited a rdf:Property;
+    rdfs:label "is orbited on";
+    rdfs:comment "the subject is on the orbit of the subject";
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:CelestialBody;
 
@@ -175,7 +175,6 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     rdfs:label "Milky Way";
-    :hasOnOrbit :SolarSystem;
     :diameter "1E5"^^dbo:LightYear;
 
 :LMC a dbo:Galaxy;
@@ -244,6 +243,7 @@
 :SolarSystem a :PlanetarySystems;
     rdfs:label "Solar System";
     :hasStar :Sun;
+    :orbited :MilkyWay;
     :Planets
         (:Mercury :Venus :Earth :Mars :Jupiter :Saturn :Uranus :Neptune).
 
@@ -267,22 +267,16 @@
     :mass "0.815"^^dbr:Earth_Mass.
 :Earth a :Planet;
     :mass "5.972E24"^^dbr:Kilogram;
-    :hasOnOrbit :Moon.
 :Mars a :Planet;
     :mass "0.107"^^dbr:Earth_Mass;
-    :hasOnOrbit :Phobos, :Deimos.
 :Jupiter a :Planet;
     :mass "317.8"^^dbr:Earth_Mass;
-    :hasOnOrbit :Io, :Europa, :Ganymede, :Callisto.
 :Saturn a :Planet;
     :mass "95.16"^^dbr:Earth_Mass;
-    :hasOnOrbit :Pan, :Daphnis, :Atlas, :Prometheus, :Pandora, :Epimetheus, :Janus, :Mimas, :Methone, :Anthe, :Pallene, :Enceladus, :Tethys, :Telesto, :Calypso, :Dione, :Helene, :Polydeuces, :Rhea, :Titan, :Hyperion, :Iapetus, :Kiviuq, :Ijiraq, :Phoebe, :Paaliaq, :Skathi, :Albiorix, :Bebhionn, :Erriapo, :Skoll, :Siarnaq
 :Uranus a :Planet;
     :mass "14.54"^^dbr:Earth_Mass;
-    :hasOnOrbit :Puck, :Miranda, :Ariel, :Umbriel, :Titania, :Obéron.
 :Neptune a :Planet;
     :mass "17.15"^^dbr:Earth_Mass;
-    :hasOnOrbit :Triton.
 
 :ProximaCentauri_b a :Planet.
 
@@ -294,15 +288,66 @@ _:p2 a :Planet.
 :InternationalAstronomicalUnion a dbo:Organisation;
      rdfs:label "International Astronomical Union".
 
+#NaturalSatellites
 
-#ArtificalSatellite
+:Moon a :Satellite;
+    :orbited :Earth.
+
+:Phobos a :Satellite;
+    :orbited :Mars.
+
+:Deimos a :Satellite;
+    :orbited :Mars.
+
+:Io a :Satellite;
+    :orbited :Jupiter.
+
+:Europa a :Satellite;
+    :orbited :Jupiter.
+
+:Ganymede a :Satellite;
+    :orbited :Jupiter.
+
+:Callisto a :Satellite;
+    :orbited :Jupiter.
+
+:Pan a :Satellite;
+    :orbited :Saturn.
+
+:Daphnis a :Satellite;
+    :orbited :Saturn.
+
+:Atlas a :Satellite;
+    :orbited :Saturn.
+
+:Prometheus a :Satellite;
+    :orbited :Saturn.
+
+:Pandora a :Satellite;
+    :orbited :Saturn.
+:Epimetheus a :Satellite;
+    :orbited :Saturn.
+:Puck a :Satellite;
+	   :orbited :Uranus.
+:Miranda a :Satellite;
+	   :orbited :Uranus.
+:Ariel a :Satellite;
+	   :orbited :Uranus.
+:Umbriel a :Satellite;
+	   :orbited :Uranus.
+:Titania a :Satellite;
+	   :orbited :Uranus.
+:Obéron a :Satellite;
+	   :orbited :Uranus.
+:Triton: a :Satellite;
+    :orbited :Neptune;
+#ArtificalSatellites
 
 :Sputnik1 a :ArtificalSatellite;
-   :launchDate "1957-10-04"^^xsd:date;
-   :missionDuration "21"dbo:day;
-   :orbited :Earth.
+   dbo:launchDate "1957-10-04"^^xsd:date;
+   dbo:missionDuration "21"^^dbo:day;
 
-#ConstellationFamily
+#ConstellationFamilies
 
 :HerculesFamily a :ConstellationFamily;
     :rdfs:label "Hercules Family";
@@ -311,7 +356,6 @@ _:p2 a :Planet.
 :OrionFamily a :ConstellationFamily;
     rdfs:label "Orion Fammily";
     :hasConstellation :Orion, :CanisMajor, :CanisMinor, :Lepus, :Monoceros.
-
 
 :HeavenlyWaters a :ConstellationFamily;
     rdfs:label "Heavenly Waters";
