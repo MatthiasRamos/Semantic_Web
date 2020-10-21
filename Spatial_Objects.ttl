@@ -109,7 +109,6 @@
     rdfs:subClassOf :Constellation;
     :collectionOf :Constellation.
 
-
 :Constellation a rdfs:Class;
       :groupOf :Stars;
       :recognizedBy :InternationalAstronomicalUnion;
@@ -187,17 +186,22 @@
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:CelestialBody;
 
-
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
       rdfs:domain dbo:CelestialBody;
       rdfs:range xsd:int.
 
 :collectionOf a rdf:Property;
-      rdfs:label "collection Of";
-      rdfs:comment "A general collection of celestial bodies";
+      rdfs:label "Collection Of";
+      rdfs:comment "A general list of celestial bodies";
       rdfs:domain dbo:CelestialBody;
       rdfs:range dbo:CelestialBody.
+
+:groupOf a rdf:Property;
+     rdfs:label "Group Of";
+     rdfs:comment "Entities with similar characteristics together";
+     rdfs:domain dbo:CelestialBody;
+     rdfs:range dbo:CelestialBody;
 
 :hasConstellation a rdf:Property;
     rdfs:label "has Constellation";
@@ -359,7 +363,7 @@ _:p2 a :Planet.
     rdfs:label "Orion Fammily";
     :hasConstellation :Orion, :CanisMajor, :CanisMinor, :Lepus, :Monoceros.
 
-:Orion  a :Constellation;
+:Orion a :Constellation;
     dbo:namedAfter "a hunter in Greek mythology, named Orion".
 
 :HeavenlyWaters a :ConstellationFamily;
