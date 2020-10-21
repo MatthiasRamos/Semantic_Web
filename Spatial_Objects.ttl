@@ -318,6 +318,14 @@ _:p2 a :Planet.
 :InternationalAstronomicalUnion a dbo:Organisation;
      rdfs:label "International Astronomical Union".
 
+
+#ArtificalSatellite
+
+:Sputnik1 a :ArtificalSatellite;
+   :launchDate "1957-10-04"^^xsd:date;
+   :missionDuration "21"dbo:day;
+   :orbited :Earth.
+
 #ConstellationFamily
 
 :HerculesFamily a :ConstellationFamily;
