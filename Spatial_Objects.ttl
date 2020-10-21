@@ -74,19 +74,6 @@
 :BlackHole a rdfs:Class;
     rdfs:label "Black Hole";
     rdfs:subClassOf dbo:CelestialBody;
-    :isDefinedBy
-    [
-    rdf:type rdf:Bag;
-    rdf:_1 :SpacetimeRegion;
-    rdf:_2 :Gravity
-    ];
-    :mostMassive
-    [
-    rdf:type rdf:Bag;
-    rdf:_1 :TON618;
-    rdf:_2 :Holmberg15A;
-    rdf:_3 :IC1101
-    ].
 
 :Matter a rdfs:Class;
     rdfs:label "Matter we know exist and have proof of existence".
@@ -129,12 +116,6 @@
     rdf:type dbo:LightYear;
     rdfs:comment "Approximative size of the Galaxy in light Year"
     ].
-
-:isDefinedBy a rdf:Property;
-    rdfs:subPropertyOf :Description;
-    rdfs:comment "Elements that describe a Celestial body";
-    rdfs:domain :Definition;
-    rdfs:range :KnownPhysics.
 
 :distance a rdf:Property;
     rdfs:comment "Distance from Earth, in light year";
@@ -216,7 +197,6 @@
     rdfs:label "Milky Way";
     :hasOnOrbit :SolarSystem;
     :diameter "1E5"^^dbo:LightYear;
-    :distance "0"^^xsd:integer.
 
 :LMC a dbo:Galaxy;
     rdfs:label "Large Magellanic Cloud";
