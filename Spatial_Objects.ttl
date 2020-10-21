@@ -36,7 +36,7 @@
 
 :StarCluster a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
-    :groupOf :Stars;
+    :groupOf :Star;
     :visibleToEye
     [
     rdf:type rdf:Bag;
@@ -98,7 +98,7 @@
 
 
 :Constellation a rdfs:Class;
-      :groupOf :Stars;
+      :groupOf :Star;
       :recognizedBy :InternationalAstronomicalUnion;
       :recognitionYear "1922"^^xsd:int.
 
@@ -283,13 +283,6 @@
     :Planets
         (_:p1 _:p2).
 
-#ArtificalSatellite
-
-:Sputnik1 a :ArtificalSatellite;
-    :launchDate "1957-10-04"^^xsd:date;
-    :missionDuration "21"dbo:day;
-    :orbited :Earth.
-
 #Planets
 
 :Mercury a :Planet;
@@ -319,28 +312,22 @@
 
 :ProximaCentauri_c a :Planet.
 
-:InternationalAstronomicalUnion a dbo:Organisation;
-     rdfs:label "International Astronomical Union".
-
 _:p1 a :Planet.
 _:p2 a :Planet.
 
-#Constellations
+:InternationalAstronomicalUnion a dbo:Organisation;
+     rdfs:label "International Astronomical Union".
+
+#ConstellationFamily
 
 :HerculesFamily a :ConstellationFamily;
     :rdfs:label "Hercules Family";
-    :hasConstellation :Hercules, :Sagitta, :Aquila, :Lyra, :Cygnus, :Vulpecula, :Hydra, :Sextans, :Crater, :Corvus, :Ophiuchus, :Serpens, :Scutum, :Centaurus, :Lupus, :CoronaAustralis, :Ara, :Triangulum Australe, :Crux.
-
-:Hercules a :Constellation;
-    :namedAfter "the Roman mythological hero, Hercules";
-    :recognizedBy :Ptolemy.
+    :hasConstellation :Hercules, :Sagitta, :Aquila, :Lyra, :Cygnus, :Vulpecula, :Hydra, :Sextans, :Crater, :Corvus, :Ophiuchus, :Serpens, :Scutum, :Centaurus, :Lupus, :CoronaAustralis, :Ara.
 
 :OrionFamily a :ConstellationFamily;
     rdfs:label "Orion Fammily";
     :hasConstellation :Orion, :CanisMajor, :CanisMinor, :Lepus, :Monoceros.
 
-:Orion  a :Constellation;
-    dbo:namedAfter "a hunter in Greek mythology, named Orion".
 
 :HeavenlyWaters a :ConstellationFamily;
     rdfs:label "Heavenly Waters";
@@ -360,10 +347,6 @@ _:p2 a :Planet.
     rdfs:label "Perseus Family";
     :hasConstellation :Cassiopeia, :Cepheus, :Andromeda, :Perseus, :Pegasus, :Cetus, :Auriga, :Lacerta, :Triangulum.
 
-:Perseus a :Constellation;
-    :isDefinedBy :InternationalAstronomicalUnion;
-    dbo:namedAfter "Greek mythological hero Perseus".
-
 :UrsaMajorFamily a :ConstellationFamily;
     rdfs:label "Ursa Major Family";
     dbo:nameInLatin "Greater Bear"^^xsd:string;
@@ -373,6 +356,18 @@ _:p2 a :Planet.
     :hasLocation dbr:Ecliptic;
     :shape dbr:Circle;
     :hasConstellation :Taurus, :Virgo, :Gemini, :Cancer, :Aquarius, :Aries, :Capricornus, :Leo, :Libra, :Pisces, :Sagittarius, :Scorpius.
+
+#Constellations
+:Orion a :Constellation;
+    dbo:namedAfter "a hunter in Greek mythology, named Orion".
+
+:Perseus a :Constellation;
+    :isDefinedBy :InternationalAstronomicalUnion;
+    dbo:namedAfter "Greek mythological hero Perseus".
+
+:Hercules a :Constellation;
+    :namedAfter "the Roman mythological hero, Hercules";
+    :recognizedBy :Ptolemy.
 
 #StarClusters
 
