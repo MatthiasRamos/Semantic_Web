@@ -288,37 +288,26 @@ _:p2 a :Planet.
 
 :Moon a :Satellite;
     :orbits :Earth.
-
 :Phobos a :Satellite;
     :orbits :Mars.
-
 :Deimos a :Satellite;
     :orbits :Mars.
-
 :Io a :Satellite;
     :orbits :Jupiter.
-
 :Europa a :Satellite;
     :orbits :Jupiter.
-
 :Ganymede a :Satellite;
     :orbits :Jupiter.
-
 :Callisto a :Satellite;
     :orbits :Jupiter.
-
 :Pan a :Satellite;
     :orbits :Saturn.
-
 :Daphnis a :Satellite;
     :orbits :Saturn.
-
 :Atlas a :Satellite;
     :orbits :Saturn.
-
 :Prometheus a :Satellite;
     :orbits :Saturn.
-
 :Pandora a :Satellite;
     :orbits :Saturn.
 :Epimetheus a :Satellite;
