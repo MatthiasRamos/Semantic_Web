@@ -3,7 +3,7 @@
 @prefix dbr: <http://dbpedia.org/resource/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <https://www.w3.org/2001/XMLSchema/#>.
-
+@prefix wiki: <https://www.wikidata.org/wiki/#>.
 @prefix : <https://inf8410.com/tp/astronomical-object/>.
 
 #########################
@@ -91,7 +91,7 @@
     rdfs:domain dbo:CelestialBody.
 
 :mass a rdf:Property;
-    rdfs:domain :CelestialBody
+    rdfs:domain :CelestialBody;
     rdfs:range xsd:int;
     rdfs:comment "Object mass;
 
@@ -349,12 +349,12 @@ _:p2 a :Planet.
 
 :BayerFamily a :ConstellationFamily;
     rdfs:label "Bayer Family";
-    :recognizedBy :PetrusPlancius;
+    :recognizedBy dbo:PetrusPlancius;
     :hasConstellation :Hydrus, :Dorado, :Volans, :Apus, :Pavo, :Grus, :Phoenix, :Tucana, :Indus, :Chamaeleon, :Musca.
 
 :LaCailleFamily a :ConstellationFamily;
     rdfs:label "La Caille Family";
-    :recognizedBy :NicolasLouisDeLacaille;
+    :recognizedBy wiki:NicolasLouisDeLacaille;
     :recognitionYear "1756"^^xsd:int.
 
 :PerseusFamily a :ConstellationFamily;
@@ -381,7 +381,7 @@ _:p2 a :Planet.
 
 :Hercules a :Constellation;
     :namedAfter "the Roman mythological hero, Hercules";
-    :recognizedBy :Ptolemy.
+    :recognizedBy dbo:Ptolemy.
 
 #StarClusters
 
