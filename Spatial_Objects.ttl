@@ -65,8 +65,7 @@
     rdf:subClassOf :Matter.
 
 :ConstellationFamily a rdfs:Class;
-    rdfs:subClassOf :Constellation;
-    :collectionOf :Constellation.
+    rdfs:subClassOf :Constellation.
 
 :Constellation a rdfs:Class;
       :groupOf :Star;
@@ -92,8 +91,10 @@
     rdfs:domain dbo:CelestialBody.
 
 :mass a rdf:Property;
-    rdfs:range :CelestialBody;
-    rdfs:comment "Object mass".
+    rdfs:domain :CelestialBody
+    rdfs:range xsd:int;
+    rdfs:comment "Object mass;
+
 
 :shape a rdf:Property;
     rdfs:comment "Form of an object in the Universe";
