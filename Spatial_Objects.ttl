@@ -12,79 +12,89 @@
 
 :Galaxy a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
-    :ourGalaxy :MilkyWay;
+    rdfs:label "Galaxy";
+    rdfs:comment "A system that contains stars and other elements held together by gravity";
     :isMadeOf :GalaxiesComponents.
 
 :Definition a rdfs:Class.
 
 :Planet a rdfs:Class;
-   rdfs:subClassOf dbo:CelestialBody.
+    rdfs:label "Planet";
+    rdfs:comment "A celestial body distinguished from the fixed stars by having an apparent motion of its own";
+    rdfs:subClassOf dbo:CelestialBody.
 
 :Star a rdfs:Class;
     rdfs:label "Star";
+    rdfs:comment "A fixed luminous point in the night sky";
     rdfs:subClassOf dbo:CelestialBody.
 
 :StarCluster a rdfs:Class;
-    rdfs:subClassOf dbo:CelestialBody;
+    rdfs:subClassOf dbo:StarCluster;
+    rdfs:label "Star Cluster";
+    rdfs:comment "A number of stars of common origin held together as a group by gravitational attraction";
     :groupOf :Star.
 
 :OpenCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
+    rdfs:label "Open Cluster";
+    rdfs:comment "A loose, irregular grouping of stars that originated from a single nebula in the arms of a spiral galaxy";
     :haslocation :MilkyWay;
     rdfs:subClassOf :StarCluster.
 
 :GlobularCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
+    rdfs:label "Globular Cluster";
+    rdfs:comment "A spherical collection of stars that orbits a galactic core";
     :hasLocation :MilkyWay;
     rdfs:subClassOf :StarCluster.
 
 :ArtificalSatellite a rdf:Class;
     rdfs:subClassOf :Satellite;
+    rdfs:comment "An object that people have made and launched into orbit using rockets";
     rdfs:label "Artifical Satellite".
 
 :NaturalSatellite a rdf:Class;
     rdfs:subClassOf :Satellite;
+    rdfs:comment "Astronomical body that orbits a planet or minor planet";
     rdfs:label "Natural Satellite".
 
 :Satellite a rdfs:Class;
+    rdfs:label "Satellite";
+    rdfs:comment "Artificial body placed in orbit around the earth or moon or another planet in order to collect information or for communication";
     rdfs:subClassOf dbo:CelestialBody.
 
 :PlanetarySystems a rdfs:Class;
     rdfs:label "Planetary Systems";
+    rdfs:comment "A set of gravitationally bound non-stellar objects";
     rdfs:subClassOf dbo:CelestialBody.
 
 :BlackHole a rdfs:Class;
     rdfs:label "Black Hole";
+    rdfs:comment "A region of space having a gravitational field so intense that no matter or radiation can escape";
     rdfs:subClassOf dbo:CelestialBody.
 
 :Matter a rdfs:Class;
-    rdfs:label "Matter we know exist and have proof of existence".
+    rdfs:comment "Physical substance in general, as distinct from mind and spirit";
+    rdfs:label "Matter".
 
 :KnownMatter a :Class;
     rdfs:label "Known Matter";
+    rdfs:comment "Matter known to be occupying space";
     rdf:subClassOf :Matter.
 
 :ConstellationFamily a rdfs:Class;
     rdfs:subClassOf :Constellation.
 
 :Constellation a rdfs:Class;
-      :groupOf :Star;
-      :recognizedBy :InternationalAstronomicalUnion;
-      :recognitionYear "1922"^^xsd:int.
-
+    rdfs:label "Constellation";
+    rdfs:comment "A group of stars forming a recognizable pattern that is traditionally named after its apparent form";
+    :groupOf :Star;
+    :recognizedBy :InternationalAstronomicalUnion;
+    :recognitionYear "1922"^^xsd:int.
 
 #########################
 #   Objects Properties  #
 #########################
-
-:ourGalaxy a rdf:Property;
-    rdfs:subPropertyOf :UniverseElements;
-    rdfs:comment "Contains our solar system";
-    rdfs:domain :Galaxy;
-    rdfs:range [
-    rdf:type dbo:LightYear;
-    rdfs:comment "Approximative size of the Galaxy in light Year"
-    ].
 
 :distance a rdf:Property;
     rdfs:comment "Distance from Earth, in light year";
@@ -93,14 +103,12 @@
 :mass a rdf:Property;
     rdfs:domain :CelestialBody;
     rdfs:range xsd:int;
-    rdfs:comment "Object mass;
-
+    rdfs:comment "Object mass".
 
 :shape a rdf:Property;
     rdfs:comment "Form of an object in the Universe";
     rdfs:domain  dbo:CelestialBody;
     rdfs:range dbo:ElementaryShapes.
-
 
 :isMadeOf a rdf:Property;
     rdfs:subPropertyOf :UniverseElements;
@@ -134,7 +142,6 @@
     rdfs:comment "the subject is on the orbit of the subject";
     rdfs:domain dbo:CelestialBody;
     rdfs:range dbo:CelestialBody.
-
 
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
@@ -218,7 +225,6 @@
     :ApparentMagnitude "15.60"^^xsd:decimal;
     :distance "4.244"^^xsd:double;
     :mass "0.122"^^dbr:Solar_Mass.
-
 
 # BlackHoles
 :TON618 a :BlackHole;
