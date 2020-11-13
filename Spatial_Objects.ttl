@@ -179,26 +179,26 @@
 #Galaxies
 :MilkyWay a dbo:Galaxy;
     rdfs:label "Milky Way";
-    :diameter "1E5"^^dbo:LightYear.
+    :diameter "1E5"^^dbo:Light-year.
 
 :LMC a dbo:Galaxy;
     rdfs:label "Large Magellanic Cloud";
-    :diameter "1.4E4"^^dbo:LightYear;
+    :diameter "1.4E4"^^dbo:Light-year;
     :distance "1.58E5"^^xsd:double.
 
 :Andromeda a dbo:Galaxy;
     rdfs:label "Andromeda";
-    :diameter "2.2E5"^^dbo:LightYear;
+    :diameter "2.2E5"^^dbo:Light-year;
     :distance "2.5E6"^^xsd:double.
 
 :CigarGalaxy a dbo:Galaxy;
     rdfs:label "Cigar Galaxy";
-    :diameter "3.7E5"^^dbo:LightYear;
+    :diameter "3.7E5"^^dbo:Light-year;
     :distance "1.15E7"^^xsd:double.
 
 :PinwheelGalaxy a dbo:Galaxy;
     rdfs:label "Pinwheel Galaxy";
-    :diameter "1.7E5"^^dbo:LightYear;
+    :diameter "1.7E5"^^dbo:Light-year;
     :distance "2.087E7"^^xsd:double.
 
 #Stars
@@ -396,17 +396,17 @@ _:p2 a :Planet.
     :knowAs "Seven Sisters and Messier 45"^^xsd:string;
     :hasLocation :Taurus;
     :ApparentMagnitude "1.6"^^xsd:decimal;
-    :distance "444"^^dbo:LightYear.
+    :distance "444"^^dbo:Light-year.
 
 :Hyades a :OpenCluster;
     rdfs:label "Hyades";
     :knowAs "CaldWell 41, Collinder 50, Melotte 25"^^xsd:string;
     :hasLocation :Taurus;
     :ApparentMagnitude "0.5"^^xsd:decimal;
-    :distance "153"^^dbo:LightYear.
+    :distance "153"^^dbo:Light-year.
 
 :47Tucanae a :GlobularCluster;
     rdfs:label "47 Tucanae";
     :hasLocation dbo:Tucana;
     :ApparentMagnitude "4.09"^^xsd:decimal;
-    :distance "13000"^^dbo:LightYear.
+    :distance "13000"^^dbo:Light-year.
