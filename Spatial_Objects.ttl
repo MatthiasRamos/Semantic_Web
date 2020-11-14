@@ -206,40 +206,54 @@
     rdfs:label "Sun";
     :ApparentMagnitude "-26.74"^^xsd:decimal;
     :distance "1.6E-5"^^xsd:double;
-    :mass "1.0"^^dbr:Solar_Mass.
+    :mass[
+    rdf:value 1.0;
+    dbo:units dbr:Solar_Mass].
 
 :AlphaCentauriA a :Star;
     rdfs:label "Rigil Kentaurus";
     :ApparentMagnitude "-0.01"^^xsd:decimal;
     :distance "4,365"^^xsd:double;
-    :mass "1.1"^^dbr:Solar_Mass.
+    :mass[
+    rdf:value 1.1;
+    dbo:units dbr:Solar_Mass].
 
 :AlphaCentauriB a :Star;
     rdfs:label "Rigil Kentaurus B";
     :ApparentMagnitude "1,35"^^xsd:decimal;
     :distance "4,365"^^xsd:double;
-    :mass "0.907"^^dbr:Solar_Mass.
+    :mass[
+    rdf:value 0.907;
+    dbo:units dbr:Solar_Mass].
 
 :AlphaCentauriC a :Star;
     rdfs:label "Proxima Centauri";
     :ApparentMagnitude "15.60"^^xsd:decimal;
     :distance "4.244"^^xsd:double;
-    :mass "0.122"^^dbr:Solar_Mass.
+    :mass[
+    rdf:value 0.122;
+    dbo:units dbr:Solar_Mass].
 
 # BlackHoles
 :TON618 a :BlackHole;
     rdfs:label "TON 618";
-    :mass "6.6E10"^^dbr:Solar_Mass;
+    :mass[
+    rdf:value 6.6E10;
+    dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Estimated from quasar HB emission line correlation".
 
 :Holmberg15A a :BlackHole;
     rdfs:label "Holmberg 15 A";
-    :mass "4.0E10"^^dbr:Solar_Mass;
+    :mass[
+    rdf:value 4.0E10;
+    dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Mass specified obtained through orbit-based, axisymmetric Schwarzschild models".
 
 :IC1101 a :BlackHole;
     rdfs:label "IC 1101";
-    :mass "7E10"^^dbr:Solar_Mass;
+    :mass[
+    rdf:value 7E10;
+    dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Estimated from properties of the host galaxy; mass has not been measured directly".
 
 #PlanetarySystems
@@ -265,21 +279,44 @@
 #Planets
 
 :Mercury a :Planet;
-    :mass "0.055"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 0.055;
+    dbo:units dbr:Earth_Mass].
+
 :Venus a :Planet;
-    :mass "0.815"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 0.815;
+    dbo:units dbr:Earth_Mass].
+
 :Earth a :Planet;
-    :mass "5.972E24"^^dbr:Kilogram.
+    :mass[
+    rdf:value 5.972E24;
+    dbo:units dbr:Kilogram].
+
 :Mars a :Planet;
-    :mass "0.107"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 0.107;
+    dbo:units dbr:Earth_Mass].
+
 :Jupiter a :Planet;
-    :mass "317.8"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 317.8;
+    dbo:units dbr:Earth_Mass].
+
 :Saturn a :Planet;
-    :mass "95.16"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 95.16;
+    dbo:units dbr:Earth_Mass].
+
 :Uranus a :Planet;
-    :mass "14.54"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 14.54;
+    dbo:units dbr:Earth_Mass].
+
 :Neptune a :Planet;
-    :mass "17.15"^^dbr:Earth_Mass.
+    :mass[
+    rdf:value 17.15;
+    dbo:units dbr:Earth_Mass].
 
 :ProximaCentauri_b a :Planet.
 
