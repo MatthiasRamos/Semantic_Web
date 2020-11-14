@@ -369,7 +369,7 @@ _:p2 a :Planet.
 
 :UrsaMajorFamily a :ConstellationFamily;
     rdfs:label "Ursa Major Family";
-    dbo:nameInLatin "Greater Bear"^^xsd:string;
+    dbo:latinName "Greater Bear"^^xsd:string;
     :hasConstellation :UrsaMajor, :UrsaMinor, :Draco, :CanesVenatici, :Bootes, :ComaBerenices, :CoronaBorealis, :Camelopardalis, :Lynx, :LeoMinor.
 
 :Zodiac a :ConstellationFamily;
