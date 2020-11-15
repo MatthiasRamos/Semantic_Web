@@ -89,6 +89,11 @@
 #   Objects Properties  #
 #########################
 
+:launchCountry a rdf:Property;
+    rdfs:comment "Country where an artifical satellite was launched";
+    rdfs:range dbo:country;
+    rdfs:domain :ArtificalSatellite.
+
 :distance a rdf:Property;
     rdfs:comment "Distance from Earth, usually in light year";
     rdfs:range xsd:float;
@@ -364,11 +369,85 @@ _:p2 a :Planet.
 	   :orbits :Uranus.
 :Triton a :Satellite;
     :orbits :Neptune.
+
 #ArtificalSatellites
 
 :Sputnik1 a :ArtificalSatellite;
+   rdfs:label "Sputnik 1";
    dbo:launchDate "1957-10-04"^^xsd:date;
-   dbo:missionDuration "21"^^dbo:day.
+   dbo:missionDuration "21"^^dbo:day;
+   :launchCountry "Soviet Union"^^xsd:string.
+
+:Explorer1 a :ArtificalSatellite;
+    rdfs:label "Explorer 1";
+    dbo:launchDate "1958-02-01"^^xsd:date;
+    dbo:missionDuration "111"^^dbo:day;
+    :launchCountry "United States"^^xsd:string.
+
+:Astérix a :ArtificalSatellite;
+    rdfs:label "Astérix";
+    dbo:launchDate "1965-11-26"^^xsd:date;
+    dbo:missionDuration "111"^^dbo:day;
+    :launchCountry "France"^^xsd:string.
+
+:Oshumi a :ArtificalSatellite;
+    rdfs:label "Oshumi";
+    dbo:launchDate "1970-02-11"^^xsd:date;
+    :launchCountry "Japan"^^xsd:string.
+
+:DongFangHongI a :ArtificalSatellite;
+    rdfs:label "Dong Fang Hong I";
+    dbo:launchDate "1970-04-24"^^xsd:date;
+    dbo:missionDuration "20"^^dbo:day;
+    :launchCountry "China"^^xsd:string.
+
+:Prospero a :ArtificalSatellite;
+    rdfs:label "Prospero";
+    dbo:launchDate "1971-10-28"^^xsd:date;
+    :launchCountry "United Kingdom"^^xsd:string.
+
+:RohiniD1 a :ArtificalSatellite;
+    rdfs:label "Rohini D1";
+    dbo:launchDate "1980-07-18"^^xsd:date;
+    :launchCountry "India"^^xsd:string.
+
+:Ofeq1 a :ArtificalSatellite;
+    rdfs:label "Ofeq 1";
+    dbo:launchDate "1988-09-19"^^xsd:date;
+    :launchCountry "Israel"^^xsd:string.
+
+:Kosmos2175 a :ArtificalSatellite;
+    rdfs:label "Kosmos 2175";
+    dbo:launchDate "1992-01-21"^^xsd:date;
+    :launchCountry "Russia"^^xsd:string.
+
+:Strela a :ArtificalSatellite;
+    rdfs:label "Strela";
+    dbo:launchDate "1992-07-13"^^xsd:date;
+    :launchCountry "Ukraine"^^xsd:string.
+
+:Omid a :ArtificalSatellite;
+    rdfs:label "Omid";
+    dbo:launchDate "2009-02-02"^^xsd:date;
+    :launchCountry "Iran"^^xsd:string.
+
+:Kwangmyongsong-3Unit2 a :ArtificalSatellite;
+    rdfs:label "Kwangmyongsong-3 Unit 2";
+    dbo:launchDate "2012-12-12"^^xsd:date;
+    dbo:missionDuration "730"^^dbo:day;
+    :launchCountry "North Korea"^^xsd:string.
+
+:STSAT-2C a :ArtificalSatellite;
+    rdfs:label "STSAT-2C";
+    dbo:launchDate "2013-01-30"^^xsd:date;
+    dbo:missionDuration "365"^^dbo:day;
+    :launchCountry "South Korea"^^xsd:string.
+
+:CubeSat a :ArtificalSatellite;
+    rdfs:label "Cube Sat";
+    dbo:launchDate "2018-11-12"^^xsd:date;
+    dbo:missionDuration "365"^^dbo:day;
+    :launchCountry "New Zealand"^^xsd:string.
 
 #ConstellationFamilies
 
