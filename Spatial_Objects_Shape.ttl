@@ -89,7 +89,7 @@
 # et ainsi de suite une planete orbite autour d'une etoile.
 :SatelliteOrbitShape
     a sh:NodeShape ;
-    sh:targetClass :Satellite ; 
+    sh:targetClass :Satellite ;
     sh:property [
         sh:path :orbits ;
         sh:class :Planet ;
@@ -129,3 +129,24 @@
     ].
 
 # Pas de resultats on a plus de 10 classes, on a 16 classes.
+
+
+# 6)
+
+:CelestialBodyShape
+    a sh:NodeShape ;
+    sh:targetClass :CelestialBody ;
+    sh:or (
+      [
+        sh:property [
+        sh:path :ApparentMagnitude ;
+        sh:minCount 1 ;
+        ]
+      ]
+      [
+        sh:property [
+        sh:path :orbits ;
+        sh:hasValue :MilkyWay;
+        ]
+      ]
+) .

@@ -123,7 +123,7 @@
 
 :knowAs a rdf:Property;
     rdfs:comment "Other designations for the label";
-    rdfs:domain :Galaxy;
+    rdfs:domain :CelestialBody;
     rdfs:range xsd:string.
 
 :recognizedBy a rdf:Property;
