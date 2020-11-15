@@ -16,8 +16,6 @@
     rdfs:comment "A system that contains stars and other elements held together by gravity";
     :isMadeOf :GalaxiesComponents.
 
-:Definition a rdfs:Class.
-
 :Planet a rdfs:Class;
     rdfs:subClassOf dbo:CelestialBody;
     rdfs:label "Planet";
@@ -78,8 +76,7 @@
     rdfs:label "Known Matter";
     rdfs:comment "Matter known to be occupying space".
 
-:ConstellationFamily a rdfs:Class;
-    rdfs:subClassOf :Constellation.
+:ConstellationFamily a rdfs:Class.
 
 :Constellation a rdfs:Class;
     rdfs:label "Constellation";
@@ -93,7 +90,8 @@
 #########################
 
 :distance a rdf:Property;
-    rdfs:comment "Distance from Earth, in light year";
+    rdfs:comment "Distance from Earth, usually in light year";
+    rdfs:range xsd:float;
     rdfs:domain dbo:CelestialBody.
 
 :mass a rdf:Property;
