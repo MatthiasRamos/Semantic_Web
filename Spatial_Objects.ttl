@@ -446,7 +446,6 @@ _:p2 a :Planet.
 :CubeSat a :ArtificalSatellite;
     rdfs:label "Cube Sat";
     dbo:launchDate "2018-11-12"^^xsd:date;
-    dbo:missionDuration "365"^^dbo:day;
     :launchCountry "New Zealand"^^xsd:string.
 
 #ConstellationFamilies
