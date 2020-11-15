@@ -73,7 +73,6 @@
     rdfs:comment "Physical substance in general, as distinct from mind and spirit";
     rdfs:label "Matter".
 
-
 :KnownMatter a rdfs:Class;
     rdf:subClassOf :Matter;
     rdfs:label "Known Matter";
@@ -99,7 +98,7 @@
 
 :mass a rdf:Property;
     rdfs:domain :CelestialBody;
-    rdfs:range xsd:int;
+    rdfs:range xsd:float;
     rdfs:comment "Object mass".
 
 :shape a rdf:Property;
