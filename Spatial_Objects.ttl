@@ -19,9 +19,9 @@
 :Definition a rdfs:Class.
 
 :Planet a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody;
     rdfs:label "Planet";
-    rdfs:comment "A celestial body distinguished from the fixed stars by having an apparent motion of its own";
-    rdfs:subClassOf dbo:CelestialBody.
+    rdfs:comment "A celestial body distinguished from the fixed stars by having an apparent motion of its own".
 
 :Star a rdfs:Class;
     rdfs:label "Star";
@@ -37,16 +37,12 @@
 :OpenCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
     rdfs:label "Open Cluster";
-    rdfs:comment "A loose, irregular grouping of stars that originated from a single nebula in the arms of a spiral galaxy";
-    :haslocation :MilkyWay;
-    rdfs:subClassOf :StarCluster.
+    rdfs:comment "A loose, irregular grouping of stars that originated from a single nebula in the arms of a spiral galaxy".
 
 :GlobularCluster a rdfs:Class;
     rdfs:subClassOf dbo:StarCluster;
     rdfs:label "Globular Cluster";
-    rdfs:comment "A spherical collection of stars that orbits a galactic core";
-    :hasLocation :MilkyWay;
-    rdfs:subClassOf :StarCluster.
+    rdfs:comment "A spherical collection of stars that orbits a galactic core".
 
 :ArtificalSatellite a rdf:Class;
     rdfs:subClassOf :Satellite;
@@ -59,28 +55,28 @@
     rdfs:label "Natural Satellite".
 
 :Satellite a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody;
     rdfs:label "Satellite";
-    rdfs:comment "Artificial body placed in orbit around the earth or moon or another planet in order to collect information or for communication";
-    rdfs:subClassOf dbo:CelestialBody.
+    rdfs:comment "Artificial body placed in orbit around the earth or moon or another planet in order to collect information or for communication".
 
 :PlanetarySystems a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody;
     rdfs:label "Planetary Systems";
-    rdfs:comment "A set of gravitationally bound non-stellar objects";
-    rdfs:subClassOf dbo:CelestialBody.
+    rdfs:comment "A set of gravitationally bound non-stellar objects".
 
 :BlackHole a rdfs:Class;
+    rdfs:subClassOf dbo:CelestialBody;
     rdfs:label "Black Hole";
-    rdfs:comment "A region of space having a gravitational field so intense that no matter or radiation can escape";
-    rdfs:subClassOf dbo:CelestialBody.
+    rdfs:comment "A region of space having a gravitational field so intense that no matter or radiation can escape".
 
 :Matter a rdfs:Class;
     rdfs:comment "Physical substance in general, as distinct from mind and spirit";
     rdfs:label "Matter".
 
 :KnownMatter a :Class;
+    rdf:subClassOf :Matter;
     rdfs:label "Known Matter";
-    rdfs:comment "Matter known to be occupying space";
-    rdf:subClassOf :Matter.
+    rdfs:comment "Matter known to be occupying space".
 
 :ConstellationFamily a rdfs:Class;
     rdfs:subClassOf :Constellation.
