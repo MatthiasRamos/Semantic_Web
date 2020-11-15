@@ -232,21 +232,21 @@
 :TON618 a :BlackHole;
     rdfs:label "TON 618";
     :mass[
-    rdf:value 6.6E10;
+    rdf:value "6,6E10"^^xsd:float;
     dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Estimated from quasar HB emission line correlation".
 
 :Holmberg15A a :BlackHole;
     rdfs:label "Holmberg 15 A";
     :mass[
-    rdf:value 4.0E10;
+    rdf:value "4,0E10"^^xsd:float;
     dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Mass specified obtained through orbit-based, axisymmetric Schwarzschild models".
 
 :IC1101 a :BlackHole;
     rdfs:label "IC 1101";
     :mass[
-    rdf:value 7E10;
+    rdf:value "7E10"^^xsd:float;
     dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Estimated from properties of the host galaxy; mass has not been measured directly".
 
@@ -284,7 +284,7 @@
 
 :Earth a :Planet;
     :mass[
-    rdf:value 5.972E24;
+    rdf:value "5.972E24"^^xsd:float;
     dbo:units dbr:Kilogram].
 
 :Mars a :Planet;
