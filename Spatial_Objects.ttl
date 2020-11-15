@@ -48,12 +48,12 @@
     :hasLocation :MilkyWay;
     rdfs:subClassOf :StarCluster.
 
-:ArtificalSatellite a rdf:Class;
+:ArtificalSatellite a rdfs:Class;
     rdfs:subClassOf :Satellite;
     rdfs:comment "An object that people have made and launched into orbit using rockets";
     rdfs:label "Artifical Satellite".
 
-:NaturalSatellite a rdf:Class;
+:NaturalSatellite a rdfs:Class;
     rdfs:subClassOf :Satellite;
     rdfs:comment "Astronomical body that orbits a planet or minor planet";
     rdfs:label "Natural Satellite".
@@ -77,7 +77,7 @@
     rdfs:comment "Physical substance in general, as distinct from mind and spirit";
     rdfs:label "Matter".
 
-:KnownMatter a :Class;
+:KnownMatter a rdfs:Class;
     rdfs:label "Known Matter";
     rdfs:comment "Matter known to be occupying space";
     rdf:subClassOf :Matter.
@@ -331,7 +331,7 @@ _:p2 a :Planet.
 	   :orbits :Uranus.
 :Obéron a :Satellite;
 	   :orbits :Uranus.
-:Triton: a :Satellite;
+:Triton a :Satellite;
     :orbits :Neptune.
 #ArtificalSatellites
 
@@ -342,7 +342,7 @@ _:p2 a :Planet.
 #ConstellationFamilies
 
 :HerculesFamily a :ConstellationFamily;
-    :rdfs:label "Hercules Family";
+    rdfs:label "Hercules Family";
     :hasConstellation :Hercules, :Sagitta, :Aquila, :Lyra, :Cygnus, :Vulpecula, :Hydra, :Sextans, :Crater, :Corvus, :Ophiuchus, :Serpens, :Scutum, :Centaurus, :Lupus, :CoronaAustralis, :Ara.
 
 :OrionFamily a :ConstellationFamily;

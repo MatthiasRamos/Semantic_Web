@@ -1,0 +1,131 @@
+#### num 3  requete SHACL #####################################################
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <https://www.w3.org/2001/XMLSchema/#>.
+@prefix wiki: <https://www.wikidata.org/wiki/#>.
+@prefix : <https://inf8410.com/tp/astronomical-object/>.
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+# Les 3 premieres requetes SHACL s'occupe de valider des erreurs qui avaient ete
+# mentionner dans les commentaires de la correction (on inserer en commentaire ces derniers).
+
+# 1) Commentaire : Commentaires manquants pour les classes
+#  Verifier que toutes les classes ont un label et un commentaire
+:ClassShape
+    a sh:NodeShape ;
+    sh:targetClass rdfs:Class ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:string ;
+    ];
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:datatype xsd:string ;
+    ].
+
+# Plus de 22 erreurs trouver dans ancienne ontologie.
+# 4 restantes dans la version actuelle.
+
+# 2) Commentaire : range invalide dans la ligne 85 du fichier. Le range doit être une classe, pas une instance.
+# Verifier que toutes les proprietes ont des range qui sont des classes.
+:RangePropertyShape
+    a sh:PropertyShape ;
+    sh:targetClass rdf:Property ;
+    sh:property [
+        sh:path rdfs:range ;
+        sh:nodeKind sh:IRI ;
+    ].
+
+#Resultat sur ancienne ontologie pour montrer que l'erreur est detecter :
+#[
+#    a sh:ValidationResult ;
+#    sh:resultSeverity sh:Violation ;
+#    sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+#    sh:sourceShape _:n365 ;
+#    sh:focusNode <https://inf8410.com/tp/astronomical-object/ourGalaxy> ;
+#    sh:value _:n482 ;
+#    sh:resultPath rdfs:range ;
+#    sh:resultMessage "Value does not have node kind sh:IRI" ;
+#] .
+
+# 3) Commentaire : range manquant pour :distance et domain manquant pour :mass
+# Verifier que toutes les proprietes ont un domain et un range
+:PropertyShape
+    a sh:NodeShape ;
+    sh:targetClass rdf:Property ;
+    sh:property [
+        sh:path rdfs:range ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:nodeKind sh:IRI ;
+    ];
+    sh:property [
+        sh:path rdfs:domain ;
+        sh:minCount 1;
+        sh:maxCount 1;
+        sh:nodeKind sh:IRI ;
+    ].
+
+# resultat ontologie actuelle :
+#
+#[
+#    a sh:ValidationResult ;
+#    sh:resultSeverity sh:Violation ;
+#    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+#    sh:sourceShape _:n517 ;
+#    sh:focusNode <https://inf8410.com/tp/astronomical-object/distance> ;
+#    sh:resultPath rdfs:range ;
+#    sh:resultMessage "Less than 1 values" ;
+#] .
+
+# 4) On veut verifier si un satellite naturel (lune) orbite autour d'une planete
+# et ainsi de suite une planete orbite autour d'une etoile.
+:SatelliteOrbitShape
+    a sh:NodeShape ;
+    sh:targetClass :Satellite ; 
+    sh:property [
+        sh:path :orbits ;
+        sh:class :Planet ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ].
+
+:PlanetOrbitShape
+    a sh:NodeShape ;
+    sh:targetClass :Planet ;
+    sh:property [
+        sh:path :orbits ;
+        sh:class :Star ;
+        sh:maxCount 1 ;
+    ].
+
+# Resultats trouver sur ontologie, parce que Sputnik est un :ArtificalSatellite
+# qui est une sous-classe de Satellite:
+
+#[
+#    a sh:ValidationResult ;
+#    sh:resultSeverity sh:Violation ;
+#    sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+#    sh:sourceShape _:n5216 ;
+#    sh:focusNode <https://inf8410.com/tp/astronomical-object/Sputnik1> ;
+#    sh:resultPath <https://inf8410.com/tp/astronomical-object/orbits> ;
+#    sh:resultMessage "Less than 1 values" ;
+#] .
+
+# 5) On devrait aussi avoir un minumum de 10 classes.
+:ClassShape
+    a sh:NodeShape ;
+    sh:targetNode rdfs:Class ;
+    sh:property [
+        sh:path [ sh:inversePath rdf:type ] ;
+        sh:minCount 10 ;
+    ].
+
+# Pas de resultats on a plus de 10 classes, on a 16 classes.
