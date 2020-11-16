@@ -76,7 +76,9 @@
     rdfs:label "Known Matter";
     rdfs:comment "Matter known to be occupying space".
 
-:ConstellationFamily a rdfs:Class.
+:ConstellationFamily a rdfs:Class;
+    rdfs:label "Constellation Family";
+    rdfs:comment "Constellations are classified within different Constellation Families".
 
 :Constellation a rdfs:Class;
     rdfs:label "Constellation";
