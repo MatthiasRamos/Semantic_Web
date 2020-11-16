@@ -329,46 +329,372 @@ _:p2 a :Planet.
 
 #NaturalSatellites
 
-:Moon a :Satellite;
-    :orbits :Earth.
-:Phobos a :Satellite;
-    :orbits :Mars.
-:Deimos a :Satellite;
-    :orbits :Mars.
-:Io a :Satellite;
-    :orbits :Jupiter.
-:Europa a :Satellite;
-    :orbits :Jupiter.
-:Ganymede a :Satellite;
-    :orbits :Jupiter.
-:Callisto a :Satellite;
-    :orbits :Jupiter.
-:Pan a :Satellite;
-    :orbits :Saturn.
-:Daphnis a :Satellite;
-    :orbits :Saturn.
-:Atlas a :Satellite;
-    :orbits :Saturn.
-:Prometheus a :Satellite;
-    :orbits :Saturn.
-:Pandora a :Satellite;
-    :orbits :Saturn.
-:Epimetheus a :Satellite;
-    :orbits :Saturn.
-:Puck a :Satellite;
-	   :orbits :Uranus.
-:Miranda a :Satellite;
-	   :orbits :Uranus.
-:Ariel a :Satellite;
-	   :orbits :Uranus.
-:Umbriel a :Satellite;
-	   :orbits :Uranus.
-:Titania a :Satellite;
-	   :orbits :Uranus.
-:Obéron a :Satellite;
-	   :orbits :Uranus.
-:Triton a :Satellite;
-    :orbits :Neptune.
+:Moon a :NaturalSatellite;
+    :orbits :Earth;
+    :mass[
+    rdf:value "7.342E22"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Phobos a :NaturalSatellite;
+    :orbits :Mars;
+    :mass[
+    rdf:value "1.0659E16"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Deimos a :NaturalSatellite;
+    :orbits :Mars;
+    :mass[
+    rdf:value "1.4762E15"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Io a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "8.931E22"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Europa a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "4.799E22"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Ganymede a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "1.4819E23"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Callisto a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "1.075E23"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Amalthea a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "2.08E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Himalia a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "4.292E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Elara a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "8.7E17"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Pasiphae a :NaturalSatellite;
+    :orbits :Jupiter;
+    :mass[
+    rdf:value "3.0E17"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Lysithea a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "6.3E16"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Leda a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.1E16"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Rhea a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "2.306E21"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Iapetus a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.805E21"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Dione a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.095E21"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Tethys a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "6.174E20"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Enceladus a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.080E20"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Mimas a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "3.7493E19"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Hyperion a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "5.6199E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Phoebe a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "8.292E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Janus a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.8975E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Siarnaq a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.8975E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Pan a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "4.95E15"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Daphnis a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "7.7E13"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Atlas a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "6.60E15"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Prometheus a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.595E17"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Pandora a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "1.371E17"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Epimetheus a :NaturalSatellite;
+    :orbits :Saturn;
+    :mass[
+    rdf:value "5.266E17"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Puck a :NaturalSatellite;
+	   :orbits :Uranus;
+     :mass[
+     rdf:value "2.9E18"^^xsd:float;
+     dbo:units dbr:Kilogram].
+
+:Sycorax a :NaturalSatellite;
+     	:orbits :Uranus;
+      :mass[
+      rdf:value "2.5E18"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Juliet a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "5.6E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Belinda a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "3.6E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Cressida a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "2.5E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Rosalind a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "2.5E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Rosalind a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "2.5E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Desdemona a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "1.8E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Bianca a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "9.2E16"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Ophelia a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "5.3E16"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Cordelia a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "4.4E16"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Setebos a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "7.5E16"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Prospero a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "8.5E16"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Perdita a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "0.18E17"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Stephano a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "2.2E16"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Mab a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "1E15"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Francisco a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "7.2E15"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Ferdinand a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "5.4E15"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Margaret a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "5.5E15"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Trinculo a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "3.9E15"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Portia a :NaturalSatellite;
+      :orbits :Uranus;
+      :mass[
+      rdf:value "1.7E18"^^xsd:float;
+      dbo:units dbr:Kilogram].
+
+:Miranda a :NaturalSatellite;
+	   :orbits :Uranus;
+     :mass[
+     rdf:value "6.4E19"^^xsd:float;
+     dbo:units dbr:Kilogram].
+
+:Ariel a :NaturalSatellite;
+	   :orbits :Uranus;
+     :mass[
+     rdf:value "1.251E21"^^xsd:float;
+     dbo:units dbr:Kilogram].
+
+:Umbriel a :NaturalSatellite;
+	   :orbits :Uranus;
+     :mass[
+     rdf:value "1.275E21"^^xsd:float;
+     dbo:units dbr:Kilogram].
+
+:Titania a :NaturalSatellite;
+	   :orbits :Uranus;
+     :mass[
+     rdf:value "3.4E21"^^xsd:float;
+     dbo:units dbr:Kilogram].
+
+:Obéron a :NaturalSatellite;
+	   :orbits :Uranus;
+     :mass[
+     rdf:value "3.076E21"^^xsd:float;
+     dbo:units dbr:Kilogram].
+
+:Triton a :NaturalSatellite;
+    :orbits :Neptune;
+    :mass[
+    rdf:value "2.139E22"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Proteus a :NaturalSatellite;
+    :orbits :Neptune;
+    :mass[
+    rdf:value "4.4E19"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Larissa a :NaturalSatellite;
+    :orbits :Neptune;
+    :mass[
+    rdf:value "4.2E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Galatea a :NaturalSatellite;
+    :orbits :Neptune;
+    :mass[
+    rdf:value "2.12E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Despina a :NaturalSatellite;
+    :orbits :Neptune;
+    :mass[
+    rdf:value "2.2E18"^^xsd:float;
+    dbo:units dbr:Kilogram].
+
+:Hippocamp a :NaturalSatellite;
+    :orbits :Neptune;
+    :mass[
+    rdf:value "1.029E15"^^xsd:float;
+    dbo:units dbr:Kilogram].
+    
 
 #ArtificalSatellites
 
