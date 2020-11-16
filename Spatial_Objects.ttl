@@ -169,6 +169,11 @@
     rdfs:domain :ConstellationFamily;
     rdfs:range :Constellation.
 
+:hasPlanet a rdf:Property;
+    rdfs:label "has Planet";
+    rdfs:domain :PlanetarySystems;
+    rdfs:range :Planets.
+
 :groupOf a rdf:Property;
      rdfs:label "Group Of";
      rdfs:comment "Entities with similar characteristics together";
@@ -210,14 +215,14 @@
 
 :CigarGalaxy a dbo:Galaxy;
     rdfs:label "Cigar Galaxy";
-    :distance "1.15E7"^^xsd:float.
+    :distance "1.15E7"^^xsd:float;
     :diameter[
     rdf:value "3.7E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
 :PinwheelGalaxy a dbo:Galaxy;
     rdfs:label "Pinwheel Galaxy";
-    :distance "2.087E7"^^xsd:float.
+    :distance "2.087E7"^^xsd:float;
     :diameter[
     rdf:value "1.7E5"^^xsd:float;
     dbo:units dbo:Light-year].
@@ -282,20 +287,17 @@
     rdfs:label "Solar System";
     :hasStar :Sun;
     :orbits :MilkyWay;
-    :Planets
-        (:Mercury :Venus :Earth :Mars :Jupiter :Saturn :Uranus :Neptune).
+    :hasPlanet :Mercury, :Venus, :Earth, :Mars, :Jupiter, :Saturn, :Uranus, :Neptune.
 
 :AlphaCentauri a :PlanetarySystems;
     rdfs:label "Alpha Centauri";
     :hasStar :AlphaCentauriA, :AlphaCentauriB, :AlphaCentauriC;
-    :Planets
-        (:ProximaCentauri_b :ProximaCentauri_c).
+    :hasPlanet :ProximaCentauri_b, :ProximaCentauri_c.
 
 :Struve2398 a :PlanetarySystems;
     rdfs:label "Struve 2398";
     :hasStar :Struve2398A, :Struve2398;
-    :Planets
-        (_:p1 _:p2).
+    :hasPlanet _:p1, _:p2.
 
 #Planets
 
@@ -303,7 +305,6 @@
     :orbitDiameter[
       rdf:value "5.791E10"^^xsd:float;
       dbo:units dbr:Metre];
-    :orbitDiameter
     :mass[
     rdf:value "0.055"^^xsd:float;
     dbo:units dbr:Earth_Mass].
@@ -367,12 +368,12 @@
 :ProximaCentauri_b a :Planet;
     :orbitDiameter[
       rdf:value "7.48E9"^^xsd:float;
-      dbo:units dbr:Metre];
+      dbo:units dbr:Metre].
 
 :ProximaCentauri_c a :Planet;
     :orbitDiameter[
       rdf:value "2.244E11"^^xsd:float;
-      dbo:units dbr:Metre];
+      dbo:units dbr:Metre].
 
 _:p1 a :Planet.
 _:p2 a :Planet.
