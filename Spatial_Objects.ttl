@@ -3,7 +3,7 @@
 @prefix dbr: <http://dbpedia.org/resource/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix wiki: <https://www.wikidata.org/wiki/#>.
+@prefix wd: <https://www.wikidata.org/wiki/#>.
 @prefix : <https://inf8410.com/tp/astronomical-object/>.
 
 #########################
@@ -199,7 +199,6 @@
     :diameter[
     rdf:value "1E5"^^xsd:float;
     dbo:units dbo:Light-year].
-
 
 :LMC a dbo:Galaxy;
     rdfs:label "Large Magellanic Cloud";
