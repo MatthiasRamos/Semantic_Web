@@ -848,7 +848,8 @@ _:p2 a :Planet.
 :LaCailleFamily a :ConstellationFamily;
     rdfs:label "La Caille Family";
     :recognizedBy wiki:NicolasLouisDeLacaille;
-    :recognitionYear "1756"^^xsd:year.
+    :recognitionYear "1756"^^xsd:year;
+    :hasConstellation :Norma, :Circinus, :Telescopium, :Microscopium, :Sculptor, :Fornax, :Caelum, :Horologium, :Octans, :Mensa, :Reticulum, :Pictor, :Antlia.
 
 :PerseusFamily a :ConstellationFamily;
     rdfs:label "Perseus Family";
