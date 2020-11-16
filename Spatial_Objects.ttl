@@ -197,7 +197,7 @@
 :MilkyWay a dbo:Galaxy;
     rdfs:label "Milky Way";
     :diameter[
-    rdf:value "1E5"^^xsd:float;
+    rdf:value "1.0E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
 :LMC a dbo:Galaxy;
@@ -850,7 +850,7 @@ _:p2 a :Planet.
 
 :LaCailleFamily a :ConstellationFamily;
     rdfs:label "La Caille Family";
-    :recognizedBy wiki:NicolasLouisDeLacaille;
+    :recognizedBy wd:NicolasLouisDeLacaille;
     :recognitionYear "1756"^^xsd:year;
     :hasConstellation :Norma, :Circinus, :Telescopium, :Microscopium, :Sculptor, :Fornax, :Caelum, :Horologium, :Octans, :Mensa, :Reticulum, :Pictor, :Antlia.
 
