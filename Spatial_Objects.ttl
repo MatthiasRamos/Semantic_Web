@@ -83,7 +83,7 @@
     rdfs:comment "A group of stars forming a recognizable pattern that is traditionally named after its apparent form";
     :groupOf :Star;
     :recognizedBy :InternationalAstronomicalUnion;
-    :recognitionYear "1922"^^xsd:int.
+    :recognitionYear "1922"^^xsd:year.
 
 #########################
 #   Objects Properties  #
@@ -150,7 +150,7 @@
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
       rdfs:domain dbo:CelestialBody;
-      rdfs:range xsd:int.
+      rdfs:range xsd:year.
 
 :collectionOf a rdf:Property;
       rdfs:label "collection Of";
@@ -188,52 +188,52 @@
 :LMC a dbo:Galaxy;
     rdfs:label "Large Magellanic Cloud";
     :diameter "1.4E4"^^dbo:Light-year;
-    :distance "1.58E5"^^xsd:double.
+    :distance "1.58E5"^^xsd:float.
 
 :Andromeda a dbo:Galaxy;
     rdfs:label "Andromeda";
     :diameter "2.2E5"^^dbo:Light-year;
-    :distance "2.5E6"^^xsd:double.
+    :distance "2.5E6"^^xsd:float.
 
 :CigarGalaxy a dbo:Galaxy;
     rdfs:label "Cigar Galaxy";
     :diameter "3.7E5"^^dbo:Light-year;
-    :distance "1.15E7"^^xsd:double.
+    :distance "1.15E7"^^xsd:float.
 
 :PinwheelGalaxy a dbo:Galaxy;
     rdfs:label "Pinwheel Galaxy";
     :diameter "1.7E5"^^dbo:Light-year;
-    :distance "2.087E7"^^xsd:double.
+    :distance "2.087E7"^^xsd:float.
 
 #Stars
 :Sun a :Star;
     rdfs:label "Sun";
-    :ApparentMagnitude "-26.74"^^xsd:decimal;
-    :distance "1.6E-5"^^xsd:double;
+    :ApparentMagnitude "-26.74"^^xsd:float;
+    :distance "1.6E-5"^^xsd:float;
     :mass[
     rdf:value 1.0;
     dbo:units dbr:Solar_Mass].
 
 :AlphaCentauriA a :Star;
     rdfs:label "Rigil Kentaurus";
-    :ApparentMagnitude "-0.01"^^xsd:decimal;
-    :distance "4,365"^^xsd:double;
+    :ApparentMagnitude "-0.01"^^xsd:float;
+    :distance "4,365"^^xsd:float;
     :mass[
     rdf:value 1.1;
     dbo:units dbr:Solar_Mass].
 
 :AlphaCentauriB a :Star;
     rdfs:label "Rigil Kentaurus B";
-    :ApparentMagnitude "1,35"^^xsd:decimal;
-    :distance "4,365"^^xsd:double;
+    :ApparentMagnitude "1.35"^^xsd:float;
+    :distance "4.365"^^xsd:float;
     :mass[
     rdf:value 0.907;
     dbo:units dbr:Solar_Mass].
 
 :AlphaCentauriC a :Star;
     rdfs:label "Proxima Centauri";
-    :ApparentMagnitude "15.60"^^xsd:decimal;
-    :distance "4.244"^^xsd:double;
+    :ApparentMagnitude "15.60"^^xsd:float;
+    :distance "4.244"^^xsd:float;
     :mass[
     rdf:value 0.122;
     dbo:units dbr:Solar_Mass].
@@ -242,14 +242,14 @@
 :TON618 a :BlackHole;
     rdfs:label "TON 618";
     :mass[
-    rdf:value "6,6E10"^^xsd:float;
+    rdf:value "6.6E10"^^xsd:float;
     dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Estimated from quasar HB emission line correlation".
 
 :Holmberg15A a :BlackHole;
     rdfs:label "Holmberg 15 A";
     :mass[
-    rdf:value "4,0E10"^^xsd:float;
+    rdf:value "4.0E10"^^xsd:float;
     dbo:units dbr:Solar_Mass];
     :howMassWasObtain "Mass specified obtained through orbit-based, axisymmetric Schwarzschild models".
 
@@ -801,7 +801,7 @@ _:p2 a :Planet.
 :LaCailleFamily a :ConstellationFamily;
     rdfs:label "La Caille Family";
     :recognizedBy wiki:NicolasLouisDeLacaille;
-    :recognitionYear "1756"^^xsd:int.
+    :recognitionYear "1756"^^xsd:year.
 
 :PerseusFamily a :ConstellationFamily;
     rdfs:label "Perseus Family";
@@ -835,18 +835,18 @@ _:p2 a :Planet.
     rdfs:label "Pleiades";
     :knowAs "Seven Sisters and Messier 45"^^xsd:string;
     :hasLocation :Taurus;
-    :ApparentMagnitude "1.6"^^xsd:decimal;
+    :ApparentMagnitude "1.6"^^xsd:float;
     :distance "444"^^dbo:Light-year.
 
 :Hyades a :OpenCluster;
     rdfs:label "Hyades";
     :knowAs "CaldWell 41, Collinder 50, Melotte 25"^^xsd:string;
     :hasLocation :Taurus;
-    :ApparentMagnitude "0.5"^^xsd:decimal;
+    :ApparentMagnitude "0.5"^^xsd:float;
     :distance "153"^^dbo:Light-year.
 
 :47Tucanae a :GlobularCluster;
     rdfs:label "47 Tucanae";
     :hasLocation dbo:Tucana;
-    :ApparentMagnitude "4.09"^^xsd:decimal;
+    :ApparentMagnitude "4.09"^^xsd:float;
     :distance "13000"^^dbo:Light-year.
