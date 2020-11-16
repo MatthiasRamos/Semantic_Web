@@ -303,7 +303,6 @@
     :orbitDiameter[
       rdf:value "5.791E10"^^xsd:float;
       dbo:units dbr:Metre];
-    :orbitDiameter
     :mass[
     rdf:value "0.055"^^xsd:float;
     dbo:units dbr:Earth_Mass].
