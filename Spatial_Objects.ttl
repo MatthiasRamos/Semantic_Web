@@ -27,18 +27,18 @@
     rdfs:subClassOf dbo:CelestialBody.
 
 :StarCluster a rdfs:Class;
-    rdfs:subClassOf dbo:StarCluster;
+    rdfs:subClassOf dbo:CelestialBody;
     rdfs:label "Star Cluster";
     rdfs:comment "A number of stars of common origin held together as a group by gravitational attraction";
     :groupOf :Star.
 
 :OpenCluster a rdfs:Class;
-    rdfs:subClassOf dbo:StarCluster;
+    rdfs:subClassOf :StarCluster;
     rdfs:label "Open Cluster";
     rdfs:comment "A loose, irregular grouping of stars that originated from a single nebula in the arms of a spiral galaxy".
 
 :GlobularCluster a rdfs:Class;
-    rdfs:subClassOf dbo:StarCluster;
+    rdfs:subClassOf :StarCluster;
     rdfs:label "Globular Cluster";
     rdfs:comment "A spherical collection of stars that orbits a galactic core".
 
