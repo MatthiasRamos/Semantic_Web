@@ -694,7 +694,7 @@ _:p2 a :Planet.
     :mass[
     rdf:value "1.029E15"^^xsd:float;
     dbo:units dbr:Kilogram].
-    
+
 
 #ArtificalSatellites
 
