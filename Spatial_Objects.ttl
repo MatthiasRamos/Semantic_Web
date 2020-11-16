@@ -107,9 +107,14 @@
     rdfs:domain dbo:CelestialBody.
 
 :mass a rdf:Property;
-    rdfs:domain :CelestialBody;
+    rdfs:domain dbo:CelestialBody;
     rdfs:range xsd:float;
     rdfs:comment "Object mass".
+
+:diameter a rdf:Property;
+    rdf:domain dbo:CelestialBody;
+    rdfs:range xsd:float;
+    rdfs:comment "Object diameter".
 
 :shape a rdf:Property;
     rdfs:comment "Form of an object in the Universe";
