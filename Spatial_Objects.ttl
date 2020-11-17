@@ -916,7 +916,7 @@ _:p2 a :Planet.
 
 :47Tucanae a :GlobularCluster;
     rdfs:label "47 Tucanae";
-    :hasLocation dbo:Tucana;
+    :hasLocation :Tucana;
     :ApparentMagnitude "4.09"^^xsd:float;
     :distance[
     rdf:value "13000"^^xsd:float;
