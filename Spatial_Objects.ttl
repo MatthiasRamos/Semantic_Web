@@ -308,6 +308,7 @@
 #Planets
 
 :Mercury a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "5.791E10"^^xsd:float;
       dbo:units dbr:Metre];
@@ -316,6 +317,7 @@
     dbo:units dbr:Earth_Mass].
 
 :Venus a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "1.082E11"^^xsd:float;
       dbo:units dbr:Metre];
@@ -324,6 +326,7 @@
     dbo:units dbr:Earth_Mass].
 
 :Earth a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "1.496E11"^^xsd:float;
       dbo:units dbr:Metre];
@@ -332,6 +335,7 @@
     dbo:units dbr:Kilogram].
 
 :Mars a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "2.279E11"^^xsd:float;
       dbo:units dbr:Metre];
@@ -340,6 +344,7 @@
     dbo:units dbr:Earth_Mass].
 
 :Jupiter a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "7.785E11"^^xsd:float;
       dbo:units dbr:Metre];
@@ -348,6 +353,7 @@
     dbo:units dbr:Earth_Mass].
 
 :Saturn a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "1.434E12"^^xsd:float;
       dbo:units dbr:Metre];
@@ -356,6 +362,7 @@
     dbo:units dbr:Earth_Mass].
 
 :Uranus a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "2.871E12"^^xsd:float;
       dbo:units dbr:Metre];
@@ -364,6 +371,7 @@
     dbo:units dbr:Earth_Mass].
 
 :Neptune a :Planet;
+    :orbits :Sun;
     :orbitDiameter[
       rdf:value "4.495E12"^^xsd:float;
       dbo:units dbr:Metre];
