@@ -294,6 +294,7 @@
     :howMassWasObtain "Estimated from properties of the host galaxy; mass has not been measured directly".
 
 #PlanetarySystems
+
 :SolarSystem a :PlanetarySystems;
     rdfs:label "Solar System";
     :hasStar :Sun;
@@ -601,12 +602,6 @@ _:p2 a :Planet.
       dbo:units dbr:Kilogram].
 
 :Cressida a :NaturalSatellite;
-      :orbits :Uranus;
-      :mass[
-      rdf:value "2.5E17"^^xsd:float;
-      dbo:units dbr:Kilogram].
-
-:Rosalind a :NaturalSatellite;
       :orbits :Uranus;
       :mass[
       rdf:value "2.5E17"^^xsd:float;
