@@ -184,7 +184,7 @@
 :hasPlanet a rdf:Property;
     rdfs:label "has Planet";
     rdfs:domain :PlanetarySystems;
-    rdfs:range :Planets.
+    rdfs:range :Planet.
 
 :groupOf a rdf:Property;
      rdfs:label "Group Of";
