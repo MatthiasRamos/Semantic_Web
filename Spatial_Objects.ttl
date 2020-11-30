@@ -21,6 +21,11 @@
     rdfs:label "Planet";
     rdfs:comment "A celestial body distinguished from the fixed stars by having an apparent motion of its own".
 
+:Exoplanet a rdfs:Class;
+    rdfs:subClassOf :Planet;
+    rdfs:label "Exoplanet";
+    rdfs:comment "A planet outside of the Solar System".
+
 :Star a rdfs:Class;
     rdfs:label "Star";
     rdfs:comment "A fixed luminous point in the night sky";
@@ -379,12 +384,12 @@
     rdf:value "17.15"^^xsd:float;
     dbo:units dbr:Earth_Mass].
 
-:ProximaCentauri_b a :Planet;
+:ProximaCentauri_b a :Exoplanet;
     :orbitDiameter[
       rdf:value "7.48E9"^^xsd:float;
       dbo:units dbr:Metre].
 
-:ProximaCentauri_c a :Planet;
+:ProximaCentauri_c a :Exoplanet;
     :orbitDiameter[
       rdf:value "2.244E11"^^xsd:float;
       dbo:units dbr:Metre].
