@@ -118,7 +118,7 @@
 
 :mass a rdf:Property;
     rdfs:domain dbo:CelestialBody;
-    rdfs:range xsd:float;
+    rdfs:range xsd:float; #measurementUnit need to create class
     rdfs:comment "Object mass".
 
 :diameter a rdf:Property;
@@ -201,7 +201,7 @@
 #      Instances        #
 #########################
 
-:GalaxiesComponents a rdf:Bag;
+:GalaxiesComponents a rdf:Bag #makeit as a class galaxiesComponent unionOf
     rdf:_1 :Star;
     rdf:_2 :InterstellarGas;
     rdf:_3 :Dust;
@@ -209,34 +209,34 @@
     rdf:_5 :DarkMatter.
 
 #Galaxies
-:MilkyWay a dbo:Galaxy;
+:MilkyWay a :Galaxy;
     rdfs:label "Milky Way";
     :diameter[
     rdf:value "1.0E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:LMC a dbo:Galaxy;
+:LMC a :Galaxy;
     rdfs:label "Large Magellanic Cloud";
     :distance "1.58E5"^^xsd:float;
     :diameter[
     rdf:value "1.4E4"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:AndromedaGalaxy a dbo:Galaxy;
+:AndromedaGalaxy a :Galaxy;
     rdfs:label "Andromeda Galaxy";
     :distance "2.5E6"^^xsd:float;
     :diameter[
     rdf:value "2.2E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:CigarGalaxy a dbo:Galaxy;
+:CigarGalaxy a :Galaxy;
     rdfs:label "Cigar Galaxy";
     :distance "1.15E7"^^xsd:float;
     :diameter[
     rdf:value "3.7E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:PinwheelGalaxy a dbo:Galaxy;
+:PinwheelGalaxy a :Galaxy;
     rdfs:label "Pinwheel Galaxy";
     :distance "2.087E7"^^xsd:float;
     :diameter[
