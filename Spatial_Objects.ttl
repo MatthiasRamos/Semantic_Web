@@ -102,7 +102,7 @@
     rdfs:domain :ArtificalSatellite.
 
 :launchCountry a rdf:Property;
-    rdfs:comment "Country where an artifical satellite was launched";
+    rdfs:comment "Country where an artificial satellite was launched";
     rdfs:range dbo:country;
     rdfs:domain :ArtificalSatellite.
 
@@ -110,6 +110,11 @@
     rdfs:comment "Distance from Earth, usually in light year";
     rdfs:range xsd:float;
     rdfs:domain dbo:CelestialBody.
+
+:ApparentMagnitude a rdf:Propery;
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range xsd:float;
+    rdfs:comment "Apparent Magnitude of a Celestial Body".
 
 :mass a rdf:Property;
     rdfs:domain dbo:CelestialBody;
