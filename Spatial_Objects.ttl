@@ -168,7 +168,7 @@
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
       rdfs:domain dbo:CelestialBody;
-      rdfs:range xsd:year.
+      rdfs:range xsd:gYear.
 
 :collectionOf a rdf:Property;
       rdfs:label "collection Of";
