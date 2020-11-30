@@ -648,7 +648,7 @@ _:p2 a :Planet.
       rdf:value "7.5E16"^^xsd:float;
       dbo:units dbr:Kilogram].
 
-:Prospero a :NaturalSatellite;
+:ProsperoMoon a :NaturalSatellite;
       :orbits :Uranus;
       :mass[
       rdf:value "8.5E16"^^xsd:float;
