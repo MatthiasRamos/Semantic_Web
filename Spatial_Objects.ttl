@@ -83,7 +83,7 @@
 :Constellation a rdfs:Class;
     rdfs:label "Constellation";
     rdfs:comment "A group of stars forming a recognizable pattern that is traditionally named after its apparent form";
-    :groupOf :Star;
+    rdfs:subClassOf dbo:CelestialBody;
     :recognizedBy :InternationalAstronomicalUnion;
     :recognitionYear "1922"^^xsd:year.
 
