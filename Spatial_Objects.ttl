@@ -222,8 +222,8 @@
     rdf:value "1.4E4"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:Andromeda a dbo:Galaxy;
-    rdfs:label "Andromeda";
+:AndromedaGalaxy a dbo:Galaxy;
+    rdfs:label "Andromeda Galaxy";
     :distance "2.5E6"^^xsd:float;
     :diameter[
     rdf:value "2.2E5"^^xsd:float;
