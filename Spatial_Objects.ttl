@@ -90,7 +90,7 @@
     rdfs:comment "A group of stars forming a recognizable pattern that is traditionally named after its apparent form";
     rdfs:subClassOf dbo:CelestialBody;
     :recognizedBy :InternationalAstronomicalUnion;
-    :recognitionYear "1922"^^xsd:year.
+    :recognitionYear "1922"^^xsd:gYear.
 
 #########################
 #   Objects Properties  #
@@ -201,7 +201,7 @@
 #      Instances        #
 #########################
 
-:GalaxiesComponents a rdf:Bag #makeit as a class galaxiesComponent unionOf
+:GalaxiesComponents a rdf:Bag
     rdf:_1 :Star;
     rdf:_2 :InterstellarGas;
     rdf:_3 :Dust;
@@ -869,7 +869,7 @@ _:p2 a :Planet.
 :LaCailleFamily a :ConstellationFamily;
     rdfs:label "La Caille Family";
     :recognizedBy wd:NicolasLouisDeLacaille;
-    :recognitionYear "1756"^^xsd:year;
+    :recognitionYear "1756"^^xsd:gYear;
     :hasConstellation :Norma, :Circinus, :Telescopium, :Microscopium, :Sculptor, :Fornax, :Caelum, :Horologium, :Octans, :Mensa, :Reticulum, :Pictor, :Antlia.
 
 :PerseusFamily a :ConstellationFamily;
