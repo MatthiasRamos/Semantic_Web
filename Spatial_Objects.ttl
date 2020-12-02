@@ -896,7 +896,7 @@ _:p2 a :Planet.
     dbo:namedAfter "Greek mythological hero Perseus".
 
 :Hercules a :Constellation;
-    :namedAfter "the Roman mythological hero, Hercules";
+    dbo:namedAfter "the Roman mythological hero, Hercules";
     :recognizedBy dbo:Ptolemy.
 
 #StarClusters
