@@ -201,7 +201,7 @@
 #      Instances        #
 #########################
 
-:GalaxiesComponents a rdf:Bag
+:GalaxiesComponents a rdf:Bag;
     rdf:_1 :Star;
     rdf:_2 :InterstellarGas;
     rdf:_3 :Dust;
