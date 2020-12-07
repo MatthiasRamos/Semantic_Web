@@ -21,6 +21,11 @@
     rdfs:label "Planet";
     rdfs:comment "A celestial body distinguished from the fixed stars by having an apparent motion of its own".
 
+:Exoplanet a rdfs:Class;
+    rdfs:subClassOf :Planet;
+    rdfs:label "Exoplanet";
+    rdfs:comment "A planet outside of the Solar System".
+
 :Star a rdfs:Class;
     rdfs:label "Star";
     rdfs:comment "A fixed luminous point in the night sky";
@@ -83,9 +88,9 @@
 :Constellation a rdfs:Class;
     rdfs:label "Constellation";
     rdfs:comment "A group of stars forming a recognizable pattern that is traditionally named after its apparent form";
-    :groupOf :Star;
+    rdfs:subClassOf dbo:CelestialBody;
     :recognizedBy :InternationalAstronomicalUnion;
-    :recognitionYear "1922"^^xsd:year.
+    :recognitionYear "1922"^^xsd:gYear.
 
 #########################
 #   Objects Properties  #
@@ -97,7 +102,7 @@
     rdfs:domain :ArtificalSatellite.
 
 :launchCountry a rdf:Property;
-    rdfs:comment "Country where an artifical satellite was launched";
+    rdfs:comment "Country where an artificial satellite was launched";
     rdfs:range dbo:country;
     rdfs:domain :ArtificalSatellite.
 
@@ -106,9 +111,14 @@
     rdfs:range xsd:float;
     rdfs:domain dbo:CelestialBody.
 
-:mass a rdf:Property;
+:ApparentMagnitude a rdf:Propery;
     rdfs:domain dbo:CelestialBody;
     rdfs:range xsd:float;
+    rdfs:comment "Apparent Magnitude of a Celestial Body".
+
+:mass a rdf:Property;
+    rdfs:domain dbo:CelestialBody;
+    rdfs:range xsd:float; #measurementUnit need to create class
     rdfs:comment "Object mass".
 
 :diameter a rdf:Property;
@@ -163,7 +173,7 @@
 :recognitionYear a rdf:DatatypeProperty;
       rdfs:label "Recognition Year";
       rdfs:domain dbo:CelestialBody;
-      rdfs:range xsd:year.
+      rdfs:range xsd:gYear.
 
 :collectionOf a rdf:Property;
       rdfs:label "collection Of";
@@ -179,7 +189,7 @@
 :hasPlanet a rdf:Property;
     rdfs:label "has Planet";
     rdfs:domain :PlanetarySystems;
-    rdfs:range :Planets.
+    rdfs:range :Planet.
 
 :groupOf a rdf:Property;
      rdfs:label "Group Of";
@@ -199,34 +209,34 @@
     rdf:_5 :DarkMatter.
 
 #Galaxies
-:MilkyWay a dbo:Galaxy;
+:MilkyWay a :Galaxy;
     rdfs:label "Milky Way";
     :diameter[
     rdf:value "1.0E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:LMC a dbo:Galaxy;
+:LMC a :Galaxy;
     rdfs:label "Large Magellanic Cloud";
     :distance "1.58E5"^^xsd:float;
     :diameter[
     rdf:value "1.4E4"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:Andromeda a dbo:Galaxy;
-    rdfs:label "Andromeda";
+:AndromedaGalaxy a :Galaxy;
+    rdfs:label "Andromeda Galaxy";
     :distance "2.5E6"^^xsd:float;
     :diameter[
     rdf:value "2.2E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:CigarGalaxy a dbo:Galaxy;
+:CigarGalaxy a :Galaxy;
     rdfs:label "Cigar Galaxy";
     :distance "1.15E7"^^xsd:float;
     :diameter[
     rdf:value "3.7E5"^^xsd:float;
     dbo:units dbo:Light-year].
 
-:PinwheelGalaxy a dbo:Galaxy;
+:PinwheelGalaxy a :Galaxy;
     rdfs:label "Pinwheel Galaxy";
     :distance "2.087E7"^^xsd:float;
     :diameter[
@@ -289,6 +299,7 @@
     :howMassWasObtain "Estimated from properties of the host galaxy; mass has not been measured directly".
 
 #PlanetarySystems
+
 :SolarSystem a :PlanetarySystems;
     rdfs:label "Solar System";
     :hasStar :Sun;
@@ -379,12 +390,12 @@
     rdf:value "17.15"^^xsd:float;
     dbo:units dbr:Earth_Mass].
 
-:ProximaCentauri_b a :Planet;
+:ProximaCentauri_b a :Exoplanet;
     :orbitDiameter[
       rdf:value "7.48E9"^^xsd:float;
       dbo:units dbr:Metre].
 
-:ProximaCentauri_c a :Planet;
+:ProximaCentauri_c a :Exoplanet;
     :orbitDiameter[
       rdf:value "2.244E11"^^xsd:float;
       dbo:units dbr:Metre].
@@ -607,12 +618,6 @@ _:p2 a :Planet.
       rdf:value "2.5E17"^^xsd:float;
       dbo:units dbr:Kilogram].
 
-:Rosalind a :NaturalSatellite;
-      :orbits :Uranus;
-      :mass[
-      rdf:value "2.5E17"^^xsd:float;
-      dbo:units dbr:Kilogram].
-
 :Desdemona a :NaturalSatellite;
       :orbits :Uranus;
       :mass[
@@ -643,7 +648,7 @@ _:p2 a :Planet.
       rdf:value "7.5E16"^^xsd:float;
       dbo:units dbr:Kilogram].
 
-:Prospero a :NaturalSatellite;
+:ProsperoMoon a :NaturalSatellite;
       :orbits :Uranus;
       :mass[
       rdf:value "8.5E16"^^xsd:float;
@@ -864,7 +869,7 @@ _:p2 a :Planet.
 :LaCailleFamily a :ConstellationFamily;
     rdfs:label "La Caille Family";
     :recognizedBy wd:NicolasLouisDeLacaille;
-    :recognitionYear "1756"^^xsd:year;
+    :recognitionYear "1756"^^xsd:gYear;
     :hasConstellation :Norma, :Circinus, :Telescopium, :Microscopium, :Sculptor, :Fornax, :Caelum, :Horologium, :Octans, :Mensa, :Reticulum, :Pictor, :Antlia.
 
 :PerseusFamily a :ConstellationFamily;
