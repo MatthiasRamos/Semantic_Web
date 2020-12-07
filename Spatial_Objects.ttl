@@ -96,7 +96,7 @@
 #   Objects Properties  #
 #########################
 
-:launchDate a rdf:Propery;
+:launchDate a rdf:Property;
     rdfs:comment "Launch Date of an Artifical Satellite";
     rdfs:range xsd:date;
     rdfs:domain :ArtificalSatellite.
