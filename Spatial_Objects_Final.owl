@@ -1238,20 +1238,6 @@
         <Class abbreviatedIRI="dbo:CelestialBody"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="Constellation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="classifiedBy"/>
-            <Class IRI="ConstellationFamily"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Constellation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="groupOf"/>
-            <Class IRI="Stars"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="EllipticalGalaxy"/>
         <Class IRI="Galaxy"/>
     </SubClassOf>
