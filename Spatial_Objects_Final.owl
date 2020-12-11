@@ -2563,11 +2563,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Planet"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Planet"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="China"/>
@@ -2585,6 +2585,11 @@
         <NamedIndividual IRI="United_Kingdom"/>
         <NamedIndividual IRI="United_States"/>
     </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="AlphaCentauri"/>
+        <NamedIndividual IRI="Centaurus"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="AlphaCentauri"/>
@@ -2659,6 +2664,11 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="AndromedaGalaxy"/>
         <NamedIndividual IRI="AndromedaGalaxyDiameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="AndromedaGalaxy"/>
+        <NamedIndividual IRI="Andromeda"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -2749,6 +2759,11 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="CigarGalaxy"/>
         <NamedIndividual IRI="CigarGalaxyDiameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="CigarGalaxy"/>
+        <NamedIndividual IRI="UrsaMajor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -3096,6 +3111,11 @@
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="Holmberg15A"/>
+        <NamedIndividual IRI="Cetus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
         <NamedIndividual IRI="Holmberg15A"/>
         <NamedIndividual IRI="Holmberg15AMass"/>
@@ -3106,6 +3126,11 @@
         <NamedIndividual abbreviatedIRI="dbr:Solar_Mass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="Hyades"/>
+        <NamedIndividual IRI="Taurus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbits"/>
         <NamedIndividual IRI="Hyperion"/>
         <NamedIndividual IRI="Saturn"/>
@@ -3114,6 +3139,11 @@
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="HyperionAMass"/>
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="IC1101"/>
+        <NamedIndividual IRI="Virgo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
@@ -3259,6 +3289,11 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="LMC"/>
         <NamedIndividual IRI="LMCDiameter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="LMC"/>
+        <NamedIndividual IRI="Dorado"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -3476,6 +3511,11 @@
         <NamedIndividual IRI="MilkyWayDiameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="MilkyWay"/>
+        <NamedIndividual IRI="Sagittarius"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="MilkyWayDiameter"/>
         <NamedIndividual abbreviatedIRI="dbo:Light-year"/>
@@ -3691,9 +3731,19 @@
         <NamedIndividual IRI="PinwheelGalaxyDiameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="PinwheelGalaxy"/>
+        <NamedIndividual IRI="UrsaMajor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="PinwheelGalaxyDiameter"/>
         <NamedIndividual abbreviatedIRI="dbo:Light-year"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="Pleiades"/>
+        <NamedIndividual IRI="Taurus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
@@ -4006,14 +4056,19 @@
         <NamedIndividual IRI="Ukraine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasPlanet"/>
+        <ObjectProperty IRI="hasLocation"/>
         <NamedIndividual IRI="Struve2398"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <NamedIndividual IRI="Draco"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="Struve2398"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasPlanet"/>
+        <NamedIndividual IRI="Struve2398"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasStar"/>
@@ -4049,6 +4104,11 @@
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="SycoraxMass"/>
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="TON618"/>
+        <NamedIndividual IRI="CanesVenatici"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
@@ -4264,6 +4324,11 @@
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="VenusOrbitDiameter"/>
         <NamedIndividual abbreviatedIRI="dbr:Metre"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="hasLocation"/>
+        <NamedIndividual IRI="47Tucanae"/>
+        <NamedIndividual IRI="Tucana"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="ApparentMagnitude"/>
@@ -5202,11 +5267,6 @@
         <Literal>Alpha Centauri</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>AlphaCentauri</IRI>
-        <IRI>Centaurus</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AlphaCentauriA</IRI>
         <Literal>Rigil Kentaurus</Literal>
@@ -5225,11 +5285,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AndromedaGalaxy</IRI>
         <Literal>Andromeda Galaxy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>AndromedaGalaxy</IRI>
-        <IRI>Andromeda</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5270,11 +5325,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CigarGalaxy</IRI>
         <Literal>Cigar Galaxy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>CigarGalaxy</IRI>
-        <IRI>UrsaMajor</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5367,19 +5417,9 @@
         <Literal>Holmberg 15 A</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>Holmberg15A</IRI>
-        <IRI>Cetus</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Hyades</IRI>
         <Literal>Hyades</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>Hyades</IRI>
-        <IRI>Taurus</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="knownAs"/>
@@ -5390,11 +5430,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IC1101</IRI>
         <Literal>IC 1101</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>IC1101</IRI>
-        <IRI>Virgo</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5437,11 +5472,6 @@
         <Literal>Large Magellanic Cloud</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>LMC</IRI>
-        <IRI>Dorado</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>LenticularGalaxy</IRI>
         <Literal>A type of galaxy intermediate between an elliptical (denoted E) and a spiral galaxy</Literal>
@@ -5475,11 +5505,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>MilkyWay</IRI>
         <Literal>Milky Way</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>MilkyWay</IRI>
-        <IRI>Sagittarius</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5522,11 +5547,6 @@
         <Literal>Pinwheel Galaxy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>PinwheelGalaxy</IRI>
-        <IRI>UrsaMajor</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Planet</IRI>
         <Literal>A celestial body distinguished from the fixed stars by having an apparent motion of its own</Literal>
@@ -5550,11 +5570,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Pleiades</IRI>
         <Literal>Pleiades</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>Pleiades</IRI>
-        <IRI>Taurus</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="knownAs"/>
@@ -5647,11 +5662,6 @@
         <Literal>Strela</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>Struve2398</IRI>
-        <IRI>Draco</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Sun</IRI>
         <Literal>Sun</Literal>
@@ -5660,11 +5670,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TON618</IRI>
         <Literal>TON 618</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>TON618</IRI>
-        <IRI>CanesVenatici</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5890,11 +5895,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>47Tucanae</IRI>
         <Literal>47 Tucanae</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="hasLocation"/>
-        <IRI>47Tucanae</IRI>
-        <IRI>Tucana</IRI>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="hasLocation"/>
