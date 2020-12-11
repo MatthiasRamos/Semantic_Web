@@ -1,0 +1,2520 @@
+Prefix(:=<https://inf8410.com/tp/astronomical-object/>)
+Prefix(wd:=<https://www.wikidata.org/wiki/#>)
+Prefix(dbo:=<http://dbpedia.org/ontology/>)
+Prefix(dbr:=<http://dbpedia.org/resource/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://inf8410.com/tp/astronomical-object/>
+
+Declaration(Class(dbo:Agent))
+Declaration(Class(dbo:CelestialBody))
+Declaration(Class(dbo:Organisation))
+Declaration(Class(dbo:Place))
+Declaration(Class(:ArtificalSatellite))
+Declaration(Class(:BarredSpiralGalaxy))
+Declaration(Class(:BayerFamily))
+Declaration(Class(:BlackHole))
+Declaration(Class(:CelestialObject))
+Declaration(Class(:Constellation))
+Declaration(Class(:ConstellationFamily))
+Declaration(Class(:Country))
+Declaration(Class(:EllipticalGalaxy))
+Declaration(Class(:Exoplanet))
+Declaration(Class(:Galaxy))
+Declaration(Class(:GlobularCluster))
+Declaration(Class(:HeavenlyWaters))
+Declaration(Class(:HerculesFamily))
+Declaration(Class(:IrregularGalaxy))
+Declaration(Class(:KnownMatter))
+Declaration(Class(:LaCailleFamily))
+Declaration(Class(:LenticularGalaxy))
+Declaration(Class(:Matter))
+Declaration(Class(:MeasurementUnit))
+Declaration(Class(:NaturalSatellite))
+Declaration(Class(:OpenCluster))
+Declaration(Class(:OrionFamily))
+Declaration(Class(:PerseusFamily))
+Declaration(Class(:Planet))
+Declaration(Class(:PlanetarySystem))
+Declaration(Class(:Satellite))
+Declaration(Class(:SpiralGalaxy))
+Declaration(Class(:StarCluster))
+Declaration(Class(:StarSystem))
+Declaration(Class(:StarburstGalaxy))
+Declaration(Class(:Stars))
+Declaration(Class(:Units))
+Declaration(Class(:UrsaMajorFamily))
+Declaration(Class(:Zodiac))
+Declaration(ObjectProperty(:classifiedBy))
+Declaration(ObjectProperty(:collectionOf))
+Declaration(ObjectProperty(:diameter))
+Declaration(ObjectProperty(:groupOf))
+Declaration(ObjectProperty(:hasConstellation))
+Declaration(ObjectProperty(:hasLocation))
+Declaration(ObjectProperty(:hasPlanet))
+Declaration(ObjectProperty(:hasStar))
+Declaration(ObjectProperty(:howMassWasObtained))
+Declaration(ObjectProperty(:isConstellationOf))
+Declaration(ObjectProperty(:isMadeOf))
+Declaration(ObjectProperty(:launchCountry))
+Declaration(ObjectProperty(:mass))
+Declaration(ObjectProperty(:orbitDiameter))
+Declaration(ObjectProperty(:orbits))
+Declaration(ObjectProperty(:recognizedBy))
+Declaration(ObjectProperty(:shape))
+Declaration(ObjectProperty(:unit))
+Declaration(DataProperty(<dbo:missionDuration>))
+Declaration(DataProperty(:ApparentMagnitude))
+Declaration(DataProperty(:distance))
+Declaration(DataProperty(:hasValue))
+Declaration(DataProperty(:knowAs))
+Declaration(DataProperty(:launchDate))
+Declaration(DataProperty(:recognitionYear))
+Declaration(NamedIndividual(dbo:IC3583))
+Declaration(NamedIndividual(dbo:IC4710))
+Declaration(NamedIndividual(dbo:Light-year))
+Declaration(NamedIndividual(dbo:Messier_49))
+Declaration(NamedIndividual(dbo:Messier_59))
+Declaration(NamedIndividual(dbo:Messier_60))
+Declaration(NamedIndividual(dbo:NGC1387))
+Declaration(NamedIndividual(dbo:NGC2787))
+Declaration(NamedIndividual(dbo:PetrusPlancius))
+Declaration(NamedIndividual(dbo:Ptolemy))
+Declaration(NamedIndividual(dbr:Circle))
+Declaration(NamedIndividual(dbr:Earth_Mass))
+Declaration(NamedIndividual(dbr:Ecliptic))
+Declaration(NamedIndividual(dbr:Kilogram))
+Declaration(NamedIndividual(dbr:Metre))
+Declaration(NamedIndividual(dbr:Solar_Mass))
+Declaration(NamedIndividual(:AlphaCentauri))
+Declaration(NamedIndividual(:AlphaCentauriA))
+Declaration(NamedIndividual(:AlphaCentauriAMass))
+Declaration(NamedIndividual(:AlphaCentauriB))
+Declaration(NamedIndividual(:AlphaCentauriBMass))
+Declaration(NamedIndividual(:AlphaCentauriC))
+Declaration(NamedIndividual(:AlphaCentauriCMass))
+Declaration(NamedIndividual(:Amalthea))
+Declaration(NamedIndividual(:AmaltheaMass))
+Declaration(NamedIndividual(:Andromeda))
+Declaration(NamedIndividual(:AndromedaGalaxy))
+Declaration(NamedIndividual(:AndromedaGalaxyDiameter))
+Declaration(NamedIndividual(:Antlia))
+Declaration(NamedIndividual(:Apus))
+Declaration(NamedIndividual(:Aquarius))
+Declaration(NamedIndividual(:Aquila))
+Declaration(NamedIndividual(:Ara))
+Declaration(NamedIndividual(:Ariel))
+Declaration(NamedIndividual(:ArielMass))
+Declaration(NamedIndividual(:Aries))
+Declaration(NamedIndividual(:Astérix))
+Declaration(NamedIndividual(:Atlas))
+Declaration(NamedIndividual(:AtlasMass))
+Declaration(NamedIndividual(:Auriga))
+Declaration(NamedIndividual(:Belinda))
+Declaration(NamedIndividual(:BelindaMass))
+Declaration(NamedIndividual(:Bianca))
+Declaration(NamedIndividual(:BiancaMass))
+Declaration(NamedIndividual(:Bootes))
+Declaration(NamedIndividual(:Caelum))
+Declaration(NamedIndividual(:Callisto))
+Declaration(NamedIndividual(:CallistoMass))
+Declaration(NamedIndividual(:Camelopardalis))
+Declaration(NamedIndividual(:Cancer))
+Declaration(NamedIndividual(:CanesVenatici))
+Declaration(NamedIndividual(:CanisMajor))
+Declaration(NamedIndividual(:CanisMinor))
+Declaration(NamedIndividual(:Capricornus))
+Declaration(NamedIndividual(:Carina))
+Declaration(NamedIndividual(:Cassiopeia))
+Declaration(NamedIndividual(:Centaurus))
+Declaration(NamedIndividual(:Cepheus))
+Declaration(NamedIndividual(:Cetus))
+Declaration(NamedIndividual(:Chamaeleon))
+Declaration(NamedIndividual(:China))
+Declaration(NamedIndividual(:CigarGalaxy))
+Declaration(NamedIndividual(:CigarGalaxyDiameter))
+Declaration(NamedIndividual(:Circinus))
+Declaration(NamedIndividual(:Columbia))
+Declaration(NamedIndividual(:ComaBerenices))
+Declaration(NamedIndividual(:Cordelia))
+Declaration(NamedIndividual(:CordeliaMass))
+Declaration(NamedIndividual(:CoronaAustralis))
+Declaration(NamedIndividual(:CoronaBorealis))
+Declaration(NamedIndividual(:Corvus))
+Declaration(NamedIndividual(:Crater))
+Declaration(NamedIndividual(:Cressida))
+Declaration(NamedIndividual(:CressidaMass))
+Declaration(NamedIndividual(:CubeSat))
+Declaration(NamedIndividual(:Cygnus))
+Declaration(NamedIndividual(:Daphnis))
+Declaration(NamedIndividual(:DaphnisMass))
+Declaration(NamedIndividual(:Deimos))
+Declaration(NamedIndividual(:DeimosMass))
+Declaration(NamedIndividual(:Delphinus))
+Declaration(NamedIndividual(:Desdemona))
+Declaration(NamedIndividual(:DesdemonaMass))
+Declaration(NamedIndividual(:Despina))
+Declaration(NamedIndividual(:DespinaMass))
+Declaration(NamedIndividual(:Dione))
+Declaration(NamedIndividual(:DioneMass))
+Declaration(NamedIndividual(:DongFangHongI))
+Declaration(NamedIndividual(:Dorado))
+Declaration(NamedIndividual(:Draco))
+Declaration(NamedIndividual(:Earth))
+Declaration(NamedIndividual(:EarthMass))
+Declaration(NamedIndividual(:EarthOrbitDiameter))
+Declaration(NamedIndividual(:Elara))
+Declaration(NamedIndividual(:ElaraMass))
+Declaration(NamedIndividual(:Enceladus))
+Declaration(NamedIndividual(:EnceladusMass))
+Declaration(NamedIndividual(:Epimetheus))
+Declaration(NamedIndividual(:EpimetheusMass))
+Declaration(NamedIndividual(:Equuleus))
+Declaration(NamedIndividual(:Eridanus))
+Declaration(NamedIndividual(:Europa))
+Declaration(NamedIndividual(:EuropaMass))
+Declaration(NamedIndividual(:Explorer1))
+Declaration(NamedIndividual(:Ferdinand))
+Declaration(NamedIndividual(:FerdinandMass))
+Declaration(NamedIndividual(:Fornax))
+Declaration(NamedIndividual(:France))
+Declaration(NamedIndividual(:Francisco))
+Declaration(NamedIndividual(:FranciscoMass))
+Declaration(NamedIndividual(:Galatea))
+Declaration(NamedIndividual(:GalateaMass))
+Declaration(NamedIndividual(:Ganymede))
+Declaration(NamedIndividual(:GanymedeMass))
+Declaration(NamedIndividual(:Gemini))
+Declaration(NamedIndividual(:Grus))
+Declaration(NamedIndividual(:Hercules))
+Declaration(NamedIndividual(:Himalia))
+Declaration(NamedIndividual(:HimaliaMass))
+Declaration(NamedIndividual(:Hippocamp))
+Declaration(NamedIndividual(:HippocampMass))
+Declaration(NamedIndividual(:Holmberg15A))
+Declaration(NamedIndividual(:Holmberg15AMass))
+Declaration(NamedIndividual(:Horologium))
+Declaration(NamedIndividual(:Hyades))
+Declaration(NamedIndividual(:Hydra))
+Declaration(NamedIndividual(:Hydrus))
+Declaration(NamedIndividual(:Hyperion))
+Declaration(NamedIndividual(:HyperionAMass))
+Declaration(NamedIndividual(:IC1101))
+Declaration(NamedIndividual(:IC1101Mass))
+Declaration(NamedIndividual(:Iapetus))
+Declaration(NamedIndividual(:IapetusMass))
+Declaration(NamedIndividual(:India))
+Declaration(NamedIndividual(:Indus))
+Declaration(NamedIndividual(:InternationalAstronomicalUnion))
+Declaration(NamedIndividual(:Io))
+Declaration(NamedIndividual(:IoMass))
+Declaration(NamedIndividual(:Iran))
+Declaration(NamedIndividual(:Israel))
+Declaration(NamedIndividual(:Janus))
+Declaration(NamedIndividual(:JanusMass))
+Declaration(NamedIndividual(:Japan))
+Declaration(NamedIndividual(:Juliet))
+Declaration(NamedIndividual(:JulietMass))
+Declaration(NamedIndividual(:Jupiter))
+Declaration(NamedIndividual(:JupiterMass))
+Declaration(NamedIndividual(:JupiterOrbitDiameter))
+Declaration(NamedIndividual(:Kosmos2175))
+Declaration(NamedIndividual(:Kwangmyongsong-3Unit2))
+Declaration(NamedIndividual(:LMC))
+Declaration(NamedIndividual(:LMCDiameter))
+Declaration(NamedIndividual(:Lacerta))
+Declaration(NamedIndividual(:Larissa))
+Declaration(NamedIndividual(:LarissaMass))
+Declaration(NamedIndividual(:Leda))
+Declaration(NamedIndividual(:LedaMass))
+Declaration(NamedIndividual(:Leo))
+Declaration(NamedIndividual(:LeoMinor))
+Declaration(NamedIndividual(:Lepus))
+Declaration(NamedIndividual(:Libra))
+Declaration(NamedIndividual(:Lupus))
+Declaration(NamedIndividual(:Lynx))
+Declaration(NamedIndividual(:Lyra))
+Declaration(NamedIndividual(:Lysithea))
+Declaration(NamedIndividual(:LysitheaMass))
+Declaration(NamedIndividual(:Mab))
+Declaration(NamedIndividual(:MabMass))
+Declaration(NamedIndividual(:Margaret))
+Declaration(NamedIndividual(:MargaretMass))
+Declaration(NamedIndividual(:Mars))
+Declaration(NamedIndividual(:MarsMass))
+Declaration(NamedIndividual(:MarsOrbitDiameter))
+Declaration(NamedIndividual(:Mensa))
+Declaration(NamedIndividual(:Mercury))
+Declaration(NamedIndividual(:MercuryMass))
+Declaration(NamedIndividual(:MercuryOrbitDiameter))
+Declaration(NamedIndividual(:Microscopium))
+Declaration(NamedIndividual(:MilkyWay))
+Declaration(NamedIndividual(:MilkyWayDiameter))
+Declaration(NamedIndividual(:Mimas))
+Declaration(NamedIndividual(:MimasMass))
+Declaration(NamedIndividual(:Miranda))
+Declaration(NamedIndividual(:MirandaMass))
+Declaration(NamedIndividual(:Monoceros))
+Declaration(NamedIndividual(:Moon))
+Declaration(NamedIndividual(:MoonMass))
+Declaration(NamedIndividual(:Musca))
+Declaration(NamedIndividual(:Neptune))
+Declaration(NamedIndividual(:NeptuneMass))
+Declaration(NamedIndividual(:NeptuneOrbitDiameter))
+Declaration(NamedIndividual(:New_Zealand))
+Declaration(NamedIndividual(:Norma))
+Declaration(NamedIndividual(:North_Korea))
+Declaration(NamedIndividual(:Obéron))
+Declaration(NamedIndividual(:ObéronMass))
+Declaration(NamedIndividual(:Octans))
+Declaration(NamedIndividual(:Ofeq1))
+Declaration(NamedIndividual(:Omid))
+Declaration(NamedIndividual(:Ophelia))
+Declaration(NamedIndividual(:OpheliaMass))
+Declaration(NamedIndividual(:Ophiuchus))
+Declaration(NamedIndividual(:Orion))
+Declaration(NamedIndividual(:Oshumi))
+Declaration(NamedIndividual(:Pan))
+Declaration(NamedIndividual(:PanMass))
+Declaration(NamedIndividual(:Pandora))
+Declaration(NamedIndividual(:PandoraMass))
+Declaration(NamedIndividual(:Pasiphae))
+Declaration(NamedIndividual(:PasiphaeMass))
+Declaration(NamedIndividual(:Pavo))
+Declaration(NamedIndividual(:Pegasus))
+Declaration(NamedIndividual(:Perdita))
+Declaration(NamedIndividual(:PerditaMass))
+Declaration(NamedIndividual(:Perseus))
+Declaration(NamedIndividual(:Phobos))
+Declaration(NamedIndividual(:PhobosMass))
+Declaration(NamedIndividual(:Phoebe))
+Declaration(NamedIndividual(:PhoebeMass))
+Declaration(NamedIndividual(:Phoenix))
+Declaration(NamedIndividual(:Pictor))
+Declaration(NamedIndividual(:PinwheelGalaxy))
+Declaration(NamedIndividual(:PinwheelGalaxyDiameter))
+Declaration(NamedIndividual(:Pisces))
+Declaration(NamedIndividual(:PiscisAustrinus))
+Declaration(NamedIndividual(:Pleiades))
+Declaration(NamedIndividual(:Portia))
+Declaration(NamedIndividual(:PortiaMass))
+Declaration(NamedIndividual(:Prometheus))
+Declaration(NamedIndividual(:PrometheusMass))
+Declaration(NamedIndividual(:Prospero))
+Declaration(NamedIndividual(:ProsperoMoon))
+Declaration(NamedIndividual(:ProsperoMoonMass))
+Declaration(NamedIndividual(:Proteus))
+Declaration(NamedIndividual(:ProteusMass))
+Declaration(NamedIndividual(:ProximaCentauri_b))
+Declaration(NamedIndividual(:ProximaCentauri_bOrbitDiameter))
+Declaration(NamedIndividual(:ProximaCentauri_c))
+Declaration(NamedIndividual(:ProximaCentauri_cOrbitDiameter))
+Declaration(NamedIndividual(:Puck))
+Declaration(NamedIndividual(:PuckMass))
+Declaration(NamedIndividual(:Puppis))
+Declaration(NamedIndividual(:Pyxis))
+Declaration(NamedIndividual(:Reticulum))
+Declaration(NamedIndividual(:Rhea))
+Declaration(NamedIndividual(:RheaMass))
+Declaration(NamedIndividual(:RohiniD1))
+Declaration(NamedIndividual(:Rosalind))
+Declaration(NamedIndividual(:RosalindMass))
+Declaration(NamedIndividual(:Russia))
+Declaration(NamedIndividual(:STSAT-2C))
+Declaration(NamedIndividual(:Sagitta))
+Declaration(NamedIndividual(:Sagittarius))
+Declaration(NamedIndividual(:Saturn))
+Declaration(NamedIndividual(:SaturnMass))
+Declaration(NamedIndividual(:SaturnOrbitDiameter))
+Declaration(NamedIndividual(:Scorpius))
+Declaration(NamedIndividual(:Sculptor))
+Declaration(NamedIndividual(:Scutum))
+Declaration(NamedIndividual(:Serpens))
+Declaration(NamedIndividual(:Setebos))
+Declaration(NamedIndividual(:SetebosMass))
+Declaration(NamedIndividual(:Sextans))
+Declaration(NamedIndividual(:Siarnaq))
+Declaration(NamedIndividual(:SiarnaqMass))
+Declaration(NamedIndividual(:SolarSystem))
+Declaration(NamedIndividual(:South_Korea))
+Declaration(NamedIndividual(:Soviet_Union))
+Declaration(NamedIndividual(:Sputnik1))
+Declaration(NamedIndividual(:Stephano))
+Declaration(NamedIndividual(:StephanoMass))
+Declaration(NamedIndividual(:Strela))
+Declaration(NamedIndividual(:Struve2398))
+Declaration(NamedIndividual(:Struve2398A))
+Declaration(NamedIndividual(:Sun))
+Declaration(NamedIndividual(:SunMass))
+Declaration(NamedIndividual(:Sycorax))
+Declaration(NamedIndividual(:SycoraxMass))
+Declaration(NamedIndividual(:TON618))
+Declaration(NamedIndividual(:TON618Mass))
+Declaration(NamedIndividual(:Taurus))
+Declaration(NamedIndividual(:Telescopium))
+Declaration(NamedIndividual(:Tethys))
+Declaration(NamedIndividual(:TethysMass))
+Declaration(NamedIndividual(:Titania))
+Declaration(NamedIndividual(:TitaniaMass))
+Declaration(NamedIndividual(:Triangulum))
+Declaration(NamedIndividual(:Trinculo))
+Declaration(NamedIndividual(:TrinculoMass))
+Declaration(NamedIndividual(:Triton))
+Declaration(NamedIndividual(:TritonMass))
+Declaration(NamedIndividual(:Tucana))
+Declaration(NamedIndividual(:Ukraine))
+Declaration(NamedIndividual(:Umbriel))
+Declaration(NamedIndividual(:UmbrielMass))
+Declaration(NamedIndividual(:United_Kingdom))
+Declaration(NamedIndividual(:United_States))
+Declaration(NamedIndividual(:Uranus))
+Declaration(NamedIndividual(:UranusMass))
+Declaration(NamedIndividual(:UranusOrbitDiameter))
+Declaration(NamedIndividual(:UrsaMajor))
+Declaration(NamedIndividual(:UrsaMinor))
+Declaration(NamedIndividual(:Vela))
+Declaration(NamedIndividual(:Venus))
+Declaration(NamedIndividual(:VenusMass))
+Declaration(NamedIndividual(:VenusOrbitDiameter))
+Declaration(NamedIndividual(:Virgo))
+Declaration(NamedIndividual(:Volans))
+Declaration(NamedIndividual(:Vulpecula))
+Declaration(NamedIndividual(<https://inf8410.com/tp/astronomical-object/47Tucanae>))
+Declaration(NamedIndividual(wd:NicolasLouisDeLacaille))
+Declaration(AnnotationProperty(dbo:latinName))
+Declaration(AnnotationProperty(dbo:missionDuration))
+Declaration(AnnotationProperty(dbo:namedAfter))
+Declaration(AnnotationProperty(:UniverseElements))
+Declaration(AnnotationProperty(:hasLocation))
+Declaration(AnnotationProperty(:howMassWasObtain))
+Declaration(AnnotationProperty(:howMassWasObtained))
+Declaration(AnnotationProperty(:isDefinedBy))
+Declaration(AnnotationProperty(:isMadeOf))
+Declaration(AnnotationProperty(:knowAs))
+Declaration(AnnotationProperty(:location))
+Declaration(Datatype(dbo:day))
+Declaration(Datatype(xsd:date))
+Declaration(Datatype(xsd:gYear))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: :hasLocation (has Location)
+
+AnnotationAssertion(rdfs:comment :hasLocation "The location of a thing in the Universe")
+AnnotationAssertion(rdfs:label :hasLocation "has Location")
+SubAnnotationPropertyOf(:hasLocation :location)
+AnnotationPropertyRange(:hasLocation dbo:Place)
+
+# Annotation Property: :howMassWasObtained (how Mass Was Obtain)
+
+AnnotationAssertion(rdfs:comment :howMassWasObtained "The way the mass was evaluate")
+AnnotationAssertion(rdfs:label :howMassWasObtained "how Mass Was Obtain")
+
+# Annotation Property: :isMadeOf (is Made Of)
+
+AnnotationAssertion(rdfs:comment :isMadeOf "Elements that compose a galaxy")
+AnnotationAssertion(rdfs:label :isMadeOf "is Made Of")
+SubAnnotationPropertyOf(:isMadeOf :UniverseElements)
+AnnotationPropertyRange(:isMadeOf :KnownMatter)
+
+# Annotation Property: :knowAs (:knowAs)
+
+AnnotationAssertion(rdfs:comment :knowAs "Other designations for the label")
+AnnotationPropertyRange(:knowAs xsd:string)
+AnnotationPropertyDomain(:knowAs :CelestialBody)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :classifiedBy (classified By)
+
+AnnotationAssertion(rdfs:comment :classifiedBy "Which constellation family best describe this constellation.")
+AnnotationAssertion(rdfs:label :classifiedBy "classified By")
+SubObjectPropertyOf(:classifiedBy owl:topObjectProperty)
+ObjectPropertyDomain(:classifiedBy :Constellation)
+ObjectPropertyRange(:classifiedBy :ConstellationFamily)
+
+# Object Property: :collectionOf (collection Of)
+
+AnnotationAssertion(rdfs:comment :collectionOf "A general list of celestial bodies")
+AnnotationAssertion(rdfs:label :collectionOf "collection Of")
+TransitiveObjectProperty(:collectionOf)
+ObjectPropertyDomain(:collectionOf dbo:CelestialBody)
+ObjectPropertyRange(:collectionOf dbo:CelestialBody)
+
+# Object Property: :diameter (diameter)
+
+AnnotationAssertion(rdfs:comment :diameter "Object diameter")
+AnnotationAssertion(rdfs:label :diameter "diameter")
+ObjectPropertyDomain(:diameter dbo:CelestialBody)
+ObjectPropertyRange(:diameter :MeasurementUnit)
+
+# Object Property: :groupOf (group Of)
+
+AnnotationAssertion(rdfs:comment :groupOf "Entities with similar characteristics together")
+AnnotationAssertion(rdfs:label :groupOf "group Of")
+TransitiveObjectProperty(:groupOf)
+ObjectPropertyDomain(:groupOf dbo:CelestialBody)
+ObjectPropertyRange(:groupOf dbo:CelestialBody)
+
+# Object Property: :hasConstellation (has Constellation)
+
+AnnotationAssertion(rdfs:comment :hasConstellation "Contains a Contellation")
+AnnotationAssertion(rdfs:label :hasConstellation "has Constellation")
+InverseObjectProperties(:hasConstellation :isConstellationOf)
+InverseFunctionalObjectProperty(:hasConstellation)
+ObjectPropertyDomain(:hasConstellation :ConstellationFamily)
+ObjectPropertyRange(:hasConstellation :Constellation)
+
+# Object Property: :hasLocation (has Location)
+
+ObjectPropertyDomain(:hasLocation dbo:CelestialBody)
+ObjectPropertyRange(:hasLocation owl:Thing)
+
+# Object Property: :hasPlanet (has Planet)
+
+AnnotationAssertion(rdfs:comment :hasPlanet "Contains a Planet")
+AnnotationAssertion(rdfs:label :hasPlanet "has Planet")
+ObjectPropertyRange(:hasPlanet :Planet)
+
+# Object Property: :hasStar (has Star)
+
+AnnotationAssertion(rdfs:comment :hasStar "Define the star of a System")
+AnnotationAssertion(rdfs:label :hasStar "has Star")
+ObjectPropertyRange(:hasStar :Stars)
+
+# Object Property: :howMassWasObtained (how Mass Was Obtain)
+
+SubObjectPropertyOf(:howMassWasObtained owl:topObjectProperty)
+
+# Object Property: :isConstellationOf (is Constellation Of)
+
+AnnotationAssertion(rdfs:comment :isConstellationOf "Constellation of which family")
+AnnotationAssertion(rdfs:label :isConstellationOf "is Constellation Of")
+SubObjectPropertyOf(:isConstellationOf owl:topObjectProperty)
+InverseFunctionalObjectProperty(:isConstellationOf)
+ObjectPropertyDomain(:isConstellationOf :Constellation)
+ObjectPropertyRange(:isConstellationOf ObjectUnionOf(:BayerFamily :HeavenlyWaters :HerculesFamily :LaCailleFamily :OrionFamily :PerseusFamily :UrsaMajorFamily :Zodiac))
+
+# Object Property: :isMadeOf (is Made Of)
+
+FunctionalObjectProperty(:isMadeOf)
+ObjectPropertyDomain(:isMadeOf :Matter)
+
+# Object Property: :launchCountry (launch Country)
+
+AnnotationAssertion(rdfs:comment :launchCountry "Country where an artificial satellite was launched")
+AnnotationAssertion(rdfs:label :launchCountry "launch Country")
+ObjectPropertyDomain(:launchCountry :ArtificalSatellite)
+ObjectPropertyRange(:launchCountry :Country)
+
+# Object Property: :mass (mass)
+
+AnnotationAssertion(rdfs:comment :mass "Object mass")
+AnnotationAssertion(rdfs:label :mass "mass")
+ObjectPropertyDomain(:mass dbo:CelestialBody)
+ObjectPropertyRange(:mass :MeasurementUnit)
+
+# Object Property: :orbitDiameter (orbit diameter)
+
+AnnotationAssertion(rdfs:comment :orbitDiameter "diameter of the orbit, in meter or Light-Year")
+AnnotationAssertion(rdfs:label :orbitDiameter "orbit diameter")
+ObjectPropertyDomain(:orbitDiameter dbo:CelestialBody)
+ObjectPropertyRange(:orbitDiameter :MeasurementUnit)
+
+# Object Property: :orbits (is on orbit)
+
+AnnotationAssertion(rdfs:comment :orbits "the subject is on the orbit of the subject")
+AnnotationAssertion(rdfs:label :orbits "is on orbit")
+TransitiveObjectProperty(:orbits)
+ObjectPropertyDomain(:orbits dbo:CelestialBody)
+ObjectPropertyRange(:orbits dbo:CelestialBody)
+
+# Object Property: :recognizedBy (recognized by)
+
+AnnotationAssertion(rdfs:comment :recognizedBy "Who found the Celesstial Body")
+AnnotationAssertion(rdfs:label :recognizedBy "recognized by")
+ObjectPropertyDomain(:recognizedBy dbo:CelestialBody)
+ObjectPropertyRange(:recognizedBy dbo:Agent)
+
+# Object Property: :shape (shape)
+
+AnnotationAssertion(rdfs:comment :shape "Form of an object in the Universe")
+AnnotationAssertion(rdfs:label :shape "shape")
+ObjectPropertyDomain(:shape dbo:CelestialBody)
+
+# Object Property: :unit (unit)
+
+AnnotationAssertion(rdfs:comment :unit "Different kinds of units")
+AnnotationAssertion(rdfs:label :unit "unit")
+ObjectPropertyDomain(:unit :MeasurementUnit)
+ObjectPropertyRange(:unit :Units)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <dbo:missionDuration> (<dbo:missionDuration>)
+
+SubDataPropertyOf(<dbo:missionDuration> owl:topDataProperty)
+DataPropertyDomain(<dbo:missionDuration> :ArtificalSatellite)
+DataPropertyRange(<dbo:missionDuration> dbo:day)
+
+# Data Property: :ApparentMagnitude (:ApparentMagnitude)
+
+DataPropertyDomain(:ApparentMagnitude dbo:CelestialBody)
+DataPropertyRange(:ApparentMagnitude xsd:float)
+
+# Data Property: :distance (:distance)
+
+AnnotationAssertion(rdfs:comment :distance "Distance from Earth, usually in light year")
+DataPropertyDomain(:distance dbo:CelestialBody)
+DataPropertyRange(:distance xsd:float)
+
+# Data Property: :hasValue (:hasValue)
+
+DataPropertyDomain(:hasValue owl:Thing)
+DataPropertyDomain(:hasValue :MeasurementUnit)
+DataPropertyRange(:hasValue xsd:float)
+
+# Data Property: :launchDate (:launchDate)
+
+DataPropertyDomain(:launchDate :ArtificalSatellite)
+DataPropertyRange(:launchDate xsd:date)
+
+# Data Property: :recognitionYear (:recognitionYear)
+
+DataPropertyDomain(:recognitionYear dbo:CelestialBody)
+DataPropertyRange(:recognitionYear xsd:gYear)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: dbo:CelestialBody (CelestialBody)
+
+AnnotationAssertion(rdfs:comment dbo:CelestialBody "Celestial bodies include asteroids,moons,planets and stars. A body refers to the frozen nucleus of ice and dust.")
+AnnotationAssertion(rdfs:label dbo:CelestialBody "CelestialBody")
+DisjointClasses(dbo:CelestialBody :Matter)
+
+# Class: :ArtificalSatellite (Artifical Satellite)
+
+AnnotationAssertion(rdfs:comment :ArtificalSatellite "An object that people have made and launched into orbit using rockets")
+AnnotationAssertion(rdfs:label :ArtificalSatellite "Artifical Satellite")
+SubClassOf(:ArtificalSatellite :Satellite)
+SubClassOf(:ArtificalSatellite ObjectIntersectionOf(ObjectSomeValuesFrom(:launchCountry :Country) ObjectExactCardinality(1 :launchCountry)))
+SubClassOf(:ArtificalSatellite DataSomeValuesFrom(:launchDate xsd:date))
+DisjointClasses(:ArtificalSatellite :NaturalSatellite)
+
+# Class: :BarredSpiralGalaxy (Barred Spiral Galaxy)
+
+AnnotationAssertion(rdfs:comment :BarredSpiralGalaxy "A barred spiral galaxy is a spiral galaxy with a central bar-shaped structure composed of stars.")
+AnnotationAssertion(rdfs:label :BarredSpiralGalaxy "Barred Spiral Galaxy")
+SubClassOf(:BarredSpiralGalaxy :SpiralGalaxy)
+
+# Class: :BayerFamily (Bayer Family)
+
+AnnotationAssertion(rdfs:comment :BayerFamily "The constellations were named mostly from exotic animals.")
+AnnotationAssertion(rdfs:label :BayerFamily "Bayer Family")
+EquivalentClasses(:BayerFamily ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Apus :Chamaeleon :Dorado :Grus :Hydrus :Indus :Musca :Pavo :Phoenix :Tucana :Volans))))
+SubClassOf(:BayerFamily :ConstellationFamily)
+
+# Class: :BlackHole (Black Hole)
+
+AnnotationAssertion(rdfs:comment :BlackHole "A region of space having a gravitational field so intense that no matter or radiation can escape")
+AnnotationAssertion(rdfs:label :BlackHole "Black Hole")
+
+# Class: :Constellation (Constellation)
+
+AnnotationAssertion(rdfs:comment :Constellation "An area on the celestial sphere where a group of visbile stars create a specifc pattern.")
+AnnotationAssertion(rdfs:label :Constellation "Constellation")
+SubClassOf(:Constellation dbo:CelestialBody)
+SubClassOf(:Constellation ObjectSomeValuesFrom(:classifiedBy :ConstellationFamily))
+SubClassOf(:Constellation ObjectSomeValuesFrom(:groupOf :Stars))
+
+# Class: :ConstellationFamily (Constellation Family)
+
+AnnotationAssertion(rdfs:comment :ConstellationFamily "Constellations are classified within different Constellation Families")
+AnnotationAssertion(rdfs:label :ConstellationFamily "Constellation Family")
+DisjointClasses(:ConstellationFamily :Matter)
+
+# Class: :Country (Country)
+
+AnnotationAssertion(rdfs:comment :Country "An indefinite usually extended expanse of land : region.")
+AnnotationAssertion(rdfs:label :Country "Country")
+
+# Class: :EllipticalGalaxy (Elliptical Galaxy)
+
+AnnotationAssertion(rdfs:comment :EllipticalGalaxy "galaxy with an approximately ellipsoidal shape")
+AnnotationAssertion(rdfs:label :EllipticalGalaxy "Elliptical Galaxy")
+SubClassOf(:EllipticalGalaxy :Galaxy)
+
+# Class: :Exoplanet (Exoplanet)
+
+AnnotationAssertion(rdfs:comment :Exoplanet "A planet outside of our solar system that usually orbits another star in our galaxy")
+AnnotationAssertion(rdfs:label :Exoplanet "Exoplanet")
+SubClassOf(:Exoplanet :Planet)
+
+# Class: :Galaxy (Galaxy)
+
+AnnotationAssertion(rdfs:comment :Galaxy "A system that contains stars and other elements held together by gravity")
+AnnotationAssertion(rdfs:label :Galaxy "Galaxy")
+SubClassOf(:Galaxy dbo:CelestialBody)
+
+# Class: :GlobularCluster (Globular Cluster)
+
+AnnotationAssertion(rdfs:comment :GlobularCluster "A spherical collection of stars that orbits a galactic core")
+AnnotationAssertion(rdfs:label :GlobularCluster "Globular Cluster")
+SubClassOf(:GlobularCluster :StarCluster)
+DisjointClasses(:GlobularCluster :OpenCluster)
+
+# Class: :HeavenlyWaters (:HeavenlyWaters)
+
+AnnotationAssertion(rdfs:comment :HeavenlyWaters "Heavenly Waters")
+AnnotationAssertion(rdfs:comment :HeavenlyWaters "The constellation names are associated with water ins some form.")
+EquivalentClasses(:HeavenlyWaters ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Carina :Columbia :Delphinus :Equuleus :Eridanus :PiscisAustrinus :Puppis :Pyxis :Vela))))
+SubClassOf(:HeavenlyWaters :ConstellationFamily)
+
+# Class: :HerculesFamily (Hercules Family)
+
+AnnotationAssertion(rdfs:comment :HerculesFamily "Menzel's largest grouping of constellations.")
+AnnotationAssertion(rdfs:label :HerculesFamily "Hercules Family")
+EquivalentClasses(:HerculesFamily ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Aquila :Ara :Centaurus :CoronaAustralis :Corvus :Crater :Cygnus :Hercules :Hydra :Lupus :Lyra :Ophiuchus :Sagitta :Scutum :Serpens :Sextans :Vulpecula))))
+SubClassOf(:HerculesFamily :ConstellationFamily)
+
+# Class: :IrregularGalaxy (Irregular galaxy)
+
+AnnotationAssertion(rdfs:comment :IrregularGalaxy "A galaxy that does not have a distinct regular shape")
+AnnotationAssertion(rdfs:label :IrregularGalaxy "Irregular galaxy")
+SubClassOf(:IrregularGalaxy :Galaxy)
+
+# Class: :KnownMatter (Known Matter)
+
+AnnotationAssertion(rdfs:comment :KnownMatter "Matter known to be occupying space")
+AnnotationAssertion(rdfs:label :KnownMatter "Known Matter")
+SubClassOf(:KnownMatter :Matter)
+
+# Class: :LaCailleFamily (La Caille Family)
+
+AnnotationAssertion(rdfs:comment :LaCailleFamily "The constellations name from the La Caille Family represent scientific instruments.")
+AnnotationAssertion(rdfs:label :LaCailleFamily "La Caille Family")
+EquivalentClasses(:LaCailleFamily ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Antlia :Caelum :Circinus :Fornax :Horologium :Mensa :Microscopium :Norma :Octans :Pictor :Reticulum :Sculptor :Telescopium))))
+SubClassOf(:LaCailleFamily :ConstellationFamily)
+
+# Class: :LenticularGalaxy (Lenticular Galaxy)
+
+AnnotationAssertion(rdfs:comment :LenticularGalaxy "A type of galaxy intermediate between an elliptical (denoted E) and a spiral galaxy")
+AnnotationAssertion(rdfs:label :LenticularGalaxy "Lenticular Galaxy")
+SubClassOf(:LenticularGalaxy :Galaxy)
+
+# Class: :Matter (Matter)
+
+AnnotationAssertion(rdfs:comment :Matter "Physical substance in general, as distinct from mind and spirit")
+AnnotationAssertion(rdfs:label :Matter "Matter")
+
+# Class: :MeasurementUnit (Measurement Unit)
+
+AnnotationAssertion(rdfs:comment :MeasurementUnit "A measurement unit class to define a value associated with :unit")
+AnnotationAssertion(rdfs:label :MeasurementUnit "Measurement Unit")
+
+# Class: :NaturalSatellite (Natural Satellite)
+
+AnnotationAssertion(rdfs:comment :NaturalSatellite "Astronomical body that orbits a planet or minor planet")
+AnnotationAssertion(rdfs:label :NaturalSatellite "Natural Satellite")
+EquivalentClasses(:NaturalSatellite ObjectIntersectionOf(:Satellite ObjectSomeValuesFrom(:orbits :Planet)))
+SubClassOf(:NaturalSatellite :Satellite)
+
+# Class: :OpenCluster (Open Cluster)
+
+AnnotationAssertion(rdfs:comment :OpenCluster "A loose, irregular grouping of stars that originated from a single nebula in the arms of a spiral galaxy")
+AnnotationAssertion(rdfs:label :OpenCluster "Open Cluster")
+SubClassOf(:OpenCluster :StarCluster)
+
+# Class: :OrionFamily (Orion Family)
+
+AnnotationAssertion(rdfs:comment :OrionFamily "This group of constellations draws from Greek myth.")
+AnnotationAssertion(rdfs:label :OrionFamily "Orion Family")
+EquivalentClasses(:OrionFamily ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:CanisMajor :CanisMinor :Lepus :Monoceros :Orion))))
+SubClassOf(:OrionFamily :ConstellationFamily)
+
+# Class: :PerseusFamily (Perseus Family)
+
+AnnotationAssertion(rdfs:comment :PerseusFamily "The Perseus Family includes several constellations associated with the Perseus myth.")
+AnnotationAssertion(rdfs:label :PerseusFamily "Perseus Family")
+EquivalentClasses(:PerseusFamily ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Andromeda :Auriga :Cassiopeia :Cepheus :Cetus :Lacerta :Pegasus :Perseus :Triangulum))))
+SubClassOf(:PerseusFamily :ConstellationFamily)
+
+# Class: :Planet (Planet)
+
+AnnotationAssertion(rdfs:comment :Planet "A celestial body distinguished from the fixed stars by having an apparent motion of its own")
+AnnotationAssertion(rdfs:label :Planet "Planet")
+EquivalentClasses(:Planet ObjectSomeValuesFrom(:orbits :Stars))
+SubClassOf(:Planet dbo:CelestialBody)
+
+# Class: :PlanetarySystem (Planetary System)
+
+AnnotationAssertion(rdfs:comment :PlanetarySystem "A planetary system is a set of gravitationally bound non-stellar objects in or out of orbit around a star or star system")
+AnnotationAssertion(rdfs:label :PlanetarySystem "Planetary System")
+
+# Class: :Satellite (Satellite)
+
+AnnotationAssertion(rdfs:comment :Satellite "Artificial body placed in orbit around the earth or moon or another planet in order to collect information or for communication")
+AnnotationAssertion(rdfs:label :Satellite "Satellite")
+EquivalentClasses(:Satellite ObjectExactCardinality(1 :orbits :Planet))
+SubClassOf(:Satellite dbo:CelestialBody)
+
+# Class: :SpiralGalaxy (Spiral Galaxy)
+
+AnnotationAssertion(rdfs:comment :SpiralGalaxy "Spiral galaxies form a class of galaxy originally described by Edwin Hubble")
+AnnotationAssertion(rdfs:label :SpiralGalaxy "Spiral Galaxy")
+SubClassOf(:SpiralGalaxy :Galaxy)
+
+# Class: :StarCluster (Star Cluster)
+
+AnnotationAssertion(rdfs:comment :StarCluster "A number of stars of common origin held together as a group by gravitational attraction")
+AnnotationAssertion(rdfs:label :StarCluster "Star Cluster")
+EquivalentClasses(:StarCluster ObjectSomeValuesFrom(:groupOf :Stars))
+SubClassOf(:StarCluster dbo:CelestialBody)
+
+# Class: :StarSystem (Star System)
+
+AnnotationAssertion(rdfs:comment :StarSystem "A small number of stars that orbit each other,[1] bound by gravitational attraction")
+AnnotationAssertion(rdfs:label :StarSystem "Star System")
+
+# Class: :StarburstGalaxy (Starburst Galaxy)
+
+AnnotationAssertion(rdfs:comment :StarburstGalaxy "A starburst galaxy is a galaxy undergoing an exceptionally high rate of star formation, as compared to the long-term average rate of star formation in the galaxy.")
+AnnotationAssertion(rdfs:label :StarburstGalaxy "Starburst Galaxy")
+SubClassOf(:StarburstGalaxy :Galaxy)
+
+# Class: :Stars (Stars)
+
+AnnotationAssertion(rdfs:comment :Stars "It consist of luminnous spheroid of plasma  held togethr by its own gravity.")
+AnnotationAssertion(rdfs:label :Stars "Stars")
+SubClassOf(:Stars dbo:CelestialBody)
+
+# Class: :Units (Units)
+
+AnnotationAssertion(rdfs:comment :Units "A definite magnitude of a quantity, defined and adopted by convention or by law")
+AnnotationAssertion(rdfs:label :Units "Units")
+
+# Class: :UrsaMajorFamily (Ursa Major Family)
+
+AnnotationAssertion(rdfs:comment :UrsaMajorFamily "The Ursa Major Family includes 10 northern constellations in the vicinity of Ursa Major.")
+AnnotationAssertion(rdfs:label :UrsaMajorFamily "Ursa Major Family")
+EquivalentClasses(:UrsaMajorFamily ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Bootes :Camelopardalis :CanesVenatici :ComaBerenices :CoronaBorealis :Draco :LeoMinor :Lynx :UrsaMajor :UrsaMinor))))
+SubClassOf(:UrsaMajorFamily :ConstellationFamily)
+
+# Class: :Zodiac (Zodiac)
+
+AnnotationAssertion(rdfs:comment :Zodiac "The constellations are all associated with zodiac signs.")
+AnnotationAssertion(rdfs:label :Zodiac "Zodiac")
+EquivalentClasses(:Zodiac ObjectIntersectionOf(:ConstellationFamily ObjectSomeValuesFrom(:hasConstellation ObjectOneOf(:Aquarius :Aries :Cancer :Capricornus :Gemini :Leo :Libra :Pisces :Sagittarius :Scorpius :Taurus :Virgo))))
+SubClassOf(:Zodiac :ConstellationFamily)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: dbo:IC3583 (dbo:IC3583)
+
+ClassAssertion(:IrregularGalaxy dbo:IC3583)
+
+# Individual: dbo:IC4710 (dbo:IC4710)
+
+ClassAssertion(:IrregularGalaxy dbo:IC4710)
+
+# Individual: dbo:Light-year (dbo:Light-year)
+
+ClassAssertion(:Units dbo:Light-year)
+
+# Individual: dbo:Messier_49 (dbo:Messier_49)
+
+ClassAssertion(:EllipticalGalaxy dbo:Messier_49)
+
+# Individual: dbo:Messier_59 (dbo:Messier_59)
+
+ClassAssertion(:EllipticalGalaxy dbo:Messier_59)
+
+# Individual: dbo:Messier_60 (dbo:Messier_60)
+
+ClassAssertion(:EllipticalGalaxy dbo:Messier_60)
+
+# Individual: dbo:NGC1387 (dbo:NGC1387)
+
+ClassAssertion(:LenticularGalaxy dbo:NGC1387)
+
+# Individual: dbo:NGC2787 (dbo:NGC2787)
+
+ClassAssertion(:LenticularGalaxy dbo:NGC2787)
+
+# Individual: dbr:Earth_Mass (dbr:Earth_Mass)
+
+ClassAssertion(:Units dbr:Earth_Mass)
+
+# Individual: dbr:Kilogram (dbr:Kilogram)
+
+ClassAssertion(:Units dbr:Kilogram)
+
+# Individual: dbr:Metre (dbr:Metre)
+
+ClassAssertion(:Units dbr:Metre)
+
+# Individual: dbr:Solar_Mass (dbr:Solar_Mass)
+
+ClassAssertion(:Units dbr:Solar_Mass)
+
+# Individual: :AlphaCentauri (Alpha Centauri)
+
+AnnotationAssertion(rdfs:label :AlphaCentauri "Alpha Centauri")
+ClassAssertion(:StarSystem :AlphaCentauri)
+ObjectPropertyAssertion(:hasLocation :AlphaCentauri :Centaurus)
+ObjectPropertyAssertion(:hasPlanet :AlphaCentauri :ProximaCentauri_b)
+ObjectPropertyAssertion(:hasPlanet :AlphaCentauri :ProximaCentauri_c)
+ObjectPropertyAssertion(:hasStar :AlphaCentauri :AlphaCentauriA)
+ObjectPropertyAssertion(:hasStar :AlphaCentauri :AlphaCentauriB)
+ObjectPropertyAssertion(:hasStar :AlphaCentauri :AlphaCentauriC)
+
+# Individual: :AlphaCentauriA (Rigil Kentaurus)
+
+AnnotationAssertion(rdfs:label :AlphaCentauriA "Rigil Kentaurus")
+ClassAssertion(:Stars :AlphaCentauriA)
+ObjectPropertyAssertion(:mass :AlphaCentauriA :AlphaCentauriAMass)
+DataPropertyAssertion(:ApparentMagnitude :AlphaCentauriA "-0.01"^^xsd:float)
+DataPropertyAssertion(:distance :AlphaCentauriA "4.365"^^xsd:float)
+
+# Individual: :AlphaCentauriAMass (:AlphaCentauriAMass)
+
+ClassAssertion(:MeasurementUnit :AlphaCentauriAMass)
+ObjectPropertyAssertion(:unit :AlphaCentauriAMass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :AlphaCentauriAMass "1.1"^^xsd:float)
+
+# Individual: :AlphaCentauriB (Rigil Kentaurus B)
+
+AnnotationAssertion(rdfs:label :AlphaCentauriB "Rigil Kentaurus B")
+ClassAssertion(:Stars :AlphaCentauriB)
+ObjectPropertyAssertion(:mass :AlphaCentauriB :AlphaCentauriBMass)
+DataPropertyAssertion(:ApparentMagnitude :AlphaCentauriB "1.35"^^xsd:float)
+DataPropertyAssertion(:distance :AlphaCentauriB "4.365"^^xsd:float)
+
+# Individual: :AlphaCentauriBMass (:AlphaCentauriBMass)
+
+ClassAssertion(:MeasurementUnit :AlphaCentauriBMass)
+ObjectPropertyAssertion(:unit :AlphaCentauriBMass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :AlphaCentauriBMass "0.907"^^xsd:float)
+
+# Individual: :AlphaCentauriC (Proxima Centauri)
+
+AnnotationAssertion(rdfs:label :AlphaCentauriC "Proxima Centauri")
+ClassAssertion(:Stars :AlphaCentauriC)
+ObjectPropertyAssertion(:mass :AlphaCentauriC :AlphaCentauriCMass)
+DataPropertyAssertion(:ApparentMagnitude :AlphaCentauriC "15.6"^^xsd:float)
+DataPropertyAssertion(:distance :AlphaCentauriC "4.244"^^xsd:float)
+
+# Individual: :AlphaCentauriCMass (:AlphaCentauriCMass)
+
+ClassAssertion(:MeasurementUnit :AlphaCentauriCMass)
+ObjectPropertyAssertion(:unit :AlphaCentauriCMass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :AlphaCentauriCMass "0.122"^^xsd:float)
+
+# Individual: :Amalthea (:Amalthea)
+
+ClassAssertion(:NaturalSatellite :Amalthea)
+ObjectPropertyAssertion(:mass :Amalthea :AmaltheaMass)
+ObjectPropertyAssertion(:orbits :Amalthea :Jupiter)
+
+# Individual: :AmaltheaMass (:AmaltheaMass)
+
+ClassAssertion(:MeasurementUnit :AmaltheaMass)
+ObjectPropertyAssertion(:unit :AmaltheaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :AmaltheaMass "2.08000002E18"^^xsd:float)
+
+# Individual: :Andromeda (:Andromeda)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Andromeda)
+
+# Individual: :AndromedaGalaxy (Andromeda Galaxy)
+
+AnnotationAssertion(rdfs:label :AndromedaGalaxy "Andromeda Galaxy")
+ClassAssertion(:BarredSpiralGalaxy :AndromedaGalaxy)
+ObjectPropertyAssertion(:diameter :AndromedaGalaxy :AndromedaGalaxyDiameter)
+ObjectPropertyAssertion(:hasLocation :AndromedaGalaxy :Andromeda)
+DataPropertyAssertion(:distance :AndromedaGalaxy "2500000.0"^^xsd:float)
+
+# Individual: :AndromedaGalaxyDiameter (:AndromedaGalaxyDiameter)
+
+ClassAssertion(:MeasurementUnit :AndromedaGalaxyDiameter)
+ObjectPropertyAssertion(:unit :AndromedaGalaxyDiameter dbo:Light-year)
+DataPropertyAssertion(:hasValue :AndromedaGalaxyDiameter "220000.0"^^xsd:float)
+
+# Individual: :Antlia (:Antlia)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Antlia)
+
+# Individual: :Apus (:Apus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Apus)
+
+# Individual: :Aquarius (:Aquarius)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Aquarius)
+
+# Individual: :Aquila (:Aquila)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :ConstellationFamily)) :Aquila)
+
+# Individual: :Ara (:Ara)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Ara)
+
+# Individual: :Ariel (:Ariel)
+
+ClassAssertion(:NaturalSatellite :Ariel)
+ObjectPropertyAssertion(:mass :Ariel :ArielMass)
+ObjectPropertyAssertion(:orbits :Ariel :Uranus)
+
+# Individual: :ArielMass (:ArielMass)
+
+ClassAssertion(:MeasurementUnit :ArielMass)
+ObjectPropertyAssertion(:unit :ArielMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :ArielMass "1.251E21"^^xsd:float)
+
+# Individual: :Aries (:Aries)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Aries)
+
+# Individual: :Astérix (Astérix)
+
+AnnotationAssertion(rdfs:label :Astérix "Astérix")
+ClassAssertion(:ArtificalSatellite :Astérix)
+ObjectPropertyAssertion(:launchCountry :Astérix :France)
+DataPropertyAssertion(<dbo:missionDuration> :Astérix "111"^^dbo:day)
+DataPropertyAssertion(:launchDate :Astérix "1965-11-26"^^xsd:date)
+
+# Individual: :Atlas (:Atlas)
+
+ClassAssertion(:NaturalSatellite :Atlas)
+ObjectPropertyAssertion(:mass :Atlas :AtlasMass)
+ObjectPropertyAssertion(:orbits :Atlas :Saturn)
+
+# Individual: :AtlasMass (:AtlasMass)
+
+ClassAssertion(:MeasurementUnit :AtlasMass)
+ObjectPropertyAssertion(:unit :AtlasMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :AtlasMass "6.6E15"^^xsd:float)
+
+# Individual: :Auriga (:Auriga)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Auriga)
+
+# Individual: :Belinda (:Belinda)
+
+ClassAssertion(:NaturalSatellite :Belinda)
+ObjectPropertyAssertion(:mass :Belinda :BelindaMass)
+ObjectPropertyAssertion(:orbits :Belinda :Uranus)
+
+# Individual: :BelindaMass (:BelindaMass)
+
+ClassAssertion(:MeasurementUnit :BelindaMass)
+ObjectPropertyAssertion(:unit :BelindaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :BelindaMass "3.60000001E17"^^xsd:float)
+
+# Individual: :Bianca (:Bianca)
+
+ClassAssertion(:NaturalSatellite :Bianca)
+ObjectPropertyAssertion(:mass :Bianca :BiancaMass)
+ObjectPropertyAssertion(:orbits :Bianca :Uranus)
+
+# Individual: :BiancaMass (:BiancaMass)
+
+ClassAssertion(:MeasurementUnit :BiancaMass)
+ObjectPropertyAssertion(:unit :BiancaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :BiancaMass "9.2000003E16"^^xsd:float)
+
+# Individual: :Bootes (:Bootes)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :Bootes)
+
+# Individual: :Caelum (:Caelum)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Caelum)
+
+# Individual: :Callisto (:Callisto)
+
+ClassAssertion(:NaturalSatellite :Callisto)
+ObjectPropertyAssertion(:mass :Callisto :CallistoMass)
+ObjectPropertyAssertion(:orbits :Callisto :Jupiter)
+
+# Individual: :CallistoMass (:CallistoMass)
+
+ClassAssertion(:MeasurementUnit :CallistoMass)
+ObjectPropertyAssertion(:unit :CallistoMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :CallistoMass "1.075E23"^^xsd:float)
+
+# Individual: :Camelopardalis (:Camelopardalis)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :Camelopardalis)
+
+# Individual: :Cancer (:Cancer)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Cancer)
+
+# Individual: :CanesVenatici (:CanesVenatici)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :CanesVenatici)
+
+# Individual: :CanisMajor (:CanisMajor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :OrionFamily)) :CanisMajor)
+
+# Individual: :CanisMinor (:CanisMinor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :OrionFamily)) :CanisMinor)
+
+# Individual: :Capricornus (:Capricornus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Capricornus)
+
+# Individual: :Carina (:Carina)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Carina)
+
+# Individual: :Cassiopeia (:Cassiopeia)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Cassiopeia)
+
+# Individual: :Centaurus (:Centaurus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Centaurus)
+
+# Individual: :Cepheus (:Cepheus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Cepheus)
+
+# Individual: :Cetus (:Cetus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Cetus)
+
+# Individual: :Chamaeleon (:Chamaeleon)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Chamaeleon)
+
+# Individual: :China (:China)
+
+ClassAssertion(:Country :China)
+
+# Individual: :CigarGalaxy (Cigar Galaxy)
+
+AnnotationAssertion(rdfs:label :CigarGalaxy "Cigar Galaxy")
+ClassAssertion(:StarburstGalaxy :CigarGalaxy)
+ObjectPropertyAssertion(:diameter :CigarGalaxy :CigarGalaxyDiameter)
+ObjectPropertyAssertion(:hasLocation :CigarGalaxy :UrsaMajor)
+DataPropertyAssertion(:distance :CigarGalaxy "1.15E7"^^xsd:float)
+
+# Individual: :CigarGalaxyDiameter (:CigarGalaxyDiameter)
+
+ClassAssertion(:MeasurementUnit :CigarGalaxyDiameter)
+ObjectPropertyAssertion(:unit :CigarGalaxyDiameter dbo:Light-year)
+DataPropertyAssertion(:hasValue :CigarGalaxyDiameter "370000.0"^^xsd:float)
+
+# Individual: :Circinus (:Circinus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Circinus)
+
+# Individual: :Columbia (:Columbia)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Columbia)
+
+# Individual: :ComaBerenices (:ComaBerenices)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :ComaBerenices)
+
+# Individual: :Cordelia (:Cordelia)
+
+ClassAssertion(:NaturalSatellite :Cordelia)
+ObjectPropertyAssertion(:mass :Cordelia :CordeliaMass)
+ObjectPropertyAssertion(:orbits :Cordelia :Uranus)
+
+# Individual: :CordeliaMass (:CordeliaMass)
+
+ClassAssertion(:MeasurementUnit :CordeliaMass)
+ObjectPropertyAssertion(:unit :CordeliaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :CordeliaMass "4.3999999E16"^^xsd:float)
+
+# Individual: :CoronaAustralis (:CoronaAustralis)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :CoronaAustralis)
+
+# Individual: :CoronaBorealis (:CoronaBorealis)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :CoronaBorealis)
+
+# Individual: :Corvus (:Corvus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Corvus)
+
+# Individual: :Crater (:Crater)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Crater)
+
+# Individual: :Cressida (:Cressida)
+
+ClassAssertion(:NaturalSatellite :Cressida)
+ObjectPropertyAssertion(:mass :Cressida :CressidaMass)
+ObjectPropertyAssertion(:orbits :Cressida :Uranus)
+
+# Individual: :CressidaMass (:CressidaMass)
+
+ClassAssertion(:MeasurementUnit :CressidaMass)
+ObjectPropertyAssertion(:unit :CressidaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :CressidaMass "2.49999996E17"^^xsd:float)
+
+# Individual: :CubeSat (Cube Sat)
+
+AnnotationAssertion(rdfs:label :CubeSat "Cube Sat")
+ClassAssertion(:ArtificalSatellite :CubeSat)
+ObjectPropertyAssertion(:launchCountry :CubeSat :New_Zealand)
+DataPropertyAssertion(:launchDate :CubeSat "2018-11-12"^^xsd:date)
+
+# Individual: :Cygnus (:Cygnus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Cygnus)
+
+# Individual: :Daphnis (:Daphnis)
+
+ClassAssertion(:NaturalSatellite :Daphnis)
+ObjectPropertyAssertion(:mass :Daphnis :DaphnisMass)
+ObjectPropertyAssertion(:orbits :Daphnis :Saturn)
+
+# Individual: :DaphnisMass (:DaphnisMass)
+
+ClassAssertion(:MeasurementUnit :DaphnisMass)
+ObjectPropertyAssertion(:unit :DaphnisMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :DaphnisMass "7.6999998E13"^^xsd:float)
+
+# Individual: :Deimos (:Deimos)
+
+ClassAssertion(:NaturalSatellite :Deimos)
+ObjectPropertyAssertion(:mass :Deimos :DeimosMass)
+ObjectPropertyAssertion(:orbits :Deimos :Mars)
+
+# Individual: :DeimosMass (:DeimosMass)
+
+ClassAssertion(:MeasurementUnit :DeimosMass)
+ObjectPropertyAssertion(:unit :DeimosMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :DeimosMass "1.47619999E15"^^xsd:float)
+
+# Individual: :Delphinus (:Delphinus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Delphinus)
+
+# Individual: :Desdemona (:Desdemona)
+
+ClassAssertion(:NaturalSatellite :Desdemona)
+ObjectPropertyAssertion(:mass :Desdemona :DesdemonaMass)
+ObjectPropertyAssertion(:orbits :Desdemona :Uranus)
+
+# Individual: :DesdemonaMass (:DesdemonaMass)
+
+ClassAssertion(:MeasurementUnit :DesdemonaMass)
+ObjectPropertyAssertion(:unit :DesdemonaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :DesdemonaMass "1.80000001E17"^^xsd:float)
+
+# Individual: :Despina (:Despina)
+
+ClassAssertion(:NaturalSatellite :Despina)
+ObjectPropertyAssertion(:mass :Despina :DespinaMass)
+ObjectPropertyAssertion(:orbits :Despina :Neptune)
+
+# Individual: :DespinaMass (:DespinaMass)
+
+ClassAssertion(:MeasurementUnit :DespinaMass)
+ObjectPropertyAssertion(:unit :DespinaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :DespinaMass "2.20000003E18"^^xsd:float)
+
+# Individual: :Dione (:Dione)
+
+ClassAssertion(:NaturalSatellite :Dione)
+ObjectPropertyAssertion(:mass :Dione :DioneMass)
+ObjectPropertyAssertion(:orbits :Dione :Saturn)
+
+# Individual: :DioneMass (:DioneMass)
+
+ClassAssertion(:MeasurementUnit :DioneMass)
+ObjectPropertyAssertion(:unit :DioneMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :DioneMass "1.095E21"^^xsd:float)
+
+# Individual: :DongFangHongI (Dong Fang Hong I)
+
+AnnotationAssertion(rdfs:label :DongFangHongI "Dong Fang Hong I")
+ClassAssertion(:ArtificalSatellite :DongFangHongI)
+ObjectPropertyAssertion(:launchCountry :DongFangHongI :China)
+DataPropertyAssertion(<dbo:missionDuration> :DongFangHongI "20"^^dbo:day)
+DataPropertyAssertion(:launchDate :DongFangHongI "1970-04-24"^^xsd:date)
+
+# Individual: :Dorado (:Dorado)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Dorado)
+
+# Individual: :Draco (:Draco)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :Draco)
+
+# Individual: :Earth (:Earth)
+
+ClassAssertion(:Planet :Earth)
+ObjectPropertyAssertion(:mass :Earth :EarthMass)
+ObjectPropertyAssertion(:orbitDiameter :Earth :EarthOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Earth :Sun)
+
+# Individual: :EarthMass (:EarthMass)
+
+ClassAssertion(:MeasurementUnit :EarthMass)
+ObjectPropertyAssertion(:unit :EarthMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :EarthMass "5.972E24"^^xsd:float)
+
+# Individual: :EarthOrbitDiameter (:EarthOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :EarthOrbitDiameter)
+ObjectPropertyAssertion(:unit :EarthOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :EarthOrbitDiameter "1.49599994E11"^^xsd:float)
+
+# Individual: :Elara (:Elara)
+
+ClassAssertion(:NaturalSatellite :Elara)
+ObjectPropertyAssertion(:mass :Elara :ElaraMass)
+ObjectPropertyAssertion(:orbits :Elara :Jupiter)
+
+# Individual: :ElaraMass (:ElaraMass)
+
+ClassAssertion(:MeasurementUnit :ElaraMass)
+ObjectPropertyAssertion(:unit :ElaraMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :ElaraMass "8.6999998E17"^^xsd:float)
+
+# Individual: :Enceladus (:Enceladus)
+
+ClassAssertion(:NaturalSatellite :Enceladus)
+ObjectPropertyAssertion(:mass :Enceladus :EnceladusMass)
+ObjectPropertyAssertion(:orbits :Enceladus :Saturn)
+
+# Individual: :EnceladusMass (:EnceladusMass)
+
+ClassAssertion(:MeasurementUnit :EnceladusMass)
+ObjectPropertyAssertion(:unit :EnceladusMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :EnceladusMass "1.08E20"^^xsd:float)
+
+# Individual: :Epimetheus (:Epimetheus)
+
+ClassAssertion(:NaturalSatellite :Epimetheus)
+ObjectPropertyAssertion(:mass :Epimetheus :EpimetheusMass)
+ObjectPropertyAssertion(:orbits :Epimetheus :Saturn)
+
+# Individual: :EpimetheusMass (:EpimetheusMass)
+
+ClassAssertion(:MeasurementUnit :EpimetheusMass)
+ObjectPropertyAssertion(:unit :EpimetheusMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :EpimetheusMass "5.26599996E17"^^xsd:float)
+
+# Individual: :Equuleus (:Equuleus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Equuleus)
+
+# Individual: :Eridanus (:Eridanus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Eridanus)
+
+# Individual: :Europa (:Europa)
+
+ClassAssertion(:NaturalSatellite :Europa)
+ObjectPropertyAssertion(:mass :Europa :EuropaMass)
+ObjectPropertyAssertion(:orbits :Europa :Jupiter)
+
+# Individual: :EuropaMass (:EuropaMass)
+
+ClassAssertion(:MeasurementUnit :EuropaMass)
+ObjectPropertyAssertion(:unit :EuropaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :EuropaMass "4.799E22"^^xsd:float)
+
+# Individual: :Explorer1 (Explorer 1)
+
+AnnotationAssertion(rdfs:label :Explorer1 "Explorer 1")
+ClassAssertion(:ArtificalSatellite :Explorer1)
+ObjectPropertyAssertion(:launchCountry :Explorer1 :United_States)
+DataPropertyAssertion(<dbo:missionDuration> :Explorer1 "111"^^dbo:day)
+DataPropertyAssertion(:launchDate :Explorer1 "1958-02-01"^^xsd:date)
+
+# Individual: :Ferdinand (:Ferdinand)
+
+ClassAssertion(:NaturalSatellite :Ferdinand)
+ObjectPropertyAssertion(:mass :Ferdinand :FerdinandMass)
+ObjectPropertyAssertion(:orbits :Ferdinand :Uranus)
+
+# Individual: :FerdinandMass (:FerdinandMass)
+
+ClassAssertion(:MeasurementUnit :FerdinandMass)
+ObjectPropertyAssertion(:unit :FerdinandMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :FerdinandMass "5.4000001E15"^^xsd:float)
+
+# Individual: :Fornax (:Fornax)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Fornax)
+
+# Individual: :France (:France)
+
+ClassAssertion(:Country :France)
+
+# Individual: :Francisco (:Francisco)
+
+ClassAssertion(:NaturalSatellite :Francisco)
+ObjectPropertyAssertion(:mass :Francisco :FranciscoMass)
+ObjectPropertyAssertion(:orbits :Francisco :Uranus)
+
+# Individual: :FranciscoMass (:FranciscoMass)
+
+ClassAssertion(:MeasurementUnit :FranciscoMass)
+ObjectPropertyAssertion(:unit :FranciscoMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :FranciscoMass "7.2E15"^^xsd:float)
+
+# Individual: :Galatea (:Galatea)
+
+ClassAssertion(:NaturalSatellite :Galatea)
+ObjectPropertyAssertion(:mass :Galatea :GalateaMass)
+ObjectPropertyAssertion(:orbits :Galatea :Neptune)
+
+# Individual: :GalateaMass (:GalateaMass)
+
+ClassAssertion(:MeasurementUnit :GalateaMass)
+ObjectPropertyAssertion(:unit :GalateaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :GalateaMass "2.11999998E18"^^xsd:float)
+
+# Individual: :Ganymede (:Ganymede)
+
+ClassAssertion(:NaturalSatellite :Ganymede)
+ObjectPropertyAssertion(:mass :Ganymede :GanymedeMass)
+ObjectPropertyAssertion(:orbits :Ganymede :Jupiter)
+
+# Individual: :GanymedeMass (:GanymedeMass)
+
+ClassAssertion(:MeasurementUnit :GanymedeMass)
+ObjectPropertyAssertion(:unit :GanymedeMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :GanymedeMass "1.4819E23"^^xsd:float)
+
+# Individual: :Gemini (:Gemini)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Gemini)
+
+# Individual: :Grus (:Grus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Grus)
+
+# Individual: :Hercules (:Hercules)
+
+AnnotationAssertion(dbo:namedAfter :Hercules "the Roman mythological hero, Hercules")
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Hercules)
+ObjectPropertyAssertion(:recognizedBy :Hercules dbo:Ptolemy)
+
+# Individual: :Himalia (:Himalia)
+
+ClassAssertion(:NaturalSatellite :Himalia)
+ObjectPropertyAssertion(:mass :Himalia :HimaliaMass)
+ObjectPropertyAssertion(:orbits :Himalia :Jupiter)
+
+# Individual: :HimaliaMass (:HimaliaMass)
+
+ClassAssertion(:MeasurementUnit :HimaliaMass)
+ObjectPropertyAssertion(:unit :HimaliaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :HimaliaMass "4.29199999E18"^^xsd:float)
+
+# Individual: :Hippocamp (:Hippocamp)
+
+ClassAssertion(:NaturalSatellite :Hippocamp)
+ObjectPropertyAssertion(:mass :Hippocamp :HippocampMass)
+ObjectPropertyAssertion(:orbits :Hippocamp :Neptune)
+
+# Individual: :HippocampMass (:HippocampMass)
+
+ClassAssertion(:MeasurementUnit :HippocampMass)
+ObjectPropertyAssertion(:unit :HippocampMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :HippocampMass "1.02900001E15"^^xsd:float)
+
+# Individual: :Holmberg15A (Holmberg 15 A)
+
+AnnotationAssertion(rdfs:label :Holmberg15A "Holmberg 15 A")
+AnnotationAssertion(:howMassWasObtained :Holmberg15A "Mass specified obtained through orbit-based, axisymmetric Schwarzschild models")
+ClassAssertion(:BlackHole :Holmberg15A)
+ObjectPropertyAssertion(:hasLocation :Holmberg15A :Cetus)
+ObjectPropertyAssertion(:mass :Holmberg15A :Holmberg15AMass)
+
+# Individual: :Holmberg15AMass (:Holmberg15AMass)
+
+ClassAssertion(:MeasurementUnit :Holmberg15AMass)
+ObjectPropertyAssertion(:unit :Holmberg15AMass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :Holmberg15AMass "4.0E10"^^xsd:float)
+
+# Individual: :Horologium (:Horologium)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Horologium)
+
+# Individual: :Hyades (Hyades)
+
+AnnotationAssertion(rdfs:label :Hyades "Hyades")
+AnnotationAssertion(:knowAs :Hyades "CaldWell 41, Collinder 50, Melotte 25")
+ClassAssertion(:OpenCluster :Hyades)
+ObjectPropertyAssertion(:hasLocation :Hyades :Taurus)
+DataPropertyAssertion(:ApparentMagnitude :Hyades "0.5"^^xsd:float)
+DataPropertyAssertion(:distance :Hyades "153.0"^^xsd:float)
+
+# Individual: :Hydra (:Hydra)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Hydra)
+
+# Individual: :Hydrus (:Hydrus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Hydrus)
+
+# Individual: :Hyperion (:Hyperion)
+
+ClassAssertion(:NaturalSatellite :Hyperion)
+ObjectPropertyAssertion(:orbits :Hyperion :Saturn)
+
+# Individual: :HyperionAMass (:HyperionAMass)
+
+ClassAssertion(:MeasurementUnit :HyperionAMass)
+ObjectPropertyAssertion(:unit :HyperionAMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :HyperionAMass "5.6199002E18"^^xsd:float)
+
+# Individual: :IC1101 (IC 1101)
+
+AnnotationAssertion(rdfs:label :IC1101 "IC 1101")
+AnnotationAssertion(:howMassWasObtained :IC1101 "Estimated from properties of the host galaxy; mass has not been measured directly")
+ClassAssertion(:BlackHole :IC1101)
+ObjectPropertyAssertion(:hasLocation :IC1101 :Virgo)
+ObjectPropertyAssertion(:mass :IC1101 :IC1101Mass)
+
+# Individual: :IC1101Mass (:IC1101Mass)
+
+ClassAssertion(:MeasurementUnit :IC1101Mass)
+ObjectPropertyAssertion(:unit :IC1101Mass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :IC1101Mass "7.0000001E10"^^xsd:float)
+
+# Individual: :Iapetus (:Iapetus)
+
+ClassAssertion(:NaturalSatellite :Iapetus)
+ObjectPropertyAssertion(:mass :Iapetus :IapetusMass)
+ObjectPropertyAssertion(:orbits :Iapetus :Saturn)
+
+# Individual: :IapetusMass (:IapetusMass)
+
+ClassAssertion(:MeasurementUnit :IapetusMass)
+ObjectPropertyAssertion(:unit :IapetusMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :IapetusMass "1.805E21"^^xsd:float)
+
+# Individual: :India (:India)
+
+ClassAssertion(:Country :India)
+
+# Individual: :Indus (:Indus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Indus)
+
+# Individual: :InternationalAstronomicalUnion (International Astronomical Union)
+
+AnnotationAssertion(rdfs:label :InternationalAstronomicalUnion "International Astronomical Union")
+ClassAssertion(dbo:Organisation :InternationalAstronomicalUnion)
+
+# Individual: :Io (:Io)
+
+ClassAssertion(:NaturalSatellite :Io)
+ObjectPropertyAssertion(:mass :Io :IoMass)
+ObjectPropertyAssertion(:orbits :Io :Jupiter)
+
+# Individual: :IoMass (:IoMass)
+
+ClassAssertion(:MeasurementUnit :IoMass)
+ObjectPropertyAssertion(:unit :IoMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :IoMass "8.931E22"^^xsd:float)
+
+# Individual: :Iran (:Iran)
+
+ClassAssertion(:Country :Iran)
+
+# Individual: :Israel (:Israel)
+
+ClassAssertion(:Country :Israel)
+
+# Individual: :Janus (:Janus)
+
+ClassAssertion(:NaturalSatellite :Janus)
+ObjectPropertyAssertion(:mass :Janus :JanusMass)
+ObjectPropertyAssertion(:orbits :Janus :Saturn)
+
+# Individual: :JanusMass (:JanusMass)
+
+ClassAssertion(:MeasurementUnit :JanusMass)
+ObjectPropertyAssertion(:unit :JanusMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :JanusMass "1.89750006E18"^^xsd:float)
+
+# Individual: :Japan (:Japan)
+
+ClassAssertion(:Country :Japan)
+
+# Individual: :Juliet (:Juliet)
+
+ClassAssertion(:NaturalSatellite :Juliet)
+ObjectPropertyAssertion(:mass :Juliet :JulietMass)
+ObjectPropertyAssertion(:orbits :Juliet :Uranus)
+
+# Individual: :JulietMass (:JulietMass)
+
+ClassAssertion(:MeasurementUnit :JulietMass)
+ObjectPropertyAssertion(:unit :JulietMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :JulietMass "5.59999998E17"^^xsd:float)
+
+# Individual: :Jupiter (:Jupiter)
+
+ClassAssertion(:Planet :Jupiter)
+ObjectPropertyAssertion(:orbitDiameter :Jupiter :JupiterOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Jupiter :Sun)
+
+# Individual: :JupiterMass (:JupiterMass)
+
+ClassAssertion(:MeasurementUnit :JupiterMass)
+ObjectPropertyAssertion(:unit :JupiterMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :JupiterMass "7.7849998E11"^^xsd:float)
+
+# Individual: :JupiterOrbitDiameter (:JupiterOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :JupiterOrbitDiameter)
+ObjectPropertyAssertion(:unit :JupiterOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :JupiterOrbitDiameter "7.7849998E11"^^xsd:float)
+
+# Individual: :Kosmos2175 (Kosmos 2175)
+
+AnnotationAssertion(rdfs:label :Kosmos2175 "Kosmos 2175")
+ClassAssertion(:ArtificalSatellite :Kosmos2175)
+ObjectPropertyAssertion(:launchCountry :Kosmos2175 :Russia)
+DataPropertyAssertion(:launchDate :Kosmos2175 "1992-01-21"^^xsd:date)
+
+# Individual: :Kwangmyongsong-3Unit2 (Kwangmyongsong-3 Unit 2)
+
+AnnotationAssertion(rdfs:label :Kwangmyongsong-3Unit2 "Kwangmyongsong-3 Unit 2")
+ClassAssertion(:ArtificalSatellite :Kwangmyongsong-3Unit2)
+ObjectPropertyAssertion(:launchCountry :Kwangmyongsong-3Unit2 :North_Korea)
+DataPropertyAssertion(<dbo:missionDuration> :Kwangmyongsong-3Unit2 "730"^^dbo:day)
+DataPropertyAssertion(:launchDate :Kwangmyongsong-3Unit2 "2012-12-12"^^xsd:date)
+
+# Individual: :LMC (Large Magellanic Cloud)
+
+AnnotationAssertion(rdfs:label :LMC "Large Magellanic Cloud")
+ClassAssertion(:SpiralGalaxy :LMC)
+ObjectPropertyAssertion(:diameter :LMC :LMCDiameter)
+ObjectPropertyAssertion(:hasLocation :LMC :Dorado)
+DataPropertyAssertion(:distance :LMC "158000.0"^^xsd:float)
+
+# Individual: :LMCDiameter (:LMCDiameter)
+
+ClassAssertion(:MeasurementUnit :LMCDiameter)
+ObjectPropertyAssertion(:unit :LMCDiameter dbo:Light-year)
+DataPropertyAssertion(:hasValue :LMCDiameter "14000.0"^^xsd:float)
+
+# Individual: :Lacerta (:Lacerta)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Lacerta)
+
+# Individual: :Larissa (:Larissa)
+
+ClassAssertion(:NaturalSatellite :Larissa)
+ObjectPropertyAssertion(:mass :Larissa :LarissaMass)
+ObjectPropertyAssertion(:orbits :Larissa :Neptune)
+
+# Individual: :LarissaMass (:LarissaMass)
+
+ClassAssertion(:MeasurementUnit :LarissaMass)
+ObjectPropertyAssertion(:unit :LarissaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :LarissaMass "4.2E18"^^xsd:float)
+
+# Individual: :Leda (:Leda)
+
+ClassAssertion(:NaturalSatellite :Leda)
+ObjectPropertyAssertion(:mass :Leda :LedaMass)
+ObjectPropertyAssertion(:orbits :Leda :Saturn)
+
+# Individual: :LedaMass (:LedaMass)
+
+ClassAssertion(:MeasurementUnit :LedaMass)
+ObjectPropertyAssertion(:unit :LedaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :LedaMass "1.09999997E16"^^xsd:float)
+
+# Individual: :Leo (:Leo)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Leo)
+
+# Individual: :LeoMinor (:LeoMinor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :LeoMinor)
+
+# Individual: :Lepus (:Lepus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :OrionFamily)) :Lepus)
+
+# Individual: :Libra (:Libra)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Libra)
+
+# Individual: :Lupus (:Lupus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Lupus)
+
+# Individual: :Lynx (:Lynx)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :Lynx)
+
+# Individual: :Lyra (:Lyra)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Lyra)
+
+# Individual: :Lysithea (:Lysithea)
+
+ClassAssertion(:NaturalSatellite :Lysithea)
+ObjectPropertyAssertion(:mass :Lysithea :LysitheaMass)
+ObjectPropertyAssertion(:orbits :Lysithea :Saturn)
+
+# Individual: :LysitheaMass (:LysitheaMass)
+
+ClassAssertion(:MeasurementUnit :LysitheaMass)
+ObjectPropertyAssertion(:unit :LysitheaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :LysitheaMass "6.3000002E16"^^xsd:float)
+
+# Individual: :Mab (:Mab)
+
+ClassAssertion(:NaturalSatellite :Mab)
+ObjectPropertyAssertion(:mass :Mab :MabMass)
+ObjectPropertyAssertion(:orbits :Mab :Uranus)
+
+# Individual: :MabMass (:MabMass)
+
+ClassAssertion(:MeasurementUnit :MabMass)
+ObjectPropertyAssertion(:unit :MabMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :MabMass "9.9999999E14"^^xsd:float)
+
+# Individual: :Margaret (:Margaret)
+
+ClassAssertion(:NaturalSatellite :Margaret)
+ObjectPropertyAssertion(:mass :Margaret :MargaretMass)
+ObjectPropertyAssertion(:orbits :Margaret :Uranus)
+
+# Individual: :MargaretMass (:MargaretMass)
+
+ClassAssertion(:MeasurementUnit :MargaretMass)
+ObjectPropertyAssertion(:unit :MargaretMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :MargaretMass "5.4999998E15"^^xsd:float)
+
+# Individual: :Mars (:Mars)
+
+ClassAssertion(:Planet :Mars)
+ObjectPropertyAssertion(:mass :Mars :MarsMass)
+ObjectPropertyAssertion(:orbitDiameter :Mars :MarsOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Mars :Sun)
+
+# Individual: :MarsMass (:MarsMass)
+
+ClassAssertion(:MeasurementUnit :MarsMass)
+ObjectPropertyAssertion(:unit :MarsMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :MarsMass "0.107"^^xsd:float)
+
+# Individual: :MarsOrbitDiameter (:MarsOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :MarsOrbitDiameter)
+ObjectPropertyAssertion(:unit :MarsOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :MarsOrbitDiameter "2.27899998E11"^^xsd:float)
+
+# Individual: :Mensa (:Mensa)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Mensa)
+
+# Individual: :Mercury (:Mercury)
+
+ClassAssertion(:Planet :Mercury)
+ObjectPropertyAssertion(:mass :Mercury :MercuryMass)
+ObjectPropertyAssertion(:orbitDiameter :Mercury :MercuryOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Mercury :Sun)
+
+# Individual: :MercuryMass (:MercuryMass)
+
+ClassAssertion(:MeasurementUnit :MercuryMass)
+ObjectPropertyAssertion(:unit :MercuryMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :MercuryMass "0.055"^^xsd:float)
+
+# Individual: :MercuryOrbitDiameter (:MercuryOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :MercuryOrbitDiameter)
+ObjectPropertyAssertion(:unit :MercuryOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :MercuryOrbitDiameter "5.7910002E10"^^xsd:float)
+
+# Individual: :Microscopium (:Microscopium)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Microscopium)
+
+# Individual: :MilkyWay (Milky Way)
+
+AnnotationAssertion(rdfs:label :MilkyWay "Milky Way")
+ClassAssertion(:BarredSpiralGalaxy :MilkyWay)
+ObjectPropertyAssertion(:diameter :MilkyWay :MilkyWayDiameter)
+ObjectPropertyAssertion(:hasLocation :MilkyWay :Sagittarius)
+
+# Individual: :MilkyWayDiameter (:MilkyWayDiameter)
+
+ClassAssertion(:MeasurementUnit :MilkyWayDiameter)
+ObjectPropertyAssertion(:unit :MilkyWayDiameter dbo:Light-year)
+DataPropertyAssertion(:hasValue :MilkyWayDiameter "100000.0"^^xsd:float)
+
+# Individual: :Mimas (:Mimas)
+
+ClassAssertion(:NaturalSatellite :Mimas)
+ObjectPropertyAssertion(:mass :Mimas :MimasMass)
+ObjectPropertyAssertion(:orbits :Mimas :Saturn)
+
+# Individual: :MimasMass (:MimasMass)
+
+ClassAssertion(:MeasurementUnit :MimasMass)
+ObjectPropertyAssertion(:unit :MimasMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :MimasMass "3.7493E19"^^xsd:float)
+
+# Individual: :Miranda (:Miranda)
+
+ClassAssertion(:NaturalSatellite :Miranda)
+ObjectPropertyAssertion(:mass :Miranda :MirandaMass)
+ObjectPropertyAssertion(:orbits :Miranda :Uranus)
+
+# Individual: :MirandaMass (:MirandaMass)
+
+ClassAssertion(:MeasurementUnit :MirandaMass)
+ObjectPropertyAssertion(:unit :MirandaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :MirandaMass "6.4E19"^^xsd:float)
+
+# Individual: :Monoceros (:Monoceros)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :OrionFamily)) :Monoceros)
+
+# Individual: :Moon (:Moon)
+
+ClassAssertion(:NaturalSatellite :Moon)
+ObjectPropertyAssertion(:mass :Moon :MoonMass)
+ObjectPropertyAssertion(:orbits :Moon :Earth)
+
+# Individual: :MoonMass (:MoonMass)
+
+ClassAssertion(:MeasurementUnit :MoonMass)
+ObjectPropertyAssertion(:unit :MoonMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :MoonMass "7.342E22"^^xsd:float)
+
+# Individual: :Musca (:Musca)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Musca)
+
+# Individual: :Neptune (:Neptune)
+
+ClassAssertion(:Planet :Neptune)
+ObjectPropertyAssertion(:mass :Neptune :NeptuneMass)
+ObjectPropertyAssertion(:orbitDiameter :Neptune :NeptuneOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Neptune :Sun)
+
+# Individual: :NeptuneMass (:NeptuneMass)
+
+ClassAssertion(:MeasurementUnit :NeptuneMass)
+ObjectPropertyAssertion(:unit :NeptuneMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :NeptuneMass "17.15"^^xsd:float)
+
+# Individual: :NeptuneOrbitDiameter (:NeptuneOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :NeptuneOrbitDiameter)
+ObjectPropertyAssertion(:unit :NeptuneOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :NeptuneOrbitDiameter "4.4949999E12"^^xsd:float)
+
+# Individual: :New_Zealand (:New_Zealand)
+
+ClassAssertion(:Country :New_Zealand)
+
+# Individual: :Norma (:Norma)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Norma)
+
+# Individual: :North_Korea (:North_Korea)
+
+ClassAssertion(:Country :North_Korea)
+
+# Individual: :Obéron (:Obéron)
+
+ClassAssertion(:NaturalSatellite :Obéron)
+ObjectPropertyAssertion(:mass :Obéron :ObéronMass)
+ObjectPropertyAssertion(:orbits :Obéron :Uranus)
+
+# Individual: :ObéronMass (:ObéronMass)
+
+ClassAssertion(:MeasurementUnit :ObéronMass)
+ObjectPropertyAssertion(:unit :ObéronMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :ObéronMass "3.076E21"^^xsd:float)
+
+# Individual: :Octans (:Octans)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Octans)
+
+# Individual: :Ofeq1 (Ofeq 1)
+
+AnnotationAssertion(rdfs:label :Ofeq1 "Ofeq 1")
+ClassAssertion(:ArtificalSatellite :Ofeq1)
+ObjectPropertyAssertion(:launchCountry :Ofeq1 :Israel)
+DataPropertyAssertion(:launchDate :Ofeq1 "1988-09-19"^^xsd:date)
+
+# Individual: :Omid (Omid)
+
+AnnotationAssertion(rdfs:label :Omid "Omid")
+ClassAssertion(:ArtificalSatellite :Omid)
+ObjectPropertyAssertion(:launchCountry :Omid :Iran)
+DataPropertyAssertion(:launchDate :Omid "2009-02-02"^^xsd:date)
+
+# Individual: :Ophelia (:Ophelia)
+
+ClassAssertion(:NaturalSatellite :Ophelia)
+ObjectPropertyAssertion(:mass :Ophelia :OpheliaMass)
+ObjectPropertyAssertion(:orbits :Ophelia :Uranus)
+
+# Individual: :OpheliaMass (:OpheliaMass)
+
+ClassAssertion(:MeasurementUnit :OpheliaMass)
+ObjectPropertyAssertion(:unit :OpheliaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :OpheliaMass "5.3E16"^^xsd:float)
+
+# Individual: :Ophiuchus (:Ophiuchus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Ophiuchus)
+
+# Individual: :Orion (:Orion)
+
+AnnotationAssertion(dbo:namedAfter :Orion "a hunter in Greek mythology, named Orion")
+ClassAssertion(:Constellation :Orion)
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :OrionFamily)) :Orion)
+
+# Individual: :Oshumi (Oshumi)
+
+AnnotationAssertion(rdfs:label :Oshumi "Oshumi")
+ClassAssertion(:ArtificalSatellite :Oshumi)
+ObjectPropertyAssertion(:launchCountry :Oshumi :Japan)
+DataPropertyAssertion(:launchDate :Oshumi "1970-02-11"^^xsd:date)
+
+# Individual: :Pan (:Pan)
+
+ClassAssertion(:NaturalSatellite :Pan)
+ObjectPropertyAssertion(:mass :Pan :PanMass)
+ObjectPropertyAssertion(:orbits :Pan :Saturn)
+
+# Individual: :PanMass (:PanMass)
+
+ClassAssertion(:MeasurementUnit :PanMass)
+ObjectPropertyAssertion(:unit :PanMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PanMass "4.9499997E15"^^xsd:float)
+
+# Individual: :Pandora (:Pandora)
+
+ClassAssertion(:NaturalSatellite :Pandora)
+ObjectPropertyAssertion(:mass :Pandora :PandoraMass)
+ObjectPropertyAssertion(:orbits :Pandora :Saturn)
+
+# Individual: :PandoraMass (:PandoraMass)
+
+ClassAssertion(:MeasurementUnit :PandoraMass)
+ObjectPropertyAssertion(:unit :PandoraMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PandoraMass "1.37100003E17"^^xsd:float)
+
+# Individual: :Pasiphae (:Pasiphae)
+
+ClassAssertion(:NaturalSatellite :Pasiphae)
+ObjectPropertyAssertion(:mass :Pasiphae :PasiphaeMass)
+ObjectPropertyAssertion(:orbits :Pasiphae :Jupiter)
+
+# Individual: :PasiphaeMass (:PasiphaeMass)
+
+ClassAssertion(:MeasurementUnit :PasiphaeMass)
+ObjectPropertyAssertion(:unit :PasiphaeMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PasiphaeMass "2.99999995E17"^^xsd:float)
+
+# Individual: :Pavo (:Pavo)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Pavo)
+
+# Individual: :Pegasus (:Pegasus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Pegasus)
+
+# Individual: :Perdita (:Perdita)
+
+ClassAssertion(:NaturalSatellite :Perdita)
+ObjectPropertyAssertion(:mass :Perdita :PerditaMass)
+ObjectPropertyAssertion(:orbits :Perdita :Uranus)
+
+# Individual: :PerditaMass (:PerditaMass)
+
+ClassAssertion(:MeasurementUnit :PerditaMass)
+ObjectPropertyAssertion(:unit :PerditaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PerditaMass "1.79999996E16"^^xsd:float)
+
+# Individual: :Perseus (:Perseus)
+
+AnnotationAssertion(dbo:namedAfter :Perseus "Greek mythological hero Perseus")
+AnnotationAssertion(:isDefinedBy :Perseus :InternationalAstronomicalUnion)
+ClassAssertion(:Constellation :Perseus)
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Perseus)
+
+# Individual: :Phobos (:Phobos)
+
+ClassAssertion(:NaturalSatellite :Phobos)
+ObjectPropertyAssertion(:mass :Phobos :PhobosMass)
+ObjectPropertyAssertion(:orbits :Phobos :Mars)
+
+# Individual: :PhobosMass (:PhobosMass)
+
+ClassAssertion(:MeasurementUnit :PhobosMass)
+ObjectPropertyAssertion(:unit :PhobosMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PhobosMass "1.06589997E16"^^xsd:float)
+
+# Individual: :Phoebe (:Phoebe)
+
+ClassAssertion(:NaturalSatellite :Phoebe)
+ObjectPropertyAssertion(:mass :Phoebe :PhoebeMass)
+ObjectPropertyAssertion(:orbits :Phoebe :Saturn)
+
+# Individual: :PhoebeMass (:PhoebeMass)
+
+ClassAssertion(:MeasurementUnit :PhoebeMass)
+ObjectPropertyAssertion(:unit :PhoebeMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PhoebeMass "8.2919999E18"^^xsd:float)
+
+# Individual: :Phoenix (:Phoenix)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Phoenix)
+
+# Individual: :Pictor (:Pictor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Pictor)
+
+# Individual: :PinwheelGalaxy (Pinwheel Galaxy)
+
+AnnotationAssertion(rdfs:label :PinwheelGalaxy "Pinwheel Galaxy")
+ClassAssertion(:SpiralGalaxy :PinwheelGalaxy)
+ObjectPropertyAssertion(:diameter :PinwheelGalaxy :PinwheelGalaxyDiameter)
+ObjectPropertyAssertion(:hasLocation :PinwheelGalaxy :UrsaMajor)
+DataPropertyAssertion(:distance :PinwheelGalaxy "2.087E7"^^xsd:float)
+
+# Individual: :PinwheelGalaxyDiameter (:PinwheelGalaxyDiameter)
+
+ClassAssertion(:MeasurementUnit :PinwheelGalaxyDiameter)
+ObjectPropertyAssertion(:unit :PinwheelGalaxyDiameter dbo:Light-year)
+DataPropertyAssertion(:hasValue :PinwheelGalaxyDiameter "170000.0"^^xsd:float)
+
+# Individual: :Pisces (:Pisces)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Pisces)
+
+# Individual: :PiscisAustrinus (:PiscisAustrinus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :PiscisAustrinus)
+
+# Individual: :Pleiades (Pleiades)
+
+AnnotationAssertion(rdfs:label :Pleiades "Pleiades")
+AnnotationAssertion(:knowAs :Pleiades "Seven Sisters and Messier 45")
+ClassAssertion(:OpenCluster :Pleiades)
+ObjectPropertyAssertion(:hasLocation :Pleiades :Taurus)
+DataPropertyAssertion(:ApparentMagnitude :Pleiades "1.6"^^xsd:float)
+DataPropertyAssertion(:distance :Pleiades "444.0"^^xsd:float)
+
+# Individual: :Portia (:Portia)
+
+ClassAssertion(:NaturalSatellite :Portia)
+ObjectPropertyAssertion(:mass :Portia :PortiaMass)
+ObjectPropertyAssertion(:orbits :Portia :Uranus)
+
+# Individual: :PortiaMass (:PortiaMass)
+
+ClassAssertion(:MeasurementUnit :PortiaMass)
+ObjectPropertyAssertion(:unit :PortiaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PortiaMass "1.70000001E18"^^xsd:float)
+
+# Individual: :Prometheus (:Prometheus)
+
+ClassAssertion(:NaturalSatellite :Prometheus)
+ObjectPropertyAssertion(:mass :Prometheus :PrometheusMass)
+ObjectPropertyAssertion(:orbits :Prometheus :Saturn)
+
+# Individual: :PrometheusMass (:PrometheusMass)
+
+ClassAssertion(:MeasurementUnit :PrometheusMass)
+ObjectPropertyAssertion(:unit :PrometheusMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PrometheusMass "1.59500001E17"^^xsd:float)
+
+# Individual: :Prospero (Prospero)
+
+AnnotationAssertion(rdfs:label :Prospero "Prospero")
+ClassAssertion(:ArtificalSatellite :Prospero)
+ObjectPropertyAssertion(:launchCountry :Prospero :United_Kingdom)
+DataPropertyAssertion(:launchDate :Prospero "1971-10-28"^^xsd:date)
+
+# Individual: :ProsperoMoon (:ProsperoMoon)
+
+ClassAssertion(:NaturalSatellite :ProsperoMoon)
+ObjectPropertyAssertion(:mass :ProsperoMoon :ProsperoMoonMass)
+ObjectPropertyAssertion(:orbits :ProsperoMoon :Uranus)
+
+# Individual: :ProsperoMoonMass (:ProsperoMoonMass)
+
+ClassAssertion(:MeasurementUnit :ProsperoMoonMass)
+ObjectPropertyAssertion(:unit :ProsperoMoonMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :ProsperoMoonMass "8.4999997E16"^^xsd:float)
+
+# Individual: :Proteus (:Proteus)
+
+ClassAssertion(:NaturalSatellite :Proteus)
+ObjectPropertyAssertion(:mass :Proteus :ProteusMass)
+ObjectPropertyAssertion(:orbits :Proteus :Neptune)
+
+# Individual: :ProteusMass (:ProteusMass)
+
+ClassAssertion(:MeasurementUnit :ProteusMass)
+ObjectPropertyAssertion(:unit :ProteusMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :ProteusMass "4.4E19"^^xsd:float)
+
+# Individual: :ProximaCentauri_b (:ProximaCentauri_b)
+
+ClassAssertion(:Exoplanet :ProximaCentauri_b)
+ObjectPropertyAssertion(:orbitDiameter :ProximaCentauri_b :ProximaCentauri_bOrbitDiameter)
+
+# Individual: :ProximaCentauri_bOrbitDiameter (:ProximaCentauri_bOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :ProximaCentauri_bOrbitDiameter)
+ObjectPropertyAssertion(:unit :ProximaCentauri_bOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :ProximaCentauri_bOrbitDiameter "7.48E9"^^xsd:float)
+
+# Individual: :ProximaCentauri_c (:ProximaCentauri_c)
+
+ClassAssertion(:Exoplanet :ProximaCentauri_c)
+ObjectPropertyAssertion(:orbitDiameter :ProximaCentauri_c :ProximaCentauri_cOrbitDiameter)
+
+# Individual: :ProximaCentauri_cOrbitDiameter (:ProximaCentauri_cOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :ProximaCentauri_cOrbitDiameter)
+ObjectPropertyAssertion(:unit :ProximaCentauri_cOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :ProximaCentauri_cOrbitDiameter "2.24399999E11"^^xsd:float)
+
+# Individual: :Puck (:Puck)
+
+ClassAssertion(:NaturalSatellite :Puck)
+ObjectPropertyAssertion(:mass :Puck :PuckMass)
+ObjectPropertyAssertion(:orbits :Puck :Uranus)
+
+# Individual: :PuckMass (:PuckMass)
+
+ClassAssertion(:MeasurementUnit :PuckMass)
+ObjectPropertyAssertion(:unit :PuckMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :PuckMass "2.90000013E18"^^xsd:float)
+
+# Individual: :Puppis (:Puppis)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Puppis)
+
+# Individual: :Pyxis (:Pyxis)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Pyxis)
+
+# Individual: :Reticulum (:Reticulum)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Reticulum)
+
+# Individual: :Rhea (:Rhea)
+
+ClassAssertion(:NaturalSatellite :Rhea)
+ObjectPropertyAssertion(:mass :Rhea :RheaMass)
+ObjectPropertyAssertion(:orbits :Rhea :Saturn)
+
+# Individual: :RheaMass (:RheaMass)
+
+ClassAssertion(:MeasurementUnit :RheaMass)
+ObjectPropertyAssertion(:unit :RheaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :RheaMass "2.306E21"^^xsd:float)
+
+# Individual: :RohiniD1 (Rohini D1)
+
+AnnotationAssertion(rdfs:label :RohiniD1 "Rohini D1")
+ClassAssertion(:ArtificalSatellite :RohiniD1)
+ObjectPropertyAssertion(:launchCountry :RohiniD1 :India)
+DataPropertyAssertion(:launchDate :RohiniD1 "1980-07-18"^^xsd:date)
+
+# Individual: :Rosalind (:Rosalind)
+
+ClassAssertion(:NaturalSatellite :Rosalind)
+ObjectPropertyAssertion(:mass :Rosalind :RosalindMass)
+ObjectPropertyAssertion(:orbits :Rosalind :Uranus)
+
+# Individual: :RosalindMass (:RosalindMass)
+
+ClassAssertion(:MeasurementUnit :RosalindMass)
+ObjectPropertyAssertion(:unit :RosalindMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :RosalindMass "2.49999996E17"^^xsd:float)
+
+# Individual: :Russia (:Russia)
+
+ClassAssertion(:Country :Russia)
+
+# Individual: :STSAT-2C (STSAT-2C)
+
+AnnotationAssertion(rdfs:label :STSAT-2C "STSAT-2C")
+ClassAssertion(:ArtificalSatellite :STSAT-2C)
+ObjectPropertyAssertion(:launchCountry :STSAT-2C :South_Korea)
+DataPropertyAssertion(<dbo:missionDuration> :STSAT-2C "365"^^dbo:day)
+DataPropertyAssertion(:launchDate :STSAT-2C "2013-01-30"^^xsd:date)
+
+# Individual: :Sagitta (:Sagitta)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Sagitta)
+
+# Individual: :Sagittarius (:Sagittarius)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Sagittarius)
+
+# Individual: :Saturn (:Saturn)
+
+ClassAssertion(:Planet :Saturn)
+ObjectPropertyAssertion(:mass :Saturn :SaturnMass)
+ObjectPropertyAssertion(:orbitDiameter :Saturn :SaturnOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Saturn :Sun)
+
+# Individual: :SaturnMass (:SaturnMass)
+
+ClassAssertion(:MeasurementUnit :SaturnMass)
+ObjectPropertyAssertion(:unit :SaturnMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :SaturnMass "95.16"^^xsd:float)
+
+# Individual: :SaturnOrbitDiameter (:SaturnOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :SaturnOrbitDiameter)
+ObjectPropertyAssertion(:unit :SaturnOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :SaturnOrbitDiameter "1.43400003E12"^^xsd:float)
+
+# Individual: :Scorpius (:Scorpius)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Scorpius)
+
+# Individual: :Sculptor (:Sculptor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Sculptor)
+
+# Individual: :Scutum (:Scutum)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Scutum)
+
+# Individual: :Serpens (:Serpens)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Serpens)
+
+# Individual: :Setebos (:Setebos)
+
+ClassAssertion(:NaturalSatellite :Setebos)
+ObjectPropertyAssertion(:mass :Setebos :SetebosMass)
+ObjectPropertyAssertion(:orbits :Setebos :Uranus)
+
+# Individual: :SetebosMass (:SetebosMass)
+
+ClassAssertion(:MeasurementUnit :SetebosMass)
+ObjectPropertyAssertion(:unit :SetebosMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :SetebosMass "7.4999999E16"^^xsd:float)
+
+# Individual: :Sextans (:Sextans)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Sextans)
+
+# Individual: :Siarnaq (:Siarnaq)
+
+ClassAssertion(:NaturalSatellite :Siarnaq)
+ObjectPropertyAssertion(:mass :Siarnaq :SiarnaqMass)
+ObjectPropertyAssertion(:orbits :Siarnaq :Saturn)
+
+# Individual: :SiarnaqMass (:SiarnaqMass)
+
+ClassAssertion(:MeasurementUnit :SiarnaqMass)
+ObjectPropertyAssertion(:unit :SiarnaqMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :SiarnaqMass "1.89750006E18"^^xsd:float)
+
+# Individual: :SolarSystem (:SolarSystem)
+
+ClassAssertion(:PlanetarySystem :SolarSystem)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Earth)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Jupiter)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Mars)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Mercury)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Neptune)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Saturn)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Uranus)
+ObjectPropertyAssertion(:hasPlanet :SolarSystem :Venus)
+ObjectPropertyAssertion(:hasStar :SolarSystem :Sun)
+ObjectPropertyAssertion(:orbits :SolarSystem :MilkyWay)
+
+# Individual: :South_Korea (:South_Korea)
+
+ClassAssertion(:Country :South_Korea)
+
+# Individual: :Soviet_Union (:Soviet_Union)
+
+ClassAssertion(:Country :Soviet_Union)
+
+# Individual: :Sputnik1 (Sputnik 1)
+
+AnnotationAssertion(rdfs:label :Sputnik1 "Sputnik 1")
+ClassAssertion(:ArtificalSatellite :Sputnik1)
+ObjectPropertyAssertion(:launchCountry :Sputnik1 :Soviet_Union)
+DataPropertyAssertion(<dbo:missionDuration> :Sputnik1 "21"^^dbo:day)
+DataPropertyAssertion(:launchDate :Sputnik1 "1957-10-04"^^xsd:date)
+
+# Individual: :Stephano (:Stephano)
+
+ClassAssertion(:NaturalSatellite :Stephano)
+ObjectPropertyAssertion(:mass :Stephano :StephanoMass)
+ObjectPropertyAssertion(:orbits :Stephano :Uranus)
+
+# Individual: :StephanoMass (:StephanoMass)
+
+ClassAssertion(:MeasurementUnit :StephanoMass)
+ObjectPropertyAssertion(:unit :StephanoMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :StephanoMass "2.19999993E16"^^xsd:float)
+
+# Individual: :Strela (Strela)
+
+AnnotationAssertion(rdfs:label :Strela "Strela")
+ClassAssertion(:ArtificalSatellite :Strela)
+ObjectPropertyAssertion(:launchCountry :Strela :Ukraine)
+DataPropertyAssertion(:launchDate :Strela "1992-07-13"^^xsd:date)
+
+# Individual: :Struve2398 (:Struve2398)
+
+ClassAssertion(:StarSystem :Struve2398)
+ObjectPropertyAssertion(:hasLocation :Struve2398 :Draco)
+ObjectPropertyAssertion(:hasPlanet :Struve2398 _:genid2147483648)
+ObjectPropertyAssertion(:hasPlanet :Struve2398 _:genid2147483649)
+ObjectPropertyAssertion(:hasStar :Struve2398 :Struve2398)
+ObjectPropertyAssertion(:hasStar :Struve2398 :Struve2398A)
+
+# Individual: :Sun (Sun)
+
+AnnotationAssertion(rdfs:label :Sun "Sun")
+ClassAssertion(:Stars :Sun)
+ObjectPropertyAssertion(:mass :Sun :SunMass)
+DataPropertyAssertion(:ApparentMagnitude :Sun "-26.74"^^xsd:float)
+DataPropertyAssertion(:distance :Sun "1.6E-5"^^xsd:float)
+
+# Individual: :SunMass (:SunMass)
+
+ClassAssertion(:MeasurementUnit :SunMass)
+ObjectPropertyAssertion(:unit :SunMass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :SunMass "1.0"^^xsd:float)
+
+# Individual: :Sycorax (:Sycorax)
+
+ClassAssertion(:NaturalSatellite :Sycorax)
+ObjectPropertyAssertion(:mass :Sycorax :SycoraxMass)
+ObjectPropertyAssertion(:orbits :Sycorax :Uranus)
+
+# Individual: :SycoraxMass (:SycoraxMass)
+
+ClassAssertion(:MeasurementUnit :SycoraxMass)
+ObjectPropertyAssertion(:unit :SycoraxMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :SycoraxMass "2.5E18"^^xsd:float)
+
+# Individual: :TON618 (TON 618)
+
+AnnotationAssertion(rdfs:label :TON618 "TON 618")
+AnnotationAssertion(:howMassWasObtain :TON618 "Estimated from quasar HB emission line correlation")
+ClassAssertion(:BlackHole :TON618)
+ClassAssertion(:Galaxy :TON618)
+ObjectPropertyAssertion(:hasLocation :TON618 :CanesVenatici)
+ObjectPropertyAssertion(:mass :TON618 :TON618Mass)
+
+# Individual: :TON618Mass (:TON618Mass)
+
+ClassAssertion(:MeasurementUnit :TON618Mass)
+ObjectPropertyAssertion(:unit :TON618Mass dbr:Solar_Mass)
+DataPropertyAssertion(:hasValue :TON618Mass "6.5999999E10"^^xsd:float)
+
+# Individual: :Taurus (:Taurus)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Taurus)
+
+# Individual: :Telescopium (:Telescopium)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :LaCailleFamily)) :Telescopium)
+
+# Individual: :Tethys (:Tethys)
+
+ClassAssertion(:NaturalSatellite :Tethys)
+ObjectPropertyAssertion(:mass :Tethys :TethysMass)
+ObjectPropertyAssertion(:orbits :Tethys :Saturn)
+
+# Individual: :TethysMass (:TethysMass)
+
+ClassAssertion(:MeasurementUnit :TethysMass)
+ObjectPropertyAssertion(:unit :TethysMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :TethysMass "6.174E20"^^xsd:float)
+
+# Individual: :Titania (:Titania)
+
+ClassAssertion(:NaturalSatellite :Titania)
+ObjectPropertyAssertion(:mass :Titania :TitaniaMass)
+ObjectPropertyAssertion(:orbits :Titania :Uranus)
+
+# Individual: :TitaniaMass (:TitaniaMass)
+
+ClassAssertion(:MeasurementUnit :TitaniaMass)
+ObjectPropertyAssertion(:unit :TitaniaMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :TitaniaMass "3.4E21"^^xsd:float)
+
+# Individual: :Triangulum (:Triangulum)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :PerseusFamily)) :Triangulum)
+
+# Individual: :Trinculo (:Trinculo)
+
+ClassAssertion(:NaturalSatellite :Trinculo)
+ObjectPropertyAssertion(:mass :Trinculo :TrinculoMass)
+ObjectPropertyAssertion(:orbits :Trinculo :Uranus)
+
+# Individual: :TrinculoMass (:TrinculoMass)
+
+ClassAssertion(:MeasurementUnit :TrinculoMass)
+ObjectPropertyAssertion(:unit :TrinculoMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :TrinculoMass "3.89999996E15"^^xsd:float)
+
+# Individual: :Triton (:Triton)
+
+ClassAssertion(:NaturalSatellite :Triton)
+ObjectPropertyAssertion(:mass :Triton :TritonMass)
+ObjectPropertyAssertion(:orbits :Triton :Neptune)
+
+# Individual: :TritonMass (:TritonMass)
+
+ClassAssertion(:MeasurementUnit :TritonMass)
+ObjectPropertyAssertion(:unit :TritonMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :TritonMass "2.139E22"^^xsd:float)
+
+# Individual: :Tucana (:Tucana)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Tucana)
+
+# Individual: :Ukraine (:Ukraine)
+
+ClassAssertion(:Country :Ukraine)
+
+# Individual: :Umbriel (:Umbriel)
+
+ClassAssertion(:NaturalSatellite :Umbriel)
+ObjectPropertyAssertion(:mass :Umbriel :UmbrielMass)
+ObjectPropertyAssertion(:orbits :Umbriel :Uranus)
+
+# Individual: :UmbrielMass (:UmbrielMass)
+
+ClassAssertion(:MeasurementUnit :UmbrielMass)
+ObjectPropertyAssertion(:unit :UmbrielMass dbr:Kilogram)
+DataPropertyAssertion(:hasValue :UmbrielMass "1.275E21"^^xsd:float)
+
+# Individual: :United_Kingdom (:United_Kingdom)
+
+ClassAssertion(:Country :United_Kingdom)
+
+# Individual: :United_States (:United_States)
+
+ClassAssertion(:Country :United_States)
+
+# Individual: :Uranus (:Uranus)
+
+ClassAssertion(:Planet :Uranus)
+ObjectPropertyAssertion(:mass :Uranus :UranusMass)
+ObjectPropertyAssertion(:orbitDiameter :Uranus :UranusOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Uranus :Sun)
+
+# Individual: :UranusMass (:UranusMass)
+
+ClassAssertion(:MeasurementUnit :UranusMass)
+ObjectPropertyAssertion(:unit :UranusMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :UranusMass "14.54"^^xsd:float)
+
+# Individual: :UranusOrbitDiameter (:UranusOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :UranusOrbitDiameter)
+ObjectPropertyAssertion(:unit :UranusOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :UranusOrbitDiameter "2.87100004E12"^^xsd:float)
+
+# Individual: :UrsaMajor (:UrsaMajor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :UrsaMajor)
+
+# Individual: :UrsaMinor (:UrsaMinor)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :UrsaMajorFamily)) :UrsaMinor)
+
+# Individual: :Vela (:Vela)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HeavenlyWaters)) :Vela)
+
+# Individual: :Venus (:Venus)
+
+ClassAssertion(:Planet :Venus)
+ObjectPropertyAssertion(:mass :Venus :VenusMass)
+ObjectPropertyAssertion(:orbitDiameter :Venus :VenusOrbitDiameter)
+ObjectPropertyAssertion(:orbits :Venus :Sun)
+
+# Individual: :VenusMass (:VenusMass)
+
+ClassAssertion(:MeasurementUnit :VenusMass)
+ObjectPropertyAssertion(:unit :VenusMass dbr:Earth_Mass)
+DataPropertyAssertion(:hasValue :VenusMass "0.815"^^xsd:float)
+
+# Individual: :VenusOrbitDiameter (:VenusOrbitDiameter)
+
+ClassAssertion(:MeasurementUnit :VenusOrbitDiameter)
+ObjectPropertyAssertion(:unit :VenusOrbitDiameter dbr:Metre)
+DataPropertyAssertion(:hasValue :VenusOrbitDiameter "1.08200002E11"^^xsd:float)
+
+# Individual: :Virgo (:Virgo)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :Zodiac)) :Virgo)
+
+# Individual: :Volans (:Volans)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :BayerFamily)) :Volans)
+
+# Individual: :Vulpecula (:Vulpecula)
+
+ClassAssertion(ObjectIntersectionOf(:Constellation ObjectSomeValuesFrom(:isConstellationOf :HerculesFamily)) :Vulpecula)
+
+# Individual: <https://inf8410.com/tp/astronomical-object/47Tucanae> (47 Tucanae)
+
+AnnotationAssertion(rdfs:label <https://inf8410.com/tp/astronomical-object/47Tucanae> "47 Tucanae")
+AnnotationAssertion(:hasLocation <https://inf8410.com/tp/astronomical-object/47Tucanae> :Tucana)
+ClassAssertion(:GlobularCluster <https://inf8410.com/tp/astronomical-object/47Tucanae>)
+DataPropertyAssertion(:ApparentMagnitude <https://inf8410.com/tp/astronomical-object/47Tucanae> "4.09"^^xsd:float)
+DataPropertyAssertion(:distance <https://inf8410.com/tp/astronomical-object/47Tucanae> "13000.0"^^xsd:float)
+
+
+DisjointClasses(:BayerFamily :HeavenlyWaters :HerculesFamily :LaCailleFamily :OrionFamily :PerseusFamily :UrsaMajorFamily :Zodiac)
+ClassAssertion(:Planet _:genid2147483648)
+ClassAssertion(:Planet _:genid2147483649)
+DifferentIndividuals(:China :France :India :Iran :Israel :Japan :New_Zealand :North_Korea :Russia :South_Korea :Soviet_Union :Ukraine :United_Kingdom :United_States)
+)
