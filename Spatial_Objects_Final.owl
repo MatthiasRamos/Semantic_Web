@@ -34,9 +34,6 @@
         <Class IRI="BarredSpiralGalaxy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="BayerFamily"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="BlackHole"/>
     </Declaration>
     <Declaration>
@@ -61,19 +58,10 @@
         <Class IRI="GlobularCluster"/>
     </Declaration>
     <Declaration>
-        <Class IRI="HeavenlyWaters"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="HerculesFamily"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="IrregularGalaxy"/>
     </Declaration>
     <Declaration>
         <Class IRI="KnownMatter"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="LaCailleFamily"/>
     </Declaration>
     <Declaration>
         <Class IRI="LenticularGalaxy"/>
@@ -89,12 +77,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="OpenCluster"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OrionFamily"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PerseusFamily"/>
     </Declaration>
     <Declaration>
         <Class IRI="Planet"/>
@@ -122,12 +104,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="Units"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="UrsaMajorFamily"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Zodiac"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="classifiedBy"/>
@@ -202,13 +178,19 @@
         <DataProperty IRI="hasValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="knowAs"/>
+        <DataProperty IRI="howMassWasObtained"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="knownAs"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="launchDate"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="recognitionYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dbo:namedAfter"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="dbo:Light-year"/>
@@ -308,6 +290,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Auriga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BayerFamily"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Belinda"/>
@@ -538,7 +523,13 @@
         <NamedIndividual IRI="Grus"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="HeavenlyWaters"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="Hercules"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HerculesFamily"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Himalia"/>
@@ -644,6 +635,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="LMCDiameter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LaCailleFamily"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Lacerta"/>
@@ -799,6 +793,9 @@
         <NamedIndividual IRI="Orion"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="OrionFamily"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="Oshumi"/>
     </Declaration>
     <Declaration>
@@ -833,6 +830,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Perseus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PerseusFamily"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Phobos"/>
@@ -1093,6 +1093,9 @@
         <NamedIndividual IRI="UrsaMajor"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="UrsaMajorFamily"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="UrsaMinor"/>
     </Declaration>
     <Declaration>
@@ -1117,19 +1120,13 @@
         <NamedIndividual IRI="Vulpecula"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="Zodiac"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="47Tucanae"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="wd:NicolasLouisDeLacaille"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dbo:latinName"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dbo:missionDuration"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dbo:namedAfter"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="UniverseElements"/>
@@ -1141,16 +1138,13 @@
         <AnnotationProperty IRI="howMassWasObtain"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="howMassWasObtained"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty IRI="isDefinedBy"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="isMadeOf"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="knowAs"/>
+        <AnnotationProperty IRI="knownAs"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="location"/>
@@ -1165,186 +1159,12 @@
         <Datatype abbreviatedIRI="xsd:gYear"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="BayerFamily"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Apus"/>
-                    <NamedIndividual IRI="Chamaeleon"/>
-                    <NamedIndividual IRI="Dorado"/>
-                    <NamedIndividual IRI="Grus"/>
-                    <NamedIndividual IRI="Hydrus"/>
-                    <NamedIndividual IRI="Indus"/>
-                    <NamedIndividual IRI="Musca"/>
-                    <NamedIndividual IRI="Pavo"/>
-                    <NamedIndividual IRI="Phoenix"/>
-                    <NamedIndividual IRI="Tucana"/>
-                    <NamedIndividual IRI="Volans"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="HeavenlyWaters"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Carina"/>
-                    <NamedIndividual IRI="Columbia"/>
-                    <NamedIndividual IRI="Delphinus"/>
-                    <NamedIndividual IRI="Equuleus"/>
-                    <NamedIndividual IRI="Eridanus"/>
-                    <NamedIndividual IRI="PiscisAustrinus"/>
-                    <NamedIndividual IRI="Puppis"/>
-                    <NamedIndividual IRI="Pyxis"/>
-                    <NamedIndividual IRI="Vela"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="HerculesFamily"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Aquila"/>
-                    <NamedIndividual IRI="Ara"/>
-                    <NamedIndividual IRI="Centaurus"/>
-                    <NamedIndividual IRI="CoronaAustralis"/>
-                    <NamedIndividual IRI="Corvus"/>
-                    <NamedIndividual IRI="Crater"/>
-                    <NamedIndividual IRI="Cygnus"/>
-                    <NamedIndividual IRI="Hercules"/>
-                    <NamedIndividual IRI="Hydra"/>
-                    <NamedIndividual IRI="Lupus"/>
-                    <NamedIndividual IRI="Lyra"/>
-                    <NamedIndividual IRI="Ophiuchus"/>
-                    <NamedIndividual IRI="Sagitta"/>
-                    <NamedIndividual IRI="Scutum"/>
-                    <NamedIndividual IRI="Serpens"/>
-                    <NamedIndividual IRI="Sextans"/>
-                    <NamedIndividual IRI="Vulpecula"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="LaCailleFamily"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Antlia"/>
-                    <NamedIndividual IRI="Caelum"/>
-                    <NamedIndividual IRI="Circinus"/>
-                    <NamedIndividual IRI="Fornax"/>
-                    <NamedIndividual IRI="Horologium"/>
-                    <NamedIndividual IRI="Mensa"/>
-                    <NamedIndividual IRI="Microscopium"/>
-                    <NamedIndividual IRI="Norma"/>
-                    <NamedIndividual IRI="Octans"/>
-                    <NamedIndividual IRI="Pictor"/>
-                    <NamedIndividual IRI="Reticulum"/>
-                    <NamedIndividual IRI="Sculptor"/>
-                    <NamedIndividual IRI="Telescopium"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="NaturalSatellite"/>
         <ObjectIntersectionOf>
             <Class IRI="Satellite"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="orbits"/>
                 <Class IRI="Planet"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="OrionFamily"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="CanisMajor"/>
-                    <NamedIndividual IRI="CanisMinor"/>
-                    <NamedIndividual IRI="Lepus"/>
-                    <NamedIndividual IRI="Monoceros"/>
-                    <NamedIndividual IRI="Orion"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="PerseusFamily"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Andromeda"/>
-                    <NamedIndividual IRI="Auriga"/>
-                    <NamedIndividual IRI="Cassiopeia"/>
-                    <NamedIndividual IRI="Cepheus"/>
-                    <NamedIndividual IRI="Cetus"/>
-                    <NamedIndividual IRI="Lacerta"/>
-                    <NamedIndividual IRI="Pegasus"/>
-                    <NamedIndividual IRI="Perseus"/>
-                    <NamedIndividual IRI="Triangulum"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="UrsaMajorFamily"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Bootes"/>
-                    <NamedIndividual IRI="Camelopardalis"/>
-                    <NamedIndividual IRI="CanesVenatici"/>
-                    <NamedIndividual IRI="ComaBerenices"/>
-                    <NamedIndividual IRI="CoronaBorealis"/>
-                    <NamedIndividual IRI="Draco"/>
-                    <NamedIndividual IRI="LeoMinor"/>
-                    <NamedIndividual IRI="Lynx"/>
-                    <NamedIndividual IRI="UrsaMajor"/>
-                    <NamedIndividual IRI="UrsaMinor"/>
-                </ObjectOneOf>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="Zodiac"/>
-        <ObjectIntersectionOf>
-            <Class IRI="ConstellationFamily"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="hasConstellation"/>
-                <ObjectOneOf>
-                    <NamedIndividual IRI="Aquarius"/>
-                    <NamedIndividual IRI="Aries"/>
-                    <NamedIndividual IRI="Cancer"/>
-                    <NamedIndividual IRI="Capricornus"/>
-                    <NamedIndividual IRI="Gemini"/>
-                    <NamedIndividual IRI="Leo"/>
-                    <NamedIndividual IRI="Libra"/>
-                    <NamedIndividual IRI="Pisces"/>
-                    <NamedIndividual IRI="Sagittarius"/>
-                    <NamedIndividual IRI="Scorpius"/>
-                    <NamedIndividual IRI="Taurus"/>
-                    <NamedIndividual IRI="Virgo"/>
-                </ObjectOneOf>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -1374,10 +1194,6 @@
     <SubClassOf>
         <Class IRI="BarredSpiralGalaxy"/>
         <Class IRI="SpiralGalaxy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BayerFamily"/>
-        <Class IRI="ConstellationFamily"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Constellation"/>
@@ -1414,24 +1230,12 @@
         <Class IRI="StarCluster"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="HeavenlyWaters"/>
-        <Class IRI="ConstellationFamily"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="HerculesFamily"/>
-        <Class IRI="ConstellationFamily"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="IrregularGalaxy"/>
         <Class IRI="Galaxy"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="KnownMatter"/>
         <Class IRI="Matter"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="LaCailleFamily"/>
-        <Class IRI="ConstellationFamily"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="LenticularGalaxy"/>
@@ -1444,14 +1248,6 @@
     <SubClassOf>
         <Class IRI="OpenCluster"/>
         <Class IRI="StarCluster"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="OrionFamily"/>
-        <Class IRI="ConstellationFamily"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PerseusFamily"/>
-        <Class IRI="ConstellationFamily"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Planet"/>
@@ -1477,14 +1273,6 @@
         <Class IRI="Stars"/>
         <Class abbreviatedIRI="dbo:CelestialBody"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="UrsaMajorFamily"/>
-        <Class IRI="ConstellationFamily"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Zodiac"/>
-        <Class IRI="ConstellationFamily"/>
-    </SubClassOf>
     <DisjointClasses>
         <Class abbreviatedIRI="dbo:CelestialBody"/>
         <Class IRI="Matter"/>
@@ -1492,16 +1280,6 @@
     <DisjointClasses>
         <Class IRI="ArtificalSatellite"/>
         <Class IRI="NaturalSatellite"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="BayerFamily"/>
-        <Class IRI="HeavenlyWaters"/>
-        <Class IRI="HerculesFamily"/>
-        <Class IRI="LaCailleFamily"/>
-        <Class IRI="OrionFamily"/>
-        <Class IRI="PerseusFamily"/>
-        <Class IRI="UrsaMajorFamily"/>
-        <Class IRI="Zodiac"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="ConstellationFamily"/>
@@ -1568,13 +1346,7 @@
         <NamedIndividual IRI="AmaltheaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Andromeda"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1586,53 +1358,23 @@
         <NamedIndividual IRI="AndromedaGalaxyDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Antlia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Apus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Aquarius"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="ConstellationFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Aquila"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Ara"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1644,13 +1386,7 @@
         <NamedIndividual IRI="ArielMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Aries"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1666,14 +1402,12 @@
         <NamedIndividual IRI="AtlasMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Auriga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="BayerFamily"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="NaturalSatellite"/>
@@ -1692,23 +1426,11 @@
         <NamedIndividual IRI="BiancaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Bootes"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Caelum"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1720,123 +1442,51 @@
         <NamedIndividual IRI="CallistoMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Camelopardalis"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Cancer"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="CanesVenatici"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="OrionFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="CanisMajor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="OrionFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="CanisMinor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Capricornus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Carina"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Cassiopeia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Centaurus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Cepheus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Cetus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Chamaeleon"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1852,33 +1502,15 @@
         <NamedIndividual IRI="CigarGalaxyDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Circinus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Columbia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="ComaBerenices"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1890,43 +1522,19 @@
         <NamedIndividual IRI="CordeliaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="CoronaAustralis"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="CoronaBorealis"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Corvus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Crater"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1942,13 +1550,7 @@
         <NamedIndividual IRI="CubeSat"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Cygnus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1968,13 +1570,7 @@
         <NamedIndividual IRI="DeimosMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Delphinus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2006,23 +1602,11 @@
         <NamedIndividual IRI="DongFangHongI"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Dorado"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Draco"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2062,23 +1646,11 @@
         <NamedIndividual IRI="EpimetheusMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Equuleus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Eridanus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2102,13 +1674,7 @@
         <NamedIndividual IRI="FerdinandMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Fornax"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2140,34 +1706,24 @@
         <NamedIndividual IRI="GanymedeMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Gemini"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Grus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="HeavenlyWaters"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Hercules"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="HerculesFamily"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="NaturalSatellite"/>
@@ -2194,13 +1750,7 @@
         <NamedIndividual IRI="Holmberg15AMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Horologium"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2208,23 +1758,11 @@
         <NamedIndividual IRI="Hyades"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Hydra"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Hydrus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2256,13 +1794,7 @@
         <NamedIndividual IRI="India"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Indus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2334,13 +1866,11 @@
         <NamedIndividual IRI="LMCDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="LaCailleFamily"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Lacerta"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2360,73 +1890,31 @@
         <NamedIndividual IRI="LedaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Leo"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="LeoMinor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="OrionFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Lepus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Libra"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Lupus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Lynx"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Lyra"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2466,13 +1954,7 @@
         <NamedIndividual IRI="MarsOrbitDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Mensa"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2488,13 +1970,7 @@
         <NamedIndividual IRI="MercuryOrbitDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Microscopium"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2522,13 +1998,7 @@
         <NamedIndividual IRI="MirandaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="OrionFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Monoceros"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2540,13 +2010,7 @@
         <NamedIndividual IRI="MoonMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Musca"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2566,13 +2030,7 @@
         <NamedIndividual IRI="New_Zealand"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Norma"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2588,13 +2046,7 @@
         <NamedIndividual IRI="ObéronMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Octans"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2614,24 +2066,16 @@
         <NamedIndividual IRI="OpheliaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Ophiuchus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="OrionFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Orion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="OrionFamily"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="ArtificalSatellite"/>
@@ -2662,23 +2106,11 @@
         <NamedIndividual IRI="PasiphaeMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Pavo"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Pegasus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2690,14 +2122,12 @@
         <NamedIndividual IRI="PerditaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Perseus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="PerseusFamily"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="NaturalSatellite"/>
@@ -2716,23 +2146,11 @@
         <NamedIndividual IRI="PhoebeMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Phoenix"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Pictor"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2744,23 +2162,11 @@
         <NamedIndividual IRI="PinwheelGalaxyDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Pisces"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="PiscisAustrinus"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2828,33 +2234,15 @@
         <NamedIndividual IRI="PuckMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Puppis"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Pyxis"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Reticulum"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2886,23 +2274,11 @@
         <NamedIndividual IRI="STSAT-2C"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Sagitta"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Sagittarius"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2918,43 +2294,19 @@
         <NamedIndividual IRI="SaturnOrbitDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Scorpius"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Sculptor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Scutum"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Serpens"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2966,13 +2318,7 @@
         <NamedIndividual IRI="SetebosMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Sextans"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3040,23 +2386,11 @@
         <NamedIndividual IRI="TON618Mass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Taurus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="LaCailleFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Telescopium"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3076,13 +2410,7 @@
         <NamedIndividual IRI="TitaniaMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="PerseusFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Triangulum"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3102,13 +2430,7 @@
         <NamedIndividual IRI="TritonMass"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Tucana"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3144,33 +2466,19 @@
         <NamedIndividual IRI="UranusOrbitDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="UrsaMajor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="UrsaMajorFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="UrsaMajorFamily"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="UrsaMinor"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HeavenlyWaters"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Vela"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -3186,34 +2494,20 @@
         <NamedIndividual IRI="VenusOrbitDiameter"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="Zodiac"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Virgo"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="BayerFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Volans"/>
     </ClassAssertion>
     <ClassAssertion>
-        <ObjectIntersectionOf>
-            <Class IRI="Constellation"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="isConstellationOf"/>
-                <Class IRI="HerculesFamily"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
+        <Class IRI="Constellation"/>
         <NamedIndividual IRI="Vulpecula"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="ConstellationFamily"/>
+        <NamedIndividual IRI="Zodiac"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="GlobularCluster"/>
@@ -3221,11 +2515,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Planet"/>
-        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Planet"/>
-        <AnonymousIndividual nodeID="_:genid2147483651"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="China"/>
@@ -4666,12 +3960,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="Struve2398"/>
-        <AnonymousIndividual nodeID="_:genid2147483650"/>
+        <AnonymousIndividual nodeID="_:genid2147483648"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="Struve2398"/>
-        <AnonymousIndividual nodeID="_:genid2147483651"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasStar"/>
@@ -5139,6 +4433,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.4819E23</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="dbo:namedAfter"/>
+        <NamedIndividual IRI="Hercules"/>
+        <Literal>the Roman mythological hero, Hercules</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="hasValue"/>
         <NamedIndividual IRI="HimaliaMass"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.29199999E18</Literal>
@@ -5324,6 +4623,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.3E16</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="dbo:namedAfter"/>
+        <NamedIndividual IRI="Orion"/>
+        <Literal>a hunter in Greek mythology, named Orion</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="launchDate"/>
         <NamedIndividual IRI="Oshumi"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1970-02-11</Literal>
@@ -5347,6 +4651,11 @@
         <DataProperty IRI="hasValue"/>
         <NamedIndividual IRI="PerditaMass"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.79999996E16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="dbo:namedAfter"/>
+        <NamedIndividual IRI="Perseus"/>
+        <Literal>Greek mythological hero Perseus</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="hasValue"/>
@@ -5502,6 +4811,11 @@
         <DataProperty IRI="hasValue"/>
         <NamedIndividual IRI="SycoraxMass"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.5E18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="howMassWasObtained"/>
+        <NamedIndividual IRI="TON618"/>
+        <Literal>Estimated from quasar HB emission line correlation</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="hasValue"/>
@@ -5733,19 +5047,6 @@
         <Class abbreviatedIRI="dbo:CelestialBody"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="isConstellationOf"/>
-        <ObjectUnionOf>
-            <Class IRI="BayerFamily"/>
-            <Class IRI="HeavenlyWaters"/>
-            <Class IRI="HerculesFamily"/>
-            <Class IRI="LaCailleFamily"/>
-            <Class IRI="OrionFamily"/>
-            <Class IRI="PerseusFamily"/>
-            <Class IRI="UrsaMajorFamily"/>
-            <Class IRI="Zodiac"/>
-        </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="launchCountry"/>
         <Class IRI="Country"/>
     </ObjectPropertyRange>
@@ -5775,6 +5076,14 @@
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="dbo:missionDuration"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="howMassWasObtained"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="dbo:namedAfter"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
@@ -5891,16 +5200,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>BayerFamily</IRI>
-        <Literal>The constellations were named mostly from exotic animals.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BayerFamily</IRI>
-        <Literal>Bayer Family</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>BlackHole</IRI>
         <Literal>A region of space having a gravitational field so intense that no matter or radiation can escape</Literal>
     </AnnotationAssertion>
@@ -5975,31 +5274,6 @@
         <Literal>Globular Cluster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>HeavenlyWaters</IRI>
-        <Literal>Heavenly Waters</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>HeavenlyWaters</IRI>
-        <Literal>The constellation names are associated with water ins some form.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dbo:namedAfter"/>
-        <IRI>Hercules</IRI>
-        <Literal>the Roman mythological hero, Hercules</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>HerculesFamily</IRI>
-        <Literal>Menzel&apos;s largest grouping of constellations.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HerculesFamily</IRI>
-        <Literal>Hercules Family</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Holmberg15A</IRI>
         <Literal>Holmberg 15 A</Literal>
@@ -6008,11 +5282,6 @@
         <AnnotationProperty IRI="hasLocation"/>
         <IRI>Holmberg15A</IRI>
         <IRI>Cetus</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="howMassWasObtained"/>
-        <IRI>Holmberg15A</IRI>
-        <Literal>Mass specified obtained through orbit-based, axisymmetric Schwarzschild models</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6025,7 +5294,7 @@
         <IRI>Taurus</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="knowAs"/>
+        <AnnotationProperty IRI="knownAs"/>
         <IRI>Hyades</IRI>
         <Literal>CaldWell 41, Collinder 50, Melotte 25</Literal>
     </AnnotationAssertion>
@@ -6038,11 +5307,6 @@
         <AnnotationProperty IRI="hasLocation"/>
         <IRI>IC1101</IRI>
         <IRI>Virgo</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="howMassWasObtained"/>
-        <IRI>IC1101</IRI>
-        <Literal>Estimated from properties of the host galaxy; mass has not been measured directly</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6078,16 +5342,6 @@
         <AnnotationProperty IRI="hasLocation"/>
         <IRI>LMC</IRI>
         <IRI>Dorado</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>LaCailleFamily</IRI>
-        <Literal>The constellations name from the La Caille Family represent scientific instruments.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>LaCailleFamily</IRI>
-        <Literal>La Caille Family</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6150,44 +5404,9 @@
         <Literal>Open Cluster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dbo:namedAfter"/>
-        <IRI>Orion</IRI>
-        <Literal>a hunter in Greek mythology, named Orion</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>OrionFamily</IRI>
-        <Literal>This group of constellations draws from Greek myth.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OrionFamily</IRI>
-        <Literal>Orion Family</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Oshumi</IRI>
         <Literal>Oshumi</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dbo:namedAfter"/>
-        <IRI>Perseus</IRI>
-        <Literal>Greek mythological hero Perseus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="isDefinedBy"/>
-        <IRI>Perseus</IRI>
-        <IRI>InternationalAstronomicalUnion</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>PerseusFamily</IRI>
-        <Literal>The Perseus Family includes several constellations associated with the Perseus myth.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PerseusFamily</IRI>
-        <Literal>Perseus Family</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6220,7 +5439,7 @@
         <IRI>Taurus</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="knowAs"/>
+        <AnnotationProperty IRI="knownAs"/>
         <IRI>Pleiades</IRI>
         <Literal>Seven Sisters and Messier 45</Literal>
     </AnnotationAssertion>
@@ -6290,31 +5509,6 @@
         <IRI>CanesVenatici</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="howMassWasObtain"/>
-        <IRI>TON618</IRI>
-        <Literal>Estimated from quasar HB emission line correlation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>UrsaMajorFamily</IRI>
-        <Literal>The Ursa Major Family includes 10 northern constellations in the vicinity of Ursa Major.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>UrsaMajorFamily</IRI>
-        <Literal>Ursa Major Family</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>Zodiac</IRI>
-        <Literal>The constellations are all associated with zodiac signs.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Zodiac</IRI>
-        <Literal>Zodiac</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>collectionOf</IRI>
         <Literal>A general list of celestial bodies</Literal>
@@ -6376,7 +5570,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>knowAs</IRI>
+        <IRI>knownAs</IRI>
         <Literal>Other designations for the label</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -6455,11 +5649,11 @@
         <IRI>KnownMatter</IRI>
     </AnnotationPropertyRange>
     <AnnotationPropertyRange>
-        <AnnotationProperty IRI="knowAs"/>
+        <AnnotationProperty IRI="knownAs"/>
         <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
     </AnnotationPropertyRange>
     <AnnotationPropertyDomain>
-        <AnnotationProperty IRI="knowAs"/>
+        <AnnotationProperty IRI="knownAs"/>
         <IRI>CelestialBody</IRI>
     </AnnotationPropertyDomain>
 </Ontology>
@@ -6467,4 +5661,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
