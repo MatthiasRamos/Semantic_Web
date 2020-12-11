@@ -40,9 +40,6 @@
         <Class IRI="BlackHole"/>
     </Declaration>
     <Declaration>
-        <Class IRI="CelestialObject"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="Constellation"/>
     </Declaration>
     <Declaration>
@@ -173,6 +170,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="mass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="neighbor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="orbitDiameter"/>
@@ -1407,7 +1407,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="Galaxy"/>
-        <Class IRI="CelestialObject"/>
+        <Class abbreviatedIRI="dbo:CelestialBody"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="GlobularCluster"/>
@@ -1467,7 +1467,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="StarCluster"/>
-        <Class IRI="CelestialObject"/>
+        <Class abbreviatedIRI="dbo:CelestialBody"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="StarburstGalaxy"/>
@@ -3221,11 +3221,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Planet"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Planet"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="China"/>
@@ -3243,11 +3243,6 @@
         <NamedIndividual IRI="United_Kingdom"/>
         <NamedIndividual IRI="United_States"/>
     </DifferentIndividuals>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="AlphaCentauri"/>
-        <NamedIndividual IRI="Centaurus"/>
-    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="AlphaCentauri"/>
@@ -3322,11 +3317,6 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="AndromedaGalaxy"/>
         <NamedIndividual IRI="AndromedaGalaxyDiameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="AndromedaGalaxy"/>
-        <NamedIndividual IRI="Andromeda"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -3417,11 +3407,6 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="CigarGalaxy"/>
         <NamedIndividual IRI="CigarGalaxyDiameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="CigarGalaxy"/>
-        <NamedIndividual IRI="UrsaMajor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -3547,6 +3532,46 @@
         <ObjectProperty IRI="mass"/>
         <NamedIndividual IRI="Earth"/>
         <NamedIndividual IRI="EarthMass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Earth"/>
+        <NamedIndividual IRI="Venus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
@@ -3729,11 +3754,6 @@
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="Holmberg15A"/>
-        <NamedIndividual IRI="Cetus"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
         <NamedIndividual IRI="Holmberg15A"/>
         <NamedIndividual IRI="Holmberg15AMass"/>
@@ -3744,11 +3764,6 @@
         <NamedIndividual abbreviatedIRI="dbr:Solar_Mass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="Hyades"/>
-        <NamedIndividual IRI="Taurus"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbits"/>
         <NamedIndividual IRI="Hyperion"/>
         <NamedIndividual IRI="Saturn"/>
@@ -3757,11 +3772,6 @@
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="HyperionAMass"/>
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="IC1101"/>
-        <NamedIndividual IRI="Virgo"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
@@ -3834,6 +3844,46 @@
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Jupiter"/>
+        <NamedIndividual IRI="Venus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
         <NamedIndividual IRI="Jupiter"/>
         <NamedIndividual IRI="JupiterOrbitDiameter"/>
@@ -3867,11 +3917,6 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="LMC"/>
         <NamedIndividual IRI="LMCDiameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="LMC"/>
-        <NamedIndividual IRI="Dorado"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -3959,6 +4004,46 @@
         <NamedIndividual IRI="MarsMass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mars"/>
+        <NamedIndividual IRI="Venus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
         <NamedIndividual IRI="Mars"/>
         <NamedIndividual IRI="MarsOrbitDiameter"/>
@@ -3984,6 +4069,46 @@
         <NamedIndividual IRI="MercuryMass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Mercury"/>
+        <NamedIndividual IRI="Venus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
         <NamedIndividual IRI="Mercury"/>
         <NamedIndividual IRI="MercuryOrbitDiameter"/>
@@ -4007,11 +4132,6 @@
         <ObjectProperty IRI="diameter"/>
         <NamedIndividual IRI="MilkyWay"/>
         <NamedIndividual IRI="MilkyWayDiameter"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="MilkyWay"/>
-        <NamedIndividual IRI="Sagittarius"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
@@ -4229,19 +4349,9 @@
         <NamedIndividual IRI="PinwheelGalaxyDiameter"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="PinwheelGalaxy"/>
-        <NamedIndividual IRI="UrsaMajor"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="PinwheelGalaxyDiameter"/>
         <NamedIndividual abbreviatedIRI="dbo:Light-year"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="Pleiades"/>
-        <NamedIndividual IRI="Taurus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
@@ -4389,6 +4499,46 @@
         <NamedIndividual IRI="SaturnMass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Saturn"/>
+        <NamedIndividual IRI="Venus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
         <NamedIndividual IRI="Saturn"/>
         <NamedIndividual IRI="SaturnOrbitDiameter"/>
@@ -4514,19 +4664,14 @@
         <NamedIndividual IRI="Ukraine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
+        <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="Struve2398"/>
-        <NamedIndividual IRI="Draco"/>
+        <AnonymousIndividual nodeID="_:genid2147483650"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasPlanet"/>
         <NamedIndividual IRI="Struve2398"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasPlanet"/>
-        <NamedIndividual IRI="Struve2398"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="hasStar"/>
@@ -4562,11 +4707,6 @@
         <ObjectProperty IRI="unit"/>
         <NamedIndividual IRI="SycoraxMass"/>
         <NamedIndividual abbreviatedIRI="dbr:Kilogram"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="hasLocation"/>
-        <NamedIndividual IRI="TON618"/>
-        <NamedIndividual IRI="CanesVenatici"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="mass"/>
@@ -4659,6 +4799,46 @@
         <NamedIndividual IRI="UranusMass"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Uranus"/>
+        <NamedIndividual IRI="Venus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
         <NamedIndividual IRI="Uranus"/>
         <NamedIndividual IRI="UranusOrbitDiameter"/>
@@ -4682,6 +4862,46 @@
         <ObjectProperty IRI="mass"/>
         <NamedIndividual IRI="Venus"/>
         <NamedIndividual IRI="VenusMass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Mercury"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="neighbor"/>
+        <NamedIndividual IRI="Venus"/>
+        <NamedIndividual IRI="Venus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="orbitDiameter"/>
@@ -5370,6 +5590,9 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="isMadeOf"/>
     </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="launchCountry"/>
+    </FunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="hasConstellation"/>
     </InverseFunctionalObjectProperty>
@@ -5382,6 +5605,18 @@
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="orbits"/>
     </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="neighbor"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="hasPlanet"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="has_on_orbit"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="isMadeOf"/>
+    </AsymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="collectionOf"/>
     </TransitiveObjectProperty>
@@ -5394,6 +5629,9 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="orbits"/>
     </TransitiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="neighbor"/>
+    </ReflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="classifiedBy"/>
         <Class IRI="Constellation"/>
@@ -5419,6 +5657,10 @@
         <Class abbreviatedIRI="dbo:CelestialBody"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_on_orbit"/>
+        <Class abbreviatedIRI="dbo:CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="isConstellationOf"/>
         <Class IRI="Constellation"/>
     </ObjectPropertyDomain>
@@ -5433,6 +5675,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="mass"/>
         <Class abbreviatedIRI="dbo:CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="neighbor"/>
+        <Class IRI="Planet"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="orbitDiameter"/>
@@ -5475,16 +5721,16 @@
         <Class IRI="Constellation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="hasLocation"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="hasPlanet"/>
         <Class IRI="Planet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="hasStar"/>
         <Class IRI="Stars"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_on_orbit"/>
+        <Class abbreviatedIRI="dbo:CelestialBody"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="isConstellationOf"/>
@@ -5506,6 +5752,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="mass"/>
         <Class IRI="MeasurementUnit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="neighbor"/>
+        <Class IRI="Planet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="orbitDiameter"/>
@@ -5595,6 +5845,11 @@
         <Literal>Alpha Centauri</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>AlphaCentauri</IRI>
+        <IRI>Centaurus</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AlphaCentauriA</IRI>
         <Literal>Rigil Kentaurus</Literal>
@@ -5613,6 +5868,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>AndromedaGalaxy</IRI>
         <Literal>Andromeda Galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>AndromedaGalaxy</IRI>
+        <IRI>Andromeda</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5653,6 +5913,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CigarGalaxy</IRI>
         <Literal>Cigar Galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>CigarGalaxy</IRI>
+        <IRI>UrsaMajor</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5740,6 +6005,11 @@
         <Literal>Holmberg 15 A</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>Holmberg15A</IRI>
+        <IRI>Cetus</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="howMassWasObtained"/>
         <IRI>Holmberg15A</IRI>
         <Literal>Mass specified obtained through orbit-based, axisymmetric Schwarzschild models</Literal>
@@ -5750,6 +6020,11 @@
         <Literal>Hyades</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>Hyades</IRI>
+        <IRI>Taurus</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="knowAs"/>
         <IRI>Hyades</IRI>
         <Literal>CaldWell 41, Collinder 50, Melotte 25</Literal>
@@ -5758,6 +6033,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IC1101</IRI>
         <Literal>IC 1101</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>IC1101</IRI>
+        <IRI>Virgo</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="howMassWasObtained"/>
@@ -5795,6 +6075,11 @@
         <Literal>Large Magellanic Cloud</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>LMC</IRI>
+        <IRI>Dorado</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>LaCailleFamily</IRI>
         <Literal>The constellations name from the La Caille Family represent scientific instruments.</Literal>
@@ -5828,6 +6113,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>MilkyWay</IRI>
         <Literal>Milky Way</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>MilkyWay</IRI>
+        <IRI>Sagittarius</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5905,6 +6195,11 @@
         <Literal>Pinwheel Galaxy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>PinwheelGalaxy</IRI>
+        <IRI>UrsaMajor</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>Planet</IRI>
         <Literal>A celestial body distinguished from the fixed stars by having an apparent motion of its own</Literal>
@@ -5918,6 +6213,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Pleiades</IRI>
         <Literal>Pleiades</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>Pleiades</IRI>
+        <IRI>Taurus</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="knowAs"/>
@@ -5970,6 +6270,11 @@
         <Literal>Strela</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>Struve2398</IRI>
+        <IRI>Draco</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Sun</IRI>
         <Literal>Sun</Literal>
@@ -5978,6 +6283,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TON618</IRI>
         <Literal>TON 618</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="hasLocation"/>
+        <IRI>TON618</IRI>
+        <IRI>CanesVenatici</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="howMassWasObtain"/>
@@ -6135,6 +6445,10 @@
     <AnnotationPropertyRange>
         <AnnotationProperty IRI="hasLocation"/>
         <AbbreviatedIRI>dbo:Place</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="hasLocation"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
     </AnnotationPropertyRange>
     <AnnotationPropertyRange>
         <AnnotationProperty IRI="isMadeOf"/>
