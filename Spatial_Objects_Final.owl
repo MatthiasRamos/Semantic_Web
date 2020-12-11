@@ -169,6 +169,9 @@
         <DataProperty IRI="dbo:missionDuration"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="dbo:namedAfter"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="ApparentMagnitude"/>
     </Declaration>
     <Declaration>
@@ -190,10 +193,19 @@
         <DataProperty IRI="recognitionYear"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="dbo:namedAfter"/>
+        <NamedIndividual abbreviatedIRI="dbo:IC3583"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="dbo:IC4710"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="dbo:Light-year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="dbo:NGC1387"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="dbo:NGC2787"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="dbo:PetrusPlancius"/>
@@ -401,6 +413,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Cygnus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CygnusX-1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="Daphnis"/>
@@ -1099,6 +1114,9 @@
         <NamedIndividual IRI="UrsaMinor"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="V404Cygni"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="Vela"/>
     </Declaration>
     <Declaration>
@@ -1159,6 +1177,19 @@
         <Datatype abbreviatedIRI="xsd:gYear"/>
     </Declaration>
     <EquivalentClasses>
+        <Class IRI="Constellation"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="classifiedBy"/>
+                <Class IRI="ConstellationFamily"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="groupOf"/>
+                <Class IRI="Stars"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="NaturalSatellite"/>
         <ObjectIntersectionOf>
             <Class IRI="Satellite"/>
@@ -1167,6 +1198,13 @@
                 <Class IRI="Planet"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Satellite"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="orbits"/>
+            <Class IRI="Planet"/>
+        </ObjectExactCardinality>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="ArtificalSatellite"/>
@@ -1290,8 +1328,24 @@
         <Class IRI="OpenCluster"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="IrregularGalaxy"/>
+        <NamedIndividual abbreviatedIRI="dbo:IC3583"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="IrregularGalaxy"/>
+        <NamedIndividual abbreviatedIRI="dbo:IC4710"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="Units"/>
         <NamedIndividual abbreviatedIRI="dbo:Light-year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LenticularGalaxy"/>
+        <NamedIndividual abbreviatedIRI="dbo:NGC1387"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="LenticularGalaxy"/>
+        <NamedIndividual abbreviatedIRI="dbo:NGC2787"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Units"/>
@@ -1552,6 +1606,10 @@
     <ClassAssertion>
         <Class IRI="Constellation"/>
         <NamedIndividual IRI="Cygnus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BlackHole"/>
+        <NamedIndividual IRI="CygnusX-1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="NaturalSatellite"/>
@@ -2476,6 +2534,10 @@
     <ClassAssertion>
         <Class IRI="Constellation"/>
         <NamedIndividual IRI="UrsaMinor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BlackHole"/>
+        <NamedIndividual IRI="V404Cygni"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="Constellation"/>
@@ -5079,11 +5141,11 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="howMassWasObtained"/>
+        <DataProperty IRI="dbo:namedAfter"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="dbo:namedAfter"/>
+        <DataProperty IRI="howMassWasObtained"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
@@ -5200,6 +5262,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BarredSpiralGalaxy</IRI>
+        <Literal>A barred spiral galaxy is a spiral galaxy with a central bar-shaped structure composed of stars.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarredSpiralGalaxy</IRI>
+        <Literal>Barred Spiral Galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>BlackHole</IRI>
         <Literal>A region of space having a gravitational field so intense that no matter or radiation can escape</Literal>
     </AnnotationAssertion>
@@ -5239,6 +5311,16 @@
         <Literal>Constellation Family</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Country</IRI>
+        <Literal>An indefinite usually extended expanse of land : region</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Country</IRI>
+        <Literal>Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CubeSat</IRI>
         <Literal>Cube Sat</Literal>
@@ -5247,6 +5329,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DongFangHongI</IRI>
         <Literal>Dong Fang Hong I</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>EllipticalGalaxy</IRI>
+        <Literal>Galaxy with an approximately ellipsoidal shape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EllipticalGalaxy</IRI>
+        <Literal>Elliptical Galaxy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5262,6 +5354,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Explorer1</IRI>
         <Literal>Explorer 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Galaxy</IRI>
+        <Literal>A system that contains stars and other elements held together by gravity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Galaxy</IRI>
+        <Literal>Galaxy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5315,6 +5417,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>IrregularGalaxy</IRI>
+        <Literal>A galaxy that does not have a distinct regular shape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>IrregularGalaxy</IRI>
+        <Literal>Irregular galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>KnownMatter</IRI>
         <Literal>Matter known to be occupying space</Literal>
     </AnnotationAssertion>
@@ -5342,6 +5454,16 @@
         <AnnotationProperty IRI="hasLocation"/>
         <IRI>LMC</IRI>
         <IRI>Dorado</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>LenticularGalaxy</IRI>
+        <Literal>A type of galaxy intermediate between an elliptical (denoted E) and a spiral galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LenticularGalaxy</IRI>
+        <Literal>Lenticular Galaxy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5429,6 +5551,16 @@
         <Literal>Planet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PlanetarySystem</IRI>
+        <Literal>A planetary system is a set of gravitationally bound non-stellar objects in or out of orbit around a star or star system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PlanetarySystem</IRI>
+        <Literal>Planetary System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Pleiades</IRI>
         <Literal>Pleiades</Literal>
@@ -5469,9 +5601,49 @@
         <Literal>Satellite</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>SpiralGalaxy</IRI>
+        <Literal>Spiral galaxies form a class of galaxy originally described by Edwin Hubble.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SpiralGalaxy</IRI>
+        <Literal>Spiral Galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>Sputnik1</IRI>
         <Literal>Sputnik 1</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>StarCluster</IRI>
+        <Literal>A number of stars of common origin held together as a group by gravitational attraction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StarCluster</IRI>
+        <Literal>Star Cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>StarSystem</IRI>
+        <Literal>A small number of stars that orbit each other,[1] bound by gravitational attraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StarSystem</IRI>
+        <Literal>Star System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>StarburstGalaxy</IRI>
+        <Literal>A starburst galaxy is a galaxy undergoing an exceptionally high rate of star formation, as compared to the long-term average rate of star formation in the galaxy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StarburstGalaxy</IRI>
+        <Literal>Starburst Galaxy</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5510,6 +5682,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Units</IRI>
+        <Literal>A definite magnitude of a quantity, defined and adopted by convention or by law</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Units</IRI>
+        <Literal>Units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>classifiedBy</IRI>
+        <Literal>Which constellation family best describe this constellation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>classifiedBy</IRI>
+        <Literal>classified By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>collectionOf</IRI>
         <Literal>A general list of celestial bodies</Literal>
     </AnnotationAssertion>
@@ -5524,6 +5716,11 @@
         <Literal>Object diameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>diameter</IRI>
+        <Literal>diameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>distance</IRI>
         <Literal>Distance from Earth, usually in light year</Literal>
@@ -5536,7 +5733,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>groupOf</IRI>
-        <Literal>Group Of</Literal>
+        <Literal>group Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasConstellation</IRI>
+        <Literal>Contains a Contellation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5550,6 +5752,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasLocation</IRI>
+        <Literal>has Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasPlanet</IRI>
+        <Literal>Contains a Planet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>hasPlanet</IRI>
         <Literal>has Planet</Literal>
     </AnnotationAssertion>
@@ -5560,13 +5772,48 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasStar</IRI>
+        <Literal>has Star</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>has_on_orbit</IRI>
-        <Literal>has on orbit</Literal>
+        <Literal>The subject is on the orbit of the subject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_on_orbit</IRI>
+        <Literal>has On Orbit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>howMassWasObtained</IRI>
+        <Literal>The way the mass was evaluate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>howMassWasObtained</IRI>
+        <Literal>how Mass Was Obtained</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>isConstellationOf</IRI>
+        <Literal>Constellation of which family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isConstellationOf</IRI>
+        <Literal>is Constellation Of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>isMadeOf</IRI>
         <Literal>Elements that compose a galaxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isMadeOf</IRI>
+        <Literal>is Made Of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5579,9 +5826,29 @@
         <Literal>Country where an artificial satellite was launched</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>launchCountry</IRI>
+        <Literal>launch Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>mass</IRI>
         <Literal>Object mass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>mass</IRI>
+        <Literal>mass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>neighbor</IRI>
+        <Literal>Closest to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>neighbor</IRI>
+        <Literal>neighbor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5591,7 +5858,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>orbitDiameter</IRI>
-        <Literal>orbit diameter</Literal>
+        <Literal>orbit Diameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5601,12 +5868,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>orbits</IRI>
-        <Literal>is on orbit</Literal>
+        <Literal>is On Orbit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>recognizedBy</IRI>
+        <Literal>Who found the Celesstial Body</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>recognizedBy</IRI>
-        <Literal>Recognized by</Literal>
+        <Literal>recognized By</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5614,9 +5886,19 @@
         <Literal>Form of an object in the Universe</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>shape</IRI>
+        <Literal>shape</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>unit</IRI>
         <Literal>Different kinds of units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>unit</IRI>
+        <Literal>unit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5661,3 +5943,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
