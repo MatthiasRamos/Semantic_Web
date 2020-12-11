@@ -157,6 +157,9 @@
         <ObjectProperty IRI="hasStar"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="has_on_orbit"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="howMassWasObtained"/>
     </Declaration>
     <Declaration>
@@ -5345,6 +5348,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasPlanet"/>
+        <ObjectProperty IRI="has_on_orbit"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="howMassWasObtained"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -5356,6 +5363,10 @@
         <ObjectProperty IRI="hasConstellation"/>
         <ObjectProperty IRI="isConstellationOf"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="has_on_orbit"/>
+        <ObjectProperty IRI="orbits"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="isMadeOf"/>
     </FunctionalObjectProperty>
@@ -5363,13 +5374,22 @@
         <ObjectProperty IRI="hasConstellation"/>
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="has_on_orbit"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="isConstellationOf"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="orbits"/>
     </InverseFunctionalObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="collectionOf"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="groupOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="has_on_orbit"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="orbits"/>
@@ -6033,6 +6053,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasStar</IRI>
         <Literal>Define the star of a System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>has_on_orbit</IRI>
+        <Literal>has on orbit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
